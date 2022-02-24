@@ -1,6 +1,13 @@
 # SpaceR
 #### by Kieran Woodrow
 
+## Table Of Contents
+- [Project Overview](#books-project-overview)
+- [Git Structure](#gear-git-structure)
+- [Code Quality](#bar_chart_code-quality)
+- [Technology Stack](#hammer_and_wrench-technology-stack)
+- [Documentation](#page-facing-up-documentation)
+- [Project Management Tools](#card_index_dividers-project-management-tools)
 
 ## :books: Project Overview
 SpaceR is an IOS app that stives to change the world one user at a time. This app makes use of a SpaceX API and will allow the user to engage with a lot of information such as keeping track of the latest rocket launches or to view the crew members of a particular mission.
@@ -9,10 +16,10 @@ SpaceR is an IOS app that stives to change the world one user at a time. This ap
 ### Branching Stratergy
 
 master ( buid )
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp- develop ( build )
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- delelop-feature
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- develop ( build )
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- develop-feature
 
 ## :bar_chart: Code Quality
 
@@ -23,8 +30,13 @@ master ( buid )
 ### Front end 
 -Add here
 
+### Back end 
+-Add here
 
 ### Design Tools
+-add here
+
+### Testing Tools
 -add here
 
 ## :page_facing_up: Documentation:
@@ -38,7 +50,6 @@ master ( buid )
 <ul>
   <li> :pencil: -add here</li>
 </ul>
-
 
 ## :card_index_dividers: Project Management Tools
 
