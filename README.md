@@ -6,7 +6,7 @@
 - [Git Structure](#gear-git-structure)
 - [Code Quality](#bar_chart_code-quality)
 - [Technology Stack](#hammer_and_wrench-technology-stack)
-- [Documentation](#page-facing-up-documentation)
+- [Documentation](#page_facing_up-documentation)
 - [Project Management Tools](#card_index_dividers-project-management-tools)
 
 ## :books: Project Overview
@@ -28,13 +28,16 @@ master ( buid )
 ## :hammer_and_wrench: Technology Stack
 
 ### Front end 
--Add here
+![AGPL License](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
 
-### Back end 
--Add here
+![AGPL License](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
+
+![AGPL License](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
+
+![AGPL License](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
 
 ### Design Tools
--add here
+![AGPL License](https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black)
 
 ### Testing Tools
 -add here
