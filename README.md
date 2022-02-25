@@ -4,10 +4,10 @@
 ## Table Of Contents
 - [Project Overview](#books-project-overview)
 - [Git Structure](#gear-git-structure)
-- [Code Quality](#bar_chart_code-quality)
+- [Code Quality](#bar_chart-code-quality)
 - [Technology Stack](#hammer_and_wrench-technology-stack)
 - [Documentation](#page_facing_up-documentation)
-- [Project Management Tools](#card_index_dividers-project-management-tools)
+- [Project Management Tools](#card_index_dividers-project-tools)
 
 ## :books: Project Overview
 SpaceR is an IOS app that stives to change the world one user at a time. This app makes use of a SpaceX API and will allow the user to engage with a lot of information such as keeping track of the latest rocket launches or to view the crew members of a particular mission.
@@ -62,7 +62,7 @@ master ( buid )
 
 ![AGPL License](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-###Communication Tools
+### Communication Tools
 ![AGPL License](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
 
 
