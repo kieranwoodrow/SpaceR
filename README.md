@@ -36,11 +36,6 @@ master ( buid )
 
 ![AGPL License](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
 
-### Design Tools
-![AGPL License](https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black)
-
-### Testing Tools
--add here
 
 ## :page_facing_up: Documentation:
 
@@ -54,9 +49,22 @@ master ( buid )
   <li> :pencil: -add here</li>
 </ul>
 
-## :card_index_dividers: Project Management Tools
+## :card_index_dividers: Project Tools
 
--add here 
+### Design Tools
+![AGPL License](https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black)
+
+### Testing Tools
+-add here
+
+### Version Control Tools
+![AGPL License](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+![AGPL License](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+###Communication Tools
+![AGPL License](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+
 
 
 
