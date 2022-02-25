@@ -1,6 +1,6 @@
 //
 //  Rocket.swift
-//  SpaceR Priject
+//  spaceR 
 //  Created by Kieran Woodrow on 2022/02/17.
 //
 
@@ -92,12 +92,5 @@ struct PayloadWeight: Codable{
     let id, name: String?
     let kg, lb: Double?
 }
-
-
-//Questions
-//1) //What do you put if you don't know what number type api is returning? The spaceX api scheme just says number (assuming typescript type)
-        //i.e, will it break if you declare double but receives an into or will it typecast it
-
-//2)//Do you put Array module here and use everywhere. eg var rockets = [Rocket] instead of in controller
 
 

@@ -10,7 +10,6 @@
 		D6E9CF5D27C8CD6300AED244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5B27C8CD6300AED244 /* Main.storyboard */; };
 		D6E9CF5F27C8CD6600AED244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */; };
 		D6E9CF6227C8CD6600AED244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF6027C8CD6600AED244 /* LaunchScreen.storyboard */; };
-		D6E9CF6A27C8CDFB00AED244 /* SpaceRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF6927C8CDFB00AED244 /* SpaceRTests.swift */; };
 		D6E9CF6D27C8CF2A00AED244 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF6C27C8CF2A00AED244 /* Rocket.swift */; };
 		D6E9CF6F27C8CF9D00AED244 /* Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF6E27C8CF9D00AED244 /* Launches.swift */; };
 		D6E9CF7227C8D01500AED244 /* RocketsControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF7127C8D01500AED244 /* RocketsControlller.swift */; };
@@ -18,9 +17,27 @@
 		D6E9CF7727C8D0E500AED244 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF7627C8D0E500AED244 /* SceneDelegate.swift */; };
 		D6E9CF7A27C8D16900AED244 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF7927C8D16900AED244 /* Constants.swift */; };
 		D6E9CF7C27C8D18100AED244 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF7B27C8D18000AED244 /* EndPoints.swift */; };
-		D6E9CF8227C8D2D100AED244 /* SpaceRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF8127C8D2D100AED244 /* SpaceRUITests.swift */; };
-		D6E9CF8427C8D30B00AED244 /* SpaceRUiLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF8327C8D30B00AED244 /* SpaceRUiLaunchTests.swift */; };
+		D6E9CFD427C936B100AED244 /* spaceRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CFD327C936B100AED244 /* spaceRUITests.swift */; };
+		D6E9CFD627C936B100AED244 /* spaceRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CFD527C936B100AED244 /* spaceRUITestsLaunchTests.swift */; };
+		D6E9CFF027C936FE00AED244 /* spaceRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CFEF27C936FE00AED244 /* spaceRTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6E9CFD727C936B100AED244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E9CF4A27C8CD6300AED244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E9CF5127C8CD6300AED244;
+			remoteInfo = spaceR;
+		};
+		D6E9CFF127C936FE00AED244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E9CF4A27C8CD6300AED244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E9CF5127C8CD6300AED244;
+			remoteInfo = spaceR;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D6E9CF5227C8CD6300AED244 /* spaceR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,7 +45,6 @@
 		D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6E9CF6127C8CD6600AED244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6E9CF6327C8CD6600AED244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6E9CF6927C8CDFB00AED244 /* SpaceRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceRTests.swift; sourceTree = "<group>"; };
 		D6E9CF6C27C8CF2A00AED244 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		D6E9CF6E27C8CF9D00AED244 /* Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Launches.swift; path = spaceR/Models/Launches.swift; sourceTree = SOURCE_ROOT; };
 		D6E9CF7127C8D01500AED244 /* RocketsControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsControlller.swift; sourceTree = "<group>"; };
@@ -36,12 +52,29 @@
 		D6E9CF7627C8D0E500AED244 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D6E9CF7927C8D16900AED244 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D6E9CF7B27C8D18000AED244 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		D6E9CF8127C8D2D100AED244 /* SpaceRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceRUITests.swift; sourceTree = "<group>"; };
-		D6E9CF8327C8D30B00AED244 /* SpaceRUiLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceRUiLaunchTests.swift; sourceTree = "<group>"; };
+		D6E9CFD127C936B100AED244 /* spaceRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spaceRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E9CFD327C936B100AED244 /* spaceRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceRUITests.swift; sourceTree = "<group>"; };
+		D6E9CFD527C936B100AED244 /* spaceRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceRUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6E9CFED27C936FE00AED244 /* spaceRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spaceRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E9CFEF27C936FE00AED244 /* spaceRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceRTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D6E9CF4F27C8CD6300AED244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E9CFCE27C936B100AED244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E9CFEA27C936FE00AED244 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,9 +87,9 @@
 		D6E9CF4927C8CD6300AED244 = {
 			isa = PBXGroup;
 			children = (
-				D6E9CF8527C8D32200AED244 /* SpacerUITests */,
-				D6E9CF6B27C8CE0200AED244 /* SpacerTests */,
 				D6E9CF5427C8CD6300AED244 /* spaceR */,
+				D6E9CFD227C936B100AED244 /* spaceRUITests */,
+				D6E9CFEE27C936FE00AED244 /* spaceRTests */,
 				D6E9CF5327C8CD6300AED244 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				D6E9CF5227C8CD6300AED244 /* spaceR.app */,
+				D6E9CFD127C936B100AED244 /* spaceRUITests.xctest */,
+				D6E9CFED27C936FE00AED244 /* spaceRTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,14 +116,6 @@
 				D6E9CF6327C8CD6600AED244 /* Info.plist */,
 			);
 			path = spaceR;
-			sourceTree = "<group>";
-		};
-		D6E9CF6B27C8CE0200AED244 /* SpacerTests */ = {
-			isa = PBXGroup;
-			children = (
-				D6E9CF6927C8CDFB00AED244 /* SpaceRTests.swift */,
-			);
-			path = SpacerTests;
 			sourceTree = "<group>";
 		};
 		D6E9CF7027C8CFD300AED244 /* Models */ = {
@@ -151,13 +178,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D6E9CF8527C8D32200AED244 /* SpacerUITests */ = {
+		D6E9CFD227C936B100AED244 /* spaceRUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D6E9CF8127C8D2D100AED244 /* SpaceRUITests.swift */,
-				D6E9CF8327C8D30B00AED244 /* SpaceRUiLaunchTests.swift */,
+				D6E9CFD327C936B100AED244 /* spaceRUITests.swift */,
+				D6E9CFD527C936B100AED244 /* spaceRUITestsLaunchTests.swift */,
 			);
-			path = SpacerUITests;
+			path = spaceRUITests;
+			sourceTree = "<group>";
+		};
+		D6E9CFEE27C936FE00AED244 /* spaceRTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6E9CFEF27C936FE00AED244 /* spaceRTests.swift */,
+			);
+			path = spaceRTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +215,42 @@
 			productReference = D6E9CF5227C8CD6300AED244 /* spaceR.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D6E9CFD027C936B100AED244 /* spaceRUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6E9CFD927C936B100AED244 /* Build configuration list for PBXNativeTarget "spaceRUITests" */;
+			buildPhases = (
+				D6E9CFCD27C936B100AED244 /* Sources */,
+				D6E9CFCE27C936B100AED244 /* Frameworks */,
+				D6E9CFCF27C936B100AED244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6E9CFD827C936B100AED244 /* PBXTargetDependency */,
+			);
+			name = spaceRUITests;
+			productName = spaceRUITests;
+			productReference = D6E9CFD127C936B100AED244 /* spaceRUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D6E9CFEC27C936FE00AED244 /* spaceRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6E9CFF327C936FE00AED244 /* Build configuration list for PBXNativeTarget "spaceRTests" */;
+			buildPhases = (
+				D6E9CFE927C936FE00AED244 /* Sources */,
+				D6E9CFEA27C936FE00AED244 /* Frameworks */,
+				D6E9CFEB27C936FE00AED244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6E9CFF227C936FE00AED244 /* PBXTargetDependency */,
+			);
+			name = spaceRTests;
+			productName = spaceRTests;
+			productReference = D6E9CFED27C936FE00AED244 /* spaceRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,6 +263,14 @@
 				TargetAttributes = {
 					D6E9CF5127C8CD6300AED244 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					D6E9CFD027C936B100AED244 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D6E9CF5127C8CD6300AED244;
+					};
+					D6E9CFEC27C936FE00AED244 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D6E9CF5127C8CD6300AED244;
 					};
 				};
 			};
@@ -209,6 +288,8 @@
 			projectRoot = "";
 			targets = (
 				D6E9CF5127C8CD6300AED244 /* spaceR */,
+				D6E9CFD027C936B100AED244 /* spaceRUITests */,
+				D6E9CFEC27C936FE00AED244 /* spaceRTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +305,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6E9CFCF27C936B100AED244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E9CFEB27C936FE00AED244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -231,11 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6E9CF8227C8D2D100AED244 /* SpaceRUITests.swift in Sources */,
-				D6E9CF6A27C8CDFB00AED244 /* SpaceRTests.swift in Sources */,
 				D6E9CF6F27C8CF9D00AED244 /* Launches.swift in Sources */,
 				D6E9CF7227C8D01500AED244 /* RocketsControlller.swift in Sources */,
-				D6E9CF8427C8D30B00AED244 /* SpaceRUiLaunchTests.swift in Sources */,
 				D6E9CF7527C8D0BC00AED244 /* AppDelegate.swift in Sources */,
 				D6E9CF7A27C8D16900AED244 /* Constants.swift in Sources */,
 				D6E9CF6D27C8CF2A00AED244 /* Rocket.swift in Sources */,
@@ -244,7 +336,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6E9CFCD27C936B100AED244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E9CFD627C936B100AED244 /* spaceRUITestsLaunchTests.swift in Sources */,
+				D6E9CFD427C936B100AED244 /* spaceRUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E9CFE927C936FE00AED244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E9CFF027C936FE00AED244 /* spaceRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6E9CFD827C936B100AED244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E9CF5127C8CD6300AED244 /* spaceR */;
+			targetProxy = D6E9CFD727C936B100AED244 /* PBXContainerItemProxy */;
+		};
+		D6E9CFF227C936FE00AED244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E9CF5127C8CD6300AED244 /* spaceR */;
+			targetProxy = D6E9CFF127C936FE00AED244 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D6E9CF5B27C8CD6300AED244 /* Main.storyboard */ = {
@@ -436,6 +558,72 @@
 			};
 			name = Release;
 		};
+		D6E9CFDA27C936B100AED244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvt.KieranWoodrow.spaceRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = spaceR;
+			};
+			name = Debug;
+		};
+		D6E9CFDB27C936B100AED244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvt.KieranWoodrow.spaceRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = spaceR;
+			};
+			name = Release;
+		};
+		D6E9CFF427C936FE00AED244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvt.KieranWoodrow.spaceRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spaceR.app/spaceR";
+			};
+			name = Debug;
+		};
+		D6E9CFF527C936FE00AED244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvt.KieranWoodrow.spaceRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spaceR.app/spaceR";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -453,6 +641,24 @@
 			buildConfigurations = (
 				D6E9CF6727C8CD6600AED244 /* Debug */,
 				D6E9CF6827C8CD6600AED244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6E9CFD927C936B100AED244 /* Build configuration list for PBXNativeTarget "spaceRUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E9CFDA27C936B100AED244 /* Debug */,
+				D6E9CFDB27C936B100AED244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6E9CFF327C936FE00AED244 /* Build configuration list for PBXNativeTarget "spaceRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E9CFF427C936FE00AED244 /* Debug */,
+				D6E9CFF527C936FE00AED244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
