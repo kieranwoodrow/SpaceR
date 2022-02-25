@@ -48,7 +48,10 @@ extension URLSession{
                     let result = try JSONDecoder().decode(model, from: safeData)
                     
                     //Tells the code we are complete and return what we deserialization
-                    completion(.success(result))
+                    DispatchQueue.main.async {
+                        completion(.success(result))
+                    }
+                    
                 }catch{
                     completion(.failure(error))
                 }

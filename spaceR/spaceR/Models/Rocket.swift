@@ -16,19 +16,9 @@ struct Rocket: Codable{
     let landing_legs: LandingLegs?
     let payload_weights: [PayloadWeight?]
     let flickr_images: [String?]
-    let name: String?
-    let type: String?
+    let name, type, first_flight, country, company, wikipedia, description, id: String?
     let active: Bool?
-    let stages: Int?
-    let boosters: Int?
-    let cost_per_launch: Int?
-    let success_rate_pct: Int?
-    let first_flight: String?
-    let country: String?
-    let company: String?
-    let wikipedia: String?
-    let description: String?
-    let id: String?
+    let stages, boosters, cost_per_launch, success_rate_pct: Int?
 }
 
 struct Height: Codable{
@@ -102,4 +92,12 @@ struct PayloadWeight: Codable{
     let id, name: String?
     let kg, lb: Double?
 }
+
+
+//Questions
+//1) //What do you put if you don't know what number type api is returning? The spaceX api scheme just says number (assuming typescript type)
+        //i.e, will it break if you declare double but receives an into or will it typecast it
+
+//2)//Do you put Array module here and use everywhere. eg var rockets = [Rocket] instead of in controller
+
 
