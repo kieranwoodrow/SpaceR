@@ -511,6 +511,9 @@
                                     </attributedString>
                                     <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uFu-oX-0Zk" kind="show" id="lPY-b5-wzC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-B7-Ckg">
                                 <rect key="frame" x="136" y="575" width="142" height="22"/>
