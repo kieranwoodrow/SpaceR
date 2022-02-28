@@ -4,16 +4,22 @@
 //
 //  Created by Kieran Woodrow on 2022/02/25.
 //
+
+
 import Foundation
 import UIKit
 
 class RocketsController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var emailIdLabel: UILabel!
+    var emailText = ""
     private var rockets: [Rocket] = []
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.emailIdLabel.text = self.emailText
         getAllRockets()
         setupTableView()
     }
@@ -25,7 +31,7 @@ class RocketsController: UIViewController {
     
     func getAllRockets() {
         URLSession.shared.getAllRocketsEndpointURL(url: Constants.getAllRocketsUrl, model: [Rocket].self){ [weak self]result in
-            switch result{
+            switch result {
             case .success(let userArray):
                 self?.rockets = userArray
                 self?.tableView.reloadData()
@@ -42,9 +48,9 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.textLabel?.text = rockets[indexPath.item].name
-            return cell
+        return cell
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rockets.count
     }
