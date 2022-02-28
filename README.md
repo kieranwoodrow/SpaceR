@@ -1,7 +1,7 @@
 # SpaceR
 #### by Kieran Woodrow
 
-![Alt text](https://drive.google.com/drive/folders/1uGtQSm2qkG7DDMYRw9fWMvGjVKq6ufAS)
+![Alt text](https://github.com/kieranwoodrow/SpaceR/blob/feautre-Rockets/spaceR/spaceR/Resources/Assets.xcassets/Logo.imageset/Logo.png?raw=true)
 
 ## Table Of Contents
 - [Project Overview](#books-project-overview)
