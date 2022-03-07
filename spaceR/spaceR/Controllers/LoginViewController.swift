@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             self.displayAlert(title: "Email and password",
-                              message: "Email or passsword is incorrect)",
+                              message: "Email or passsword is incorrect",
                               buttonTitle: "Ok")
             return
         }
