@@ -33,10 +33,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if let email = self.textFieldEmailID.text, !email.isEmpty,  email == "Admin",
            let password = self.textFieldPassword.text, !password.isEmpty, password == ("TestPass123") {
+            
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            if let viewController = storyBoard.instantiateViewController(withIdentifier: "RocketsController")
-                as? RocketsController {
-                viewController.emailText = "Welcome \(email)"
+            if let viewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
+                as? UITabBarController {
+                // viewController.emailText = "Welcome \(email)"
                 self.navigationController?.pushViewController(viewController, animated: false )
             }
         }
