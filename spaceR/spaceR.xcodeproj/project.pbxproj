@@ -12,6 +12,7 @@
 		D6183E0D27CC70EC0073F278 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183E0C27CC70EC0073F278 /* ForgotPasswordViewController.swift */; };
 		D6183E0F27CCC1A30073F278 /* UIExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183E0E27CCC1A30073F278 /* UIExtentions.swift */; };
 		D6183E1827CCD9EC0073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6183E1727CCD9EC0073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg */; };
+		D6183E1C27CF8F540073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6183E1B27CF8F540073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg */; };
 		D6E9CF5D27C8CD6300AED244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5B27C8CD6300AED244 /* Main.storyboard */; };
 		D6E9CF5F27C8CD6600AED244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */; };
 		D6E9CF6227C8CD6600AED244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF6027C8CD6600AED244 /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 		D6183E0C27CC70EC0073F278 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		D6183E0E27CCC1A30073F278 /* UIExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtentions.swift; sourceTree = "<group>"; };
 		D6183E1727CCD9EC0073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg"; path = "../../../../../Downloads/ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg"; sourceTree = "<group>"; };
+		D6183E1B27CF8F540073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg"; path = "../../../../../Downloads/ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg"; sourceTree = "<group>"; };
 		D6E9CF5227C8CD6300AED244 /* spaceR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E9CF5C27C8CD6300AED244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				D6183E1727CCD9EC0073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg */,
 				D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */,
+				D6183E1B27CF8F540073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			files = (
 				D6E9CF6227C8CD6600AED244 /* LaunchScreen.storyboard in Resources */,
 				D6E9CF5F27C8CD6600AED244 /* Assets.xcassets in Resources */,
+				D6183E1C27CF8F540073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg in Resources */,
 				D6E9CF5D27C8CD6300AED244 /* Main.storyboard in Resources */,
 				D6183E1827CCD9EC0073F278 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg in Resources */,
 			);
