@@ -22,14 +22,6 @@ class CustomCollectionViewCell: UICollectionViewCell{
         rocketTitle.text = title
     }
     
-//    func style(){
-//        rocketImage.layer.cornerRadius = 13.0
-//        rocketImage.clipsToBounds = true
-//        rocketImage.layer.shadowColor = UIColor.darkGray.cgColor
-//        rocketImage.layer.shadowOffset = CGSize(width: 20.0, height: 20.0)
-//        rocketImage.layer.shadowRadius = 13.0
-//        rocketImage.layer.shadowOpacity = 0.9
-//    }
-//
+
     
 }

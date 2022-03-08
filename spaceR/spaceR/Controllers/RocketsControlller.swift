@@ -54,14 +54,14 @@ class RocketsController: UIViewController {
 extension RocketsController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print("------------------------------------")
-//        print("Entering collectionView (1) function")
-//        print(self.rockets)
-//        print(rockets.getRocketCount())
-//        print("Leaving collectionView (1) function")
-//        print("------------------------------------")
-//        return rockets.getRocketCount()
-        return 2
+        print("------------------------------------")
+        print("Entering collectionView (1) function")
+        print(self.rockets)
+        print(rockets.getRocketCount())
+        print("Leaving collectionView (1) function")
+        print("------------------------------------")
+        return rockets.getRocketCount()
+//        return 2
         
     }
     
@@ -92,7 +92,6 @@ extension RocketsController: UICollectionViewDelegate, UICollectionViewDataSourc
         print(index)
         rocketCell.setRocketTitle(title: title)
         rocketCell.setRocketImage(image: image)
-        //rocketCell.style()
         print("Leaving setRocketCellfunction")
         print("------------------------------------")
         
