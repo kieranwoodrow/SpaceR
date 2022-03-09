@@ -15,88 +15,66 @@ class RocketsController: UIViewController {
     @IBOutlet weak var rocketCollectionView: UICollectionView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // self.emailIdLabel.text = self.emailText
         getAllRockets()
-       // setCollectionView()
     }
     
     private func setCollectionView() {
+        
         rocketCollectionView.delegate = self
         rocketCollectionView.dataSource = self
     }
     
     func getAllRockets() {
-        print("------------------------------------")
-        print("Entering getALLRockets function")
+        
         URLSession.shared.getAllRocketsEndpointURL(url: Constants.getAllRocketsUrl, model: [Rocket].self){ [weak self]result in
             switch result {
             case .success(let rocketsArray):
                 self?.rockets.setAllRockets(rockets: rocketsArray)
-                print("Rocket Count")
-                print(self?.rockets.getRocketCount())
-                print("------------------------------------")
-                
-                print(self?.rockets.getAllRockets() ?? "no rockets populated")
                 DispatchQueue.main.async {
-                                   self?.setCollectionView()
-                               }
-                //self?.collectionView.
+                    self?.setCollectionView()
+                }
             case .failure(let error):
-                print("Leaving success of getALLRockets function")
-                print("------------------------------------")
                 print(error)
             }
         }
     }
 }
 
-extension RocketsController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension RocketsController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("------------------------------------")
-        print("Entering collectionView (1) function")
-        print(self.rockets)
-        print(rockets.getRocketCount())
-        print("Leaving collectionView (1) function")
-        print("------------------------------------")
         return rockets.getRocketCount()
-//        return 2
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("------------------------------------")
-        print("Entering collectionView (2) function")
         
         guard let cell = rocketCollectionView.dequeueReusableCell(withReuseIdentifier: "RocketCell", for: indexPath) as? CustomCollectionViewCell
-        else{
+        else {
             return UICollectionViewCell()
         }
-        setRocketCell(image: rockets.getRocketImage(index: indexPath.item), title: rockets.getRocketTitle(index: indexPath.item), rocketCell: cell,
-                   index: indexPath.item)
-        print("Leaving collectionView (2) function")
-        print("------------------------------------")
+        setRocketCell(image: rockets.getRocketImage(index: indexPath.item), title: rockets.getRocketTitle(index: indexPath.item), rocketCell: cell, index: indexPath.item)
         
-            return cell
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width/1.2, height: collectionView.frame.size.height/2)
     }
     
     func setRocketCell(image: String, title: String, rocketCell: CustomCollectionViewCell, index: Int){
         
-        //do null testing here
-        print("------------------------------------")
-        print("Entering setRocketCell function")
-        print(image)
-        print(title)
-        print(rocketCell)
-        print(index)
+        //rocketCell.rocketTitle.text = title
         rocketCell.setRocketTitle(title: title)
-        rocketCell.setRocketImage(image: image)
-        print("Leaving setRocketCellfunction")
-        print("------------------------------------")
-        
+        if let image = URL(string: image){
+            rocketCell.rocketImage.convertImageFromStringToURL(imageString: image)
+            rocketCell.test()
+        }
     }
-    
 }
+
 
 
