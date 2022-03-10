@@ -60,17 +60,8 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 800
-        }
-//
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        // 1
-//        let headerView = UIView()
-//        // 2
-//        headerView.backgroundColor = view.backgroundColor
-//        // 3
-//        return headerView
-//    }
+        return 800
+    }
     
     func setRocketCell(rocketImage: String, rocketTitle: String, rocketCell: UIRocketTableViewCell, atIndex: Int) {
         rocketCell.setRocketTableViewTitle(rocketTitle: rocketTitle)

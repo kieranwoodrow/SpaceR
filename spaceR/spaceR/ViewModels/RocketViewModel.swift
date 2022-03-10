@@ -10,7 +10,7 @@ import Foundation
 class RocketViewModel{
     
     private var allRockets: [Rocket]
-
+    
     init() {
         self.allRockets = []
     }
@@ -40,6 +40,4 @@ class RocketViewModel{
     func getRocketTitle(index: Int) -> String {
         return allRockets[index].name ?? ""
     }
-    
-    
 }
