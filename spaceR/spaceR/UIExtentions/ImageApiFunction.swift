@@ -10,12 +10,12 @@ import UIKit
 
 extension UIImageView {
     
-    func convertImageFromStringToURL(imageString: URL) {
+    func getImagesFromURL(imageURL: URL) {
         DispatchQueue.global().async { [weak self] in
-            if let safeImage = try? Data(contentsOf: imageString) {
-                if let SafeUiImage = UIImage(data: safeImage) {
+            if let safeImage = try? Data(contentsOf: imageURL) {
+                if let safeUIImage = UIImage(data: safeImage) {
                     DispatchQueue.main.async {
-                        self?.image = SafeUiImage
+                        self?.image = safeUIImage
                     }
                 }
             }
