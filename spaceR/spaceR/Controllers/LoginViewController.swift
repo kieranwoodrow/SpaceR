@@ -31,21 +31,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginSuccess(_ sender: Any) {
         
-        if let email = self.textFieldEmailID.text, !email.isEmpty,  email == "Admin",
-           let password = self.textFieldPassword.text, !password.isEmpty, password == ("TestPass123") {
-            
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            if let viewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
-                as? UITabBarController {
-                // viewController.emailText = "Welcome \(email)"
-                self.navigationController?.pushViewController(viewController, animated: false )
-            }
-        }
-        else {
-            self.displayAlert(title: "Email and password",
-                              message: "Email or passsword is incorrect",
-                              buttonTitle: "Ok")
-            return
-        }
-    }
+//        if let email = self.textFieldEmailID.text, !email.isEmpty,  email == "Admin",
+//           let password = self.textFieldPassword.text, !password.isEmpty, password == ("TestPass123") {
+//
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            if let viewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
+//                as? UITabBarController {
+//                // viewController.emailText = "Welcome \(email)"
+//                self.navigationController?.pushViewController(viewController, animated: false )
+//            }
+//        }
+//        else {
+//            self.displayAlert(title: "Email and password",
+//                              message: "Email or passsword is incorrect",
+//                              buttonTitle: "Ok")
+//            return
+//        }
+//    }
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
+            as? UITabBarController {
+            // viewController.emailText = "Welcome \(email)"
+            self.navigationController?.pushViewController(viewController, animated: false )
+        
+        }}
 }

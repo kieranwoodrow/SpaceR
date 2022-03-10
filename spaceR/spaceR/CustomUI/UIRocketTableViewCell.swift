@@ -6,45 +6,38 @@
 //
 
 import Foundation
-
 import UIKit
 
 class UIRocketTableViewCell: UITableViewCell {
     
-    
-   
-    @IBOutlet weak var rocketTableViewImage: UIImageView!
     @IBOutlet weak var rocketTableViewTitle: UILabel!
-    //    func setRocketImage(image: String) {
-//        guard let image = UIImage(named: image)else {
-//            image = ""
-//        }
-//        rocketImage.image = image
-//        rocketImage.sizeToFit()
-//
-//    }
-//
-    func setRocketTableViewTitle(rocketTitle: String) {
-        rocketTableViewTitle.text = rocketTitle
-        print("Title has been set to " + self.rocketTableViewTitle.text!   )
+    @IBOutlet weak var rocketTableViewImage: UIImageView!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
     }
     
-    func setRocketTableViewImage(rocketImageAsString: String) {
-        
-        if let safeRocketImageURl = URL(string: rocketImageAsString){
-            rocketTableViewImage.getImagesFromURL(imageURL: safeRocketImageURl )
-            
-        }
-        
+    func setRocketTableViewTitle(rocketTitle: String) {
+        rocketTableViewTitle.text = rocketTitle
+    }
+    
+    func setRocketTableViewImage(rocketImage: String) {
+        if let safeRocketImageURl = URL(string: rocketImage){
+                   rocketTableViewImage.getImagesFromURL(imageURL: safeRocketImageURl )
+               }
     }
     
     func test(){
-//        rocketImage.layer.cornerRadius = 13.0
-//        rocketImage.clipsToBounds = true
-//        rocketImage.layer.shadowColor = UIColor.darkGray.cgColor
-//        rocketImage.layer.shadowOffset = CGSize(width: 370.0, height: 370.0)
-//        rocketImage.layer.shadowRadius = 13.0
-//        rocketImage.layer.shadowOpacity = 0.9
+        rocketTableViewImage.layer.cornerRadius = 30.0
+      
+//        rocketTableViewImage.layer.shadowColor = UIColor.darkGray.cgColor
+//        rocketTableViewImage.layer.shadowOffset = CGSize(width: 370.0, height: 370.0)
+//        rocketTableViewImage.layer.shadowRadius = 13.0
+//        rocketTableViewImage.layer.shadowOpacity = 0.9
+          
+        
     }
     
 

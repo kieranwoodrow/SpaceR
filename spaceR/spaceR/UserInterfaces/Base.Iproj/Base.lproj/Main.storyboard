@@ -533,34 +533,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DVz-UF-tBC">
-                                <rect key="frame" x="9" y="88" width="385" height="604"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-NX-Np6">
+                                <rect key="frame" x="31" y="88" width="337" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RocketTableViewCell" rowHeight="258" id="euU-Cn-Slb" customClass="UIRocketTableViewCell" customModule="spaceR" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="385" height="258"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="4" indentationWidth="10" reuseIdentifier="RocketTableViewCell" rowHeight="237" id="QYi-e0-AFt" customClass="UIRocketTableViewCell" customModule="spaceR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="337" height="237"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="euU-Cn-Slb" id="mh7-o8-8p8" customClass="UIRocketTableViewCell" customModule="spaceR" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="385" height="258"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QYi-e0-AFt" id="rfD-fo-ErW">
+                                            <rect key="frame" x="0.0" y="0.0" width="337" height="237"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZp-fi-ECz">
-                                                    <rect key="frame" x="72" y="27" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rut-cy-chd">
-                                                    <rect key="frame" x="146" y="183" width="93" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-qu-gzH">
+                                                    <rect key="frame" x="48.5" y="19" width="240" height="199.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tct-9Q-dLw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJH-lR-shA">
+                                                            <rect key="frame" x="87" y="168" width="66.5" height="31.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                            <color key="textColor" name="SpaceR-orange"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" name="SpaceR-black"/>
+                                            <constraints>
+                                                <constraint firstItem="T6a-qu-gzH" firstAttribute="centerY" secondItem="rfD-fo-ErW" secondAttribute="centerY" id="Bnt-W8-W1D"/>
+                                                <constraint firstItem="T6a-qu-gzH" firstAttribute="centerX" secondItem="rfD-fo-ErW" secondAttribute="centerX" id="MjZ-Pg-hVK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="rocketTableViewImage" destination="RZp-fi-ECz" id="fRq-M6-GNd"/>
-                                            <outlet property="rocketTableViewTitle" destination="rut-cy-chd" id="StJ-pX-lFE"/>
+                                            <outlet property="rocketTableViewImage" destination="tct-9Q-dLw" id="sEi-i1-AzG"/>
+                                            <outlet property="rocketTableViewTitle" destination="nJH-lR-shA" id="cPu-A2-7CS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -571,7 +579,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GKE-fI-Z6S"/>
                     <connections>
-                        <outlet property="rocketTableView" destination="DVz-UF-tBC" id="rwE-gX-Jky"/>
+                        <outlet property="rocketTableView" destination="UZv-NX-Np6" id="vJL-Ho-9Cr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

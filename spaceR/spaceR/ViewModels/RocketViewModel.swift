@@ -27,11 +27,17 @@ class RocketViewModel{
         return allRockets.count
     }
     
-    func getRocketImage(index: Int) -> String{
-        return allRockets[index].flickr_images[0] ?? ""
+    func getRocketImage(index: Int) -> String {
+        if index == 3 {
+            return allRockets[index].flickr_images[1] ?? ""
+        }
+        
+        else {
+            return allRockets[index].flickr_images[0] ?? ""
+        }
     }
     
-    func getRocketTitle(index: Int) -> String{
+    func getRocketTitle(index: Int) -> String {
         return allRockets[index].name ?? ""
     }
     
