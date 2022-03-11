@@ -24,13 +24,12 @@ class UIRocketTableViewCell: UITableViewCell {
     }
     
     func setRocketTableViewImage(rocketImage: String) {
-        if let safeRocketImageURl = URL(string: rocketImage){
+        if let safeRocketImageURl = URL(string: rocketImage) {
             rocketTableViewImage.getImagesFromURL(imageURL: safeRocketImageURl )
         }
     }
     
-    func test(){
+    func test() {
         rocketTableViewImage.layer.cornerRadius = 30.0
-        
     }
 }

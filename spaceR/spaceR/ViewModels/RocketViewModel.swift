@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RocketViewModel{
+class RocketViewModel {
     
     private var allRockets: [Rocket]
     
@@ -29,11 +29,9 @@ class RocketViewModel{
     
     func getRocketImage(index: Int) -> String {
         if index == 3 {
-            return allRockets[index].flickr_images[1] ?? ""
-        }
-        
-        else {
-            return allRockets[index].flickr_images[0] ?? ""
+            return allRockets[index].images[1] ?? ""
+    } else {
+            return allRockets[index].images[0] ?? ""
         }
     }
     
