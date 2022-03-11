@@ -66,5 +66,6 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     func setRocketCell(rocketImage: String, rocketTitle: String, rocketCell: UIRocketTableViewCell, atIndex: Int) {
         rocketCell.setRocketTableViewTitle(rocketTitle: rocketTitle)
         rocketCell.setRocketTableViewImage(rocketImage: rocketImage)
+        rocketCell.rocketImageStyling()
     }
 }

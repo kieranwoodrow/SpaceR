@@ -1,6 +1,6 @@
 //
 //  UITableViewImageStyling.swift
-//  spaceR
+//  SpaceR
 //
 //  Created by Kieran Woodrow on 2022/03/11.
 //
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-extension UIImage {
+extension UIImageView {
     
-    func imageStyle(imageView: UIImageView) {
-        imageView.layer.cornerRadius = 30.0
+    func imageStyle() {
+        self.layer.cornerRadius = 30
     }
 }

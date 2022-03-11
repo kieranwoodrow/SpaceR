@@ -29,7 +29,7 @@ class UIRocketTableViewCell: UITableViewCell {
         }
     }
     
-    func test() {
-        rocketTableViewImage.layer.cornerRadius = 30.0
+    func rocketImageStyling() {
+        rocketTableViewImage.imageStyle()
     }
 }
