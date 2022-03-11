@@ -33,7 +33,10 @@ class RocketsController: UIViewController {
                     self?.rocketTableView.reloadData()
                 }
             case .failure(let error):
-                print(error)
+                self?.displayErrorAlertForLogin(title: "Api did not find any rockets",
+                                                errorMessage: error.localizedDescription,
+                                                buttonTitle: "Ok")
+                return
             }
         }
     }
@@ -63,6 +66,5 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     func setRocketCell(rocketImage: String, rocketTitle: String, rocketCell: UIRocketTableViewCell, atIndex: Int) {
         rocketCell.setRocketTableViewTitle(rocketTitle: rocketTitle)
         rocketCell.setRocketTableViewImage(rocketImage: rocketImage)
-        rocketCell.test()
     }
 }

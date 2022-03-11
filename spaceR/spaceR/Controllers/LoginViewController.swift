@@ -35,8 +35,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.navigationController?.pushViewController(viewController, animated: false )
             }
         } else {
-            self.displayAlert(title: "Email and password",
-                              message: "Email or passsword is incorrect",
+            self.displayErrorAlertForLogin(title: "Email and password",
+                              errorMessage: "Email or passsword is incorrect",
                               buttonTitle: "Ok")
             return
         }
