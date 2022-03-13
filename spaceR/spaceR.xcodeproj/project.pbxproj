@@ -19,6 +19,7 @@
 		D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */; };
 		D6DA798727DE114F00AFF396 /* spaceRModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798527DE114F00AFF396 /* spaceRModels.xcdatamodeld */; };
 		D6DA798A27DE137A00AFF396 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798927DE137A00AFF396 /* SignupViewModel.swift */; };
+		D6DA799027DE714E00AFF396 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798F27DE714E00AFF396 /* LoginViewModel.swift */; };
 		D6E9CF5D27C8CD6300AED244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5B27C8CD6300AED244 /* Main.storyboard */; };
 		D6E9CF5F27C8CD6600AED244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */; };
 		D6E9CF6227C8CD6600AED244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF6027C8CD6600AED244 /* LaunchScreen.storyboard */; };
@@ -64,6 +65,7 @@
 		D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorAlerts.swift; sourceTree = "<group>"; };
 		D6DA798627DE114F00AFF396 /* spaceRModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spaceRModels.xcdatamodel; sourceTree = "<group>"; };
 		D6DA798927DE137A00AFF396 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		D6DA798F27DE714E00AFF396 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D6E9CF5227C8CD6300AED244 /* spaceR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E9CF5C27C8CD6300AED244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				D6183E2627D761FE0073F278 /* RocketViewModel.swift */,
 				D6DA798927DE137A00AFF396 /* SignupViewModel.swift */,
+				D6DA798F27DE714E00AFF396 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				D6183E0B27CC6FAD0073F278 /* SignupViewController.swift in Sources */,
 				D6E9CF6F27C8CF9D00AED244 /* Launches.swift in Sources */,
 				D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */,
+				D6DA799027DE714E00AFF396 /* LoginViewModel.swift in Sources */,
 				D6E9CF7227C8D01500AED244 /* RocketsControlller.swift in Sources */,
 				D6E9CF7527C8D0BC00AED244 /* AppDelegate.swift in Sources */,
 				D6183E4D27D875B40073F278 /* ImageApiFunction.swift in Sources */,

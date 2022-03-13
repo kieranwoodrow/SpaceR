@@ -20,12 +20,12 @@ class SignupViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    @IBAction private func signupClicked(_ sender: Any) {
-        if validateUserInputFromSignupFields() {
-            successFulSignup()
-        } else {
-            unsuccessfullSignup()
-        }
+    @IBAction private func signupButtonClicked(_ sender: Any) {
+        if self.validateUserInputFromSignupFields() {
+                 self.successfulSignup()
+             } else {
+                 self.unsuccessfullSignup()
+             }
     }
     
     private func validateUserInputFromSignupFields() -> Bool {
@@ -37,6 +37,7 @@ class SignupViewController: UIViewController {
             setSignupModelAttributes(firstName: safeFirstName, lastName: safeLastName, email: safeEmail, password: safePassword)
             return true
         } else {
+            print("here 1")
             self.displayErrorAlertForUnsuccessfulSignup(title: "Signup Unsuccessful", errorMessage: "One or more of the fields are blank", buttonTitle: "Ok")
             return false
         }
@@ -49,7 +50,7 @@ class SignupViewController: UIViewController {
         signUpViewModel.setUserPassword(passwordFromForm: password)
     }
     
-    private func successFulSignup() {
+    private func successfulSignup() {
         signUpViewModel.saveUserToDatabase()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
@@ -58,7 +59,7 @@ class SignupViewController: UIViewController {
         }
     }
     
-    func unsuccessfullSignup() {
+    private func unsuccessfullSignup() {
         self.displayErrorAlertForUnsuccessfulSignup(title: "Signup Unsuccessful", errorMessage: "Did not add to database", buttonTitle: "Ok")
     }
 }
