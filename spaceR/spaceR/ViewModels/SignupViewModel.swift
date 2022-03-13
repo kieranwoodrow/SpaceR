@@ -14,7 +14,7 @@ class SignupViewModel {
     private var lastName = ""
     private var email = ""
     private var password = ""
-    let coreDataPersistantObject = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let coreDataPersistantObject = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func setUserFirstName(firstNameFromForm: String) {
         firstName = firstNameFromForm
