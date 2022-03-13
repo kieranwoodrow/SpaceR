@@ -19,6 +19,7 @@ struct Rocket: Codable {
     let name, type, firstFlight, country, company, wikipedia, description, id: String?
     let active: Bool?
     let stages, boosters, costPerLaunch, successRatePercentage: Int?
+    
     private enum CodingKeys: String, CodingKey {
         case height
         case diameter
@@ -63,6 +64,7 @@ struct FirstStage: Codable {
     let reusabe: Bool?
     let engines: Int?
     let fuelAmountInTons, burnTimeInSeconds: Double?
+    
     private enum CodingKeys: String, CodingKey {
         case thrustSeaLevel = "thrust_sea_level"
         case thrustVacuum = "thrust_vacuum"
@@ -87,6 +89,7 @@ struct SecondStage: Codable {
     let reusabe: Bool?
     let engines: Int?
     let fuelAmountInTons, burnTimeInSeconds: Double?
+    
     private enum CodingKeys: String, CodingKey {
         case thrust
         case payloads
@@ -103,6 +106,7 @@ struct Thrust: Codable {
 
 struct Payloads: Codable {
     let compositeFairing: CompositeFairing?
+    
     private enum CodingKeys: String, CodingKey {
         case compositeFairing = "composite_fairing"
     }
@@ -112,6 +116,7 @@ struct CompositeFairing: Codable {
     let optionOne: String?
     let height: Height?
     let diameter: Diameter?
+    
     private enum CodingKeys: String, CodingKey {
         case optionOne = "option_1"
         case height
@@ -126,6 +131,7 @@ struct Engines: Codable {
     let number, engineLossMax: Int?
     let type, version, layout, propellantOne, propellantTwo: String?
     let thrustToWeight: Double?
+    
     private enum CodingKeys: String, CodingKey {
         case ispEngine = "isp"
         case thrustSeaLevel = "thrust_sea_level"
@@ -143,6 +149,7 @@ struct Engines: Codable {
 
 struct ISPEngine: Codable {
     let seaLevel, vacuum: Double?
+    
     private enum CodingKeys: String, CodingKey {
         case seaLevel = "sea_level"
         case vacuum

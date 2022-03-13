@@ -18,6 +18,7 @@ struct Launch: Codable {
     let flightNumber: Int?
     let cores: [Cores?]
     let id, rocket, launchpad: UUID?
+    
     private enum CodingKeys: String, CodingKey {
             case fairlings
             case links
@@ -43,6 +44,7 @@ struct Launch: Codable {
 struct Fairlings: Codable {
     let reused, recoveryAttempt, recovered: Bool?
     let ships: [UUID?]
+    
     private enum CodingKeys: String, CodingKey {
             case reused
             case recoveryAttempt = "recovery_attempt"
@@ -56,6 +58,7 @@ struct Links: Codable {
     let reddit: Reddit?
     let flickr: Flickr?
     let presskit, webcast, youtubeId, article, wikipedia: String?
+    
     private enum CodingKeys: String, CodingKey {
             case patch
             case reddit
@@ -95,6 +98,7 @@ struct Cores: Codable {
     let flight: Int?
     let gridfins, legs, reused, landingAttempt, landingSuccess: Bool?
     let landingType: String?
+    
     private enum CodingKeys: String, CodingKey {
             case core
             case landpad

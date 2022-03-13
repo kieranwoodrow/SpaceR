@@ -10,7 +10,7 @@ import UIKit
 
 class RocketsController: UIViewController {
     
-    @IBOutlet weak var rocketTableView: UITableView!
+    @IBOutlet private weak var rocketTableView: UITableView!
     private lazy var rocketViewModel = RocketViewModel()
     
     override func viewDidLoad() {
@@ -19,12 +19,12 @@ class RocketsController: UIViewController {
         setTableView()
     }
     
-    func setTableView() {
+    private func setTableView() {
         rocketTableView.delegate = self
         rocketTableView.dataSource = self
     }
     
-    func getAllRocketsFromAPI() {
+    private func getAllRocketsFromAPI() {
         URLSession.shared.getAllRocketsEndpointURL(url: Constants.getAllRocketsUrl, model: [Rocket].self) {[weak self]result in
             switch result {
             case .success(let rocketsArray):
@@ -54,7 +54,7 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),                                            rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
+        self.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),                                            rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
                       rocketCell: cell, atIndex: indexPath.item)
         return cell
     }
@@ -63,7 +63,7 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         return 400
     }
     
-    func setRocketCell(rocketImage: String, rocketTitle: String, rocketCell: UIRocketTableViewCell, atIndex: Int) {
+    private func setRocketCell(rocketImage: String, rocketTitle: String, rocketCell: UIRocketTableViewCell, atIndex: Int) {
         rocketCell.setRocketTableViewTitle(rocketTitle: rocketTitle)
         rocketCell.setRocketTableViewImage(rocketImage: rocketImage)
         rocketCell.rocketImageStyling()
