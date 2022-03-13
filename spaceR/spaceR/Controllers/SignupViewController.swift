@@ -13,4 +13,6 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
     }
+    
+    
 }
