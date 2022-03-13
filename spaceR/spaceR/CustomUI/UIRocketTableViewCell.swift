@@ -10,12 +10,11 @@ import UIKit
 
 class UIRocketTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var rocketTableViewTitle: UILabel!
-    @IBOutlet weak var rocketTableViewImage: UIImageView!
+    @IBOutlet private weak var rocketTableViewTitle: UILabel!
+    @IBOutlet private weak var rocketTableViewImage: UIImageView!
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
     }
     
@@ -25,7 +24,7 @@ class UIRocketTableViewCell: UITableViewCell {
     
     func setRocketTableViewImage(rocketImage: String) {
         if let safeRocketImageURl = URL(string: rocketImage) {
-            rocketTableViewImage.getImagesFromURL(imageURL: safeRocketImageURl )
+            rocketTableViewImage.getImagesFromURL(imageURL: safeRocketImageURl)
         }
     }
     

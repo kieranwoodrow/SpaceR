@@ -9,10 +9,10 @@ import UIKit
 
 class SignupViewController: UIViewController {
     
-    @IBOutlet weak var userFirstName: UITextField!
-    @IBOutlet weak var userLastName: UITextField!
-    @IBOutlet weak var userEmail: UITextField!
-    @IBOutlet weak var userPassword: UITextField!
+    @IBOutlet private weak var userFirstName: UITextField!
+    @IBOutlet private weak var userLastName: UITextField!
+    @IBOutlet private weak var userEmail: UITextField!
+    @IBOutlet private weak var userPassword: UITextField!
     private lazy var signUpViewModel = SignupViewModel()
     
     override func viewDidLoad() {
