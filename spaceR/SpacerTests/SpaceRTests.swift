@@ -1,6 +1,6 @@
 //
-//  spaceRTests.swift
-//  spaceRTests
+//  SpaceRTests.swift
+//  SpaceRTests
 //
 //  Created by Kieran Woodrow on 2022/02/25.
 //

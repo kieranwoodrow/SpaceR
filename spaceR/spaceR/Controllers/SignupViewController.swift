@@ -14,23 +14,21 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     private lazy var signUpViewModel = SignupViewModel()
-  
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    @IBAction func signupClicked(_ sender: Any) {
+    @IBAction private func signupClicked(_ sender: Any) {
         if validateUserInputFromSignupFields() {
             successFulSignup()
         } else {
             unsuccessfullSignup()
         }
     }
-        
-    func validateUserInputFromSignupFields() -> Bool {
+    
+    private func validateUserInputFromSignupFields() -> Bool {
         if let safeFirstName = self.userFirstName.text, !safeFirstName.isEmpty,
            let safeLastName = self.userLastName.text, !safeLastName.isEmpty,
            let safeEmail = self.userEmail.text, !safeEmail.isEmpty,
@@ -44,23 +42,23 @@ class SignupViewController: UIViewController {
         }
     }
     
-    func setSignupModelAttributes(firstName: String, lastName: String, email: String, password: String) {
+    private func setSignupModelAttributes(firstName: String, lastName: String, email: String, password: String) {
         signUpViewModel.setUserFirstName(firstNameFromForm: firstName)
         signUpViewModel.setUserLastName(lastNameFromForm: lastName)
         signUpViewModel.setUserEmail(emailFromForm: email)
         signUpViewModel.setUserPassword(passwordFromForm: password)
     }
-        
-    func successFulSignup() {
+    
+    private func successFulSignup() {
         signUpViewModel.saveUserToDatabase()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
-            as? UITabBarController {
+            as? LoginViewController {
             self.navigationController?.pushViewController(viewController, animated: false )
         }
     }
-        
+    
     func unsuccessfullSignup() {
-        self.displayErrorAlertForUnsuccessfulSignup(title: "Signup Unsuccessful", errorMessage: "Did not ave to database", buttonTitle: "Ok")
+        self.displayErrorAlertForUnsuccessfulSignup(title: "Signup Unsuccessful", errorMessage: "Did not add to database", buttonTitle: "Ok")
     }
 }

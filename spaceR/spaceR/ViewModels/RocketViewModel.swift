@@ -30,7 +30,7 @@ class RocketViewModel {
     func getRocketImage(index: Int) -> String {
         if index == 3 {
             return allRockets[index].images[1] ?? ""
-    } else {
+        } else {
             return allRockets[index].images[0] ?? ""
         }
     }

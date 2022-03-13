@@ -34,8 +34,8 @@ class RocketsController: UIViewController {
                 }
             case .failure(let error):
                 self?.displayErrorAlertForUnsuccessfulLogin(title: "Api did not find any rockets",
-                                                errorMessage: error.localizedDescription,
-                                                buttonTitle: "Ok")
+                                                            errorMessage: error.localizedDescription,
+                                                            buttonTitle: "Ok")
                 return
             }
         }

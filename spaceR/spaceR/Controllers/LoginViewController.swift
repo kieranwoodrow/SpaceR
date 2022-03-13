@@ -36,8 +36,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         } else {
             self.displayErrorAlertForUnsuccessfulLogin(title: "Email and password",
-                              errorMessage: "Email or passsword is incorrect",
-                              buttonTitle: "Ok")
+                                                       errorMessage: "Email or passsword is incorrect",
+                                                       buttonTitle: "Ok")
             return
         }
     }

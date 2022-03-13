@@ -10,38 +10,60 @@ import UIKit
 
 class SignupViewModel {
     
-    private var firstName = ""
-    private var lastName = ""
-    private var email = ""
-    private var password = ""
+    private var userFirstName = ""
+    private var userLastName = ""
+    private var userEmail = ""
+    private var userPassword = ""
+    // swiftlint:disable force_cast
     private let coreDataPersistantObject = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    // swiftlint:enable force_cast
     
     func setUserFirstName(firstNameFromForm: String) {
-        firstName = firstNameFromForm
+        userFirstName = firstNameFromForm
     }
     
     func setUserLastName(lastNameFromForm: String) {
-        lastName = lastNameFromForm
+        userLastName = lastNameFromForm
     }
     
     func setUserEmail(emailFromForm: String) {
-        email = emailFromForm
+        userEmail = emailFromForm
     }
     
     func setUserPassword(passwordFromForm: String) {
-        password = passwordFromForm
+        userPassword = passwordFromForm
     }
     
     func saveUserToDatabase() {
         let newUser = User(context: self.coreDataPersistantObject)
-        newUser.firstName = firstName
-        newUser.lastName = lastName
-        newUser.email = email
-        newUser.password = password
+        newUser.firstName = userFirstName
+        newUser.lastName = userLastName
+        newUser.email = userEmail
+        newUser.password = userPassword
+        
         do {
             try self.coreDataPersistantObject.save()
         } catch {
-            //something here
+            print("Did not save")
         }
+        
+        //Will delete all this later. Use it for testing entries and deleting entris in db
+        //--------------------------------------------------------------------------------------------
+        //        print("Saved user into db")
+        //        print(newUser)
+        //
+        //        used to see collection of db
+        //        do {
+        //            var xTest: [User]
+        //              try xTest = coreDataPersistantObject.fetch(User.fetchRequest())
+        //            used to delete db
+        //            for item in xTest {
+        //               coreDataPersistantObject.delete(item)
+        //              }
+        //            } catch {
+        //
+        //       }
+        //--------------------------------------------------------------------------------------------
     }
+    
 }
