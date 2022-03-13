@@ -33,7 +33,7 @@ class RocketsController: UIViewController {
                     self?.rocketTableView.reloadData()
                 }
             case .failure(let error):
-                self?.displayErrorAlertForLogin(title: "Api did not find any rockets",
+                self?.displayErrorAlertForUnsuccessfulLogin(title: "Api did not find any rockets",
                                                 errorMessage: error.localizedDescription,
                                                 buttonTitle: "Ok")
                 return
