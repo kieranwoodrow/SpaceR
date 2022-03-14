@@ -11,6 +11,13 @@ import UIKit
 
 extension UIViewController {
     
+    enum customErrorAlerts: Error {
+        case unsuccessfulLogin
+        
+        case unsuccessfullSignup
+        
+    }
+    
     func displayErrorAlertForUnsuccessfulLogin(title: String, errorMessage: String, buttonTitle: String) {
         let alert = UIAlertController(title: title, message: errorMessage, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: buttonTitle, style: UIAlertAction.Style.default, handler: nil))
