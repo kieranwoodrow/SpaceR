@@ -54,18 +54,12 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),                                            rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
-                      rocketCell: cell, atIndex: indexPath.item)
+        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
-    }
-    
-    func setRocketCell(rocketImage: String, rocketTitle: String, rocketCell: UIRocketTableViewCell, atIndex: Int) {
-        rocketCell.setRocketTableViewTitle(rocketTitle: rocketTitle)
-        rocketCell.setRocketTableViewImage(rocketImage: rocketImage)
-        rocketCell.rocketImageStyling()
     }
 }

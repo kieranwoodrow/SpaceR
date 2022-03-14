@@ -31,4 +31,10 @@ class UIRocketTableViewCell: UITableViewCell {
     func rocketImageStyling() {
         rocketTableViewImage.imageStyle()
     }
+    
+    func setRocketCell(rocketImage: String, rocketTitle: String, atIndex: Int) {
+        setRocketTableViewTitle(rocketTitle: rocketTitle)
+        setRocketTableViewImage(rocketImage: rocketImage)
+        rocketImageStyling()
+    }
 }
