@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-EL-cM7">
+                            <stackView opaque="NO" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-EL-cM7">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ivan-diaz-YOy-ek-aBR0-unsplash (3).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0GP-de-Zox">
@@ -25,10 +25,6 @@
                                     </imageView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="26P-PV-yIz"/>
-                                <constraints>
-                                    <constraint firstItem="0GP-de-Zox" firstAttribute="centerX" secondItem="e6b-EL-cM7" secondAttribute="centerX" id="Ai2-bq-9uL"/>
-                                    <constraint firstItem="0GP-de-Zox" firstAttribute="centerY" secondItem="e6b-EL-cM7" secondAttribute="centerY" id="DYz-QY-HHn"/>
-                                </constraints>
                                 <variation key="heightClass=regular-widthClass=compact" alignment="fill"/>
                             </stackView>
                         </subviews>

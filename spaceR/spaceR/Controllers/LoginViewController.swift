@@ -1,6 +1,6 @@
 //
 //  LoginViewController.swift
-//  spaceR
+//  SpaceR
 //
 //  Created by Kieran Woodrow on 2022/02/28.
 //
@@ -34,8 +34,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             } else {
                 unsuccessfulLogin()
             }
+        } else {
+            self.displayErrorAlertForUnsuccessfulSignup(title: "Login Unsuccessful", errorMessage: "One or more of the fields are blank", buttonTitle: "Ok")
         }
-        self.displayErrorAlertForUnsuccessfulSignup(title: "Login Unsuccessful", errorMessage: "One or more of the fields are blank", buttonTitle: "Ok")
     }
 
     func successfulLogin() {

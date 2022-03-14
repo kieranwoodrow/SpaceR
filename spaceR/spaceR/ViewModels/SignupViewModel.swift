@@ -1,6 +1,6 @@
 //
 //  SignupViewModel.swift
-//  spaceR
+//  SpaceR
 //
 //  Created by Kieran Woodrow on 2022/03/13.
 //
@@ -44,26 +44,8 @@ class SignupViewModel {
         do {
             try self.coreDataPersistantObject.save()
         } catch {
-            print("Did not save")
+            
         }
-        
-        //Will delete all this later. Use it for testing entries and deleting entris in db
-        //--------------------------------------------------------------------------------------------
-        //        print("Saved user into db")
-        //        print(newUser)
-        //
-        //        used to see collection of db
-        //        do {
-        //            var xTest: [User]
-        //              try xTest = coreDataPersistantObject.fetch(User.fetchRequest())
-        //            used to delete db
-        //            for item in xTest {
-        //               coreDataPersistantObject.delete(item)
-        //              }
-        //            } catch {
-        //
-        //       }
-        //--------------------------------------------------------------------------------------------
     }
     
 }
