@@ -24,11 +24,12 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlA-XB-7LZ" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="411"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-2r-Wmg">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logosvg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-2r-Wmg">
                                                 <rect key="frame" x="73" y="164" width="268" height="83"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
                                         </subviews>
+                                        <color key="backgroundColor" name="SpaceR-white"/>
                                         <constraints>
                                             <constraint firstItem="SaV-2r-Wmg" firstAttribute="centerY" secondItem="JlA-XB-7LZ" secondAttribute="centerY" id="9wr-dk-PJm"/>
                                             <constraint firstItem="SaV-2r-Wmg" firstAttribute="centerX" secondItem="JlA-XB-7LZ" secondAttribute="centerX" id="Eu9-CL-aaJ"/>
@@ -54,11 +55,12 @@
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJY-48-S73">
                                                                         <rect key="frame" x="0.0" y="48" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="4H5-gi-K1w"/>
                                                                             <constraint firstAttribute="height" constant="34" id="9B2-Wh-eei"/>
                                                                         </constraints>
-                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <color key="textColor" name="SpaceR-white"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -75,10 +77,11 @@
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-wh-C2i">
                                                                         <rect key="frame" x="0.0" y="48" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="ydR-wJ-f8l"/>
                                                                         </constraints>
-                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <color key="textColor" name="SpaceR-white"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
@@ -96,6 +99,7 @@
                                                                     <backgroundConfiguration key="background"/>
                                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                     <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                                    <color key="baseBackgroundColor" name="SpaceR-white"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <segue destination="dnc-wB-42B" kind="show" id="JGm-fz-Yx9"/>
@@ -116,6 +120,7 @@
                                                                                 <color key="backgroundColor" name="SpaceR-orange"/>
                                                                             </backgroundConfiguration>
                                                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                                            <color key="baseForegroundColor" name="SpaceR-white"/>
                                                                             <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
@@ -131,21 +136,16 @@
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Eq-xf-Ul6">
                                                                                         <rect key="frame" x="0.0" y="15" width="184" height="21.5"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                                        <nil key="textColor"/>
+                                                                                        <color key="textColor" name="SpaceR-black"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unY-gW-hps">
                                                                                         <rect key="frame" x="184" y="8.5" width="86.5" height="35"/>
                                                                                         <state key="normal" title="Button"/>
-                                                                                        <buttonConfiguration key="configuration" style="filled">
-                                                                                            <attributedString key="attributedTitle">
-                                                                                                <fragment content="Sign-up">
-                                                                                                    <attributes>
-                                                                                                        <font key="NSFont" size="18" name="Helvetica"/>
-                                                                                                    </attributes>
-                                                                                                </fragment>
-                                                                                            </attributedString>
+                                                                                        <buttonConfiguration key="configuration" style="filled" title="Sign-up">
+                                                                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                                             <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                                                            <color key="baseBackgroundColor" name="SpaceR-white"/>
                                                                                         </buttonConfiguration>
                                                                                         <connections>
                                                                                             <segue destination="shc-TH-us8" kind="show" id="Nvt-PQ-hoC"/>
@@ -163,18 +163,19 @@
                                                 <variation key="heightClass=compact-widthClass=regular" distribution="fillProportionally" spacingType="standard"/>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="SpaceR-white"/>
                                         <constraints>
                                             <constraint firstItem="Bxh-tq-sqq" firstAttribute="centerY" secondItem="Vld-SB-1F3" secondAttribute="centerY" id="ccf-JZ-RZ4"/>
                                             <constraint firstItem="Bxh-tq-sqq" firstAttribute="centerX" secondItem="Vld-SB-1F3" secondAttribute="centerX" id="evL-IS-E4a"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="SpaceR-white"/>
                                 <variation key="heightClass=compact-widthClass=regular" alignment="fill" axis="horizontal" distribution="fillProportionally"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ic1-du-goo"/>
-                        <color key="backgroundColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
                             <constraint firstItem="Ic1-du-goo" firstAttribute="bottom" secondItem="N62-JK-1MK" secondAttribute="bottom" constant="-14" id="K6a-Wf-FSw"/>
                             <constraint firstItem="N62-JK-1MK" firstAttribute="trailing" secondItem="Ic1-du-goo" secondAttribute="trailing" id="RsT-SF-rSM"/>
@@ -209,11 +210,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-wW-HkD">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="280"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-66-8M1">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logosvg" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-66-8M1">
                                                         <rect key="frame" x="58" y="98.5" width="268" height="83"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="SpaceR-white"/>
                                                 <constraints>
                                                     <constraint firstItem="Sm5-66-8M1" firstAttribute="centerX" secondItem="aeK-wW-HkD" secondAttribute="centerX" id="L5B-AF-FT3"/>
                                                     <constraint firstItem="Sm5-66-8M1" firstAttribute="centerY" secondItem="aeK-wW-HkD" secondAttribute="centerY" id="Nwl-UM-jVn"/>
@@ -232,15 +233,16 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="328" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSh-qG-wJd">
                                                                         <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="34" id="JIy-7T-zR5"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="R5T-zI-5hY"/>
                                                                         </constraints>
-                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <color key="textColor" name="SpaceR-white"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -253,15 +255,16 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="328" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <nil key="highlightedColor"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-1s-Y2b">
                                                                         <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="gbN-1W-glz"/>
                                                                             <constraint firstAttribute="height" constant="34" id="raH-Lm-Hrf"/>
                                                                         </constraints>
-                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <color key="textColor" name="SpaceR-white"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -274,15 +277,16 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="64.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <nil key="highlightedColor"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfB-mD-y6y">
                                                                         <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="fFl-uH-5ZY"/>
                                                                             <constraint firstAttribute="height" constant="34" id="lXH-ed-TOP"/>
                                                                         </constraints>
-                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <color key="textColor" name="SpaceR-white"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -295,14 +299,16 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="113.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <nil key="highlightedColor"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdr-xs-R2Y">
                                                                         <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="34" id="Zjm-Nk-i4z"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="igF-E9-RQj"/>
                                                                         </constraints>
+                                                                        <color key="textColor" name="SpaceR-white"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
@@ -312,6 +318,7 @@
                                                         <variation key="heightClass=compact-widthClass=regular" distribution="fillProportionally" spacing="10"/>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" name="SpaceR-white"/>
                                                 <variation key="heightClass=compact-widthClass=regular" distribution="equalCentering"/>
                                             </stackView>
                                         </subviews>
@@ -332,6 +339,7 @@
                                                         <color key="backgroundColor" name="SpaceR-orange"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                    <color key="baseForegroundColor" name="SpaceR-white"/>
                                                     <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -341,25 +349,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HM-bT-YUB">
                                                 <rect key="frame" x="72.5" y="55" width="123" height="55"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-bR-XdA">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-bR-XdA">
                                                         <rect key="frame" x="0.0" y="0.0" width="60.5" height="55"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Back to">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.074509803921568626" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="18" name="Helvetica"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                        <color key="textColor" name="SpaceR-black"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrZ-fQ-DO4">
                                                         <rect key="frame" x="60.5" y="0.0" width="62.5" height="55"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="login">
+                                                        <buttonConfiguration key="configuration" style="filled" title="login">
                                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                             <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                            <color key="baseBackgroundColor" name="SpaceR-white"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <segue destination="uFu-oX-0Zk" kind="show" id="cyw-Wk-OUv"/>
@@ -374,7 +376,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bpm-Re-zUs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
                             <constraint firstItem="f2x-86-Xfg" firstAttribute="leading" secondItem="Bpm-Re-zUs" secondAttribute="leading" id="7bs-ID-6DS"/>
                             <constraint firstItem="f2x-86-Xfg" firstAttribute="bottom" secondItem="Bpm-Re-zUs" secondAttribute="bottom" id="Lms-iF-us1"/>
@@ -408,11 +410,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-JR-wyO" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-3C-Z70">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logosvg" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-3C-Z70">
                                                 <rect key="frame" x="73" y="169" width="268" height="83"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="SpaceR-white"/>
                                         <constraints>
                                             <constraint firstItem="EQH-3C-Z70" firstAttribute="centerY" secondItem="j7M-JR-wyO" secondAttribute="centerY" id="bHH-5b-jna"/>
                                             <constraint firstItem="EQH-3C-Z70" firstAttribute="centerX" secondItem="j7M-JR-wyO" secondAttribute="centerX" id="wNc-rv-nuR"/>
@@ -430,24 +432,20 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-k7-nli">
                                                                 <rect key="frame" x="0.0" y="0.0" width="328" height="82"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDw-r1-JIP">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDw-r1-JIP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="64.5" height="28"/>
-                                                                        <attributedString key="attributedText">
-                                                                            <fragment content="Email">
-                                                                                <attributes>
-                                                                                    <font key="NSFont" size="24" name="Helvetica-Bold"/>
-                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                </attributes>
-                                                                            </fragment>
-                                                                        </attributedString>
+                                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                                        <color key="textColor" name="SpaceR-black"/>
                                                                         <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ip-zl-abV">
                                                                         <rect key="frame" x="0.0" y="48" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="34" id="ZeU-XF-ILD"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="oDU-SJ-fI8"/>
                                                                         </constraints>
+                                                                        <color key="textColor" name="SpaceR-white"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -470,6 +468,7 @@
                                                                         <color key="backgroundColor" name="SpaceR-orange"/>
                                                                     </backgroundConfiguration>
                                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                                    <color key="baseForegroundColor" name="SpaceR-white"/>
                                                                     <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
@@ -479,23 +478,19 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RoB-xL-5q4">
                                                                 <rect key="frame" x="72.5" y="75" width="123" height="35"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc1-gZ-o7b">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc1-gZ-o7b">
                                                                         <rect key="frame" x="0.0" y="7" width="60.5" height="21"/>
-                                                                        <attributedString key="attributedText">
-                                                                            <fragment content="Back to">
-                                                                                <attributes>
-                                                                                    <font key="NSFont" size="18" name="Helvetica"/>
-                                                                                </attributes>
-                                                                            </fragment>
-                                                                        </attributedString>
+                                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                                        <color key="textColor" name="SpaceR-black"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-B7-Ckg">
                                                                         <rect key="frame" x="60.5" y="0.0" width="62.5" height="35"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="login">
+                                                                        <buttonConfiguration key="configuration" style="filled" title="login">
                                                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                             <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                                            <color key="baseBackgroundColor" name="SpaceR-white"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
                                                                             <segue destination="uFu-oX-0Zk" kind="show" id="zXh-43-cqG"/>
@@ -508,21 +503,22 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="SpaceR-white"/>
                                         <constraints>
                                             <constraint firstItem="o5s-Su-qdr" firstAttribute="centerX" secondItem="nlD-MG-BoY" secondAttribute="centerX" id="GaS-Px-WXg"/>
                                             <constraint firstItem="o5s-Su-qdr" firstAttribute="centerY" secondItem="nlD-MG-BoY" secondAttribute="centerY" id="rra-o7-fn6"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="SpaceR-white"/>
                                 <variation key="heightClass=compact-widthClass=regular" alignment="fill" axis="horizontal" distribution="fillProportionally"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pr4-kT-KDi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
                             <constraint firstItem="Pr4-kT-KDi" firstAttribute="trailing" secondItem="Nim-lL-eLr" secondAttribute="trailing" id="A1a-Mw-dbE"/>
-                            <constraint firstItem="Nim-lL-eLr" firstAttribute="top" secondItem="Pr4-kT-KDi" secondAttribute="top" id="O6p-AR-7HK"/>
+                            <constraint firstItem="Nim-lL-eLr" firstAttribute="top" secondItem="YDh-Z0-VTg" secondAttribute="top" id="O6p-AR-7HK"/>
                             <constraint firstAttribute="bottom" secondItem="Nim-lL-eLr" secondAttribute="bottom" id="TSC-2r-Odn"/>
                             <constraint firstItem="Nim-lL-eLr" firstAttribute="leading" secondItem="YDh-Z0-VTg" secondAttribute="leading" id="hhP-EU-fXj"/>
                         </constraints>
@@ -672,8 +668,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KJ-yD-EAu" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="kJt-ot-0d8">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logosvg" translatesAutoresizingMaskIntoConstraints="NO" id="kJt-ot-0d8">
                                                 <rect key="frame" x="73" y="152" width="268" height="83"/>
+                                                <color key="backgroundColor" name="SpaceR-white"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="SpaceR-white"/>
@@ -701,6 +698,7 @@
                                                                 <color key="backgroundColor" name="SpaceR-orange"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                            <color key="baseForegroundColor" name="SpaceR-white"/>
                                                             <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -709,10 +707,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11w-dp-5o8">
                                                         <rect key="frame" x="0.0" y="85" width="268" height="55"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="Bmj-Gi-PEg"/>
                                                         </constraints>
+                                                        <color key="tintColor" name="SpaceR-ButtonFill"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="SIGN UP" cornerStyle="dynamic" titleAlignment="center">
                                                             <backgroundConfiguration key="background" cornerRadius="56">
@@ -743,7 +741,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="65w-Uo-tak"/>
-                        <color key="backgroundColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
                             <constraint firstItem="VpB-9m-YzJ" firstAttribute="top" secondItem="65w-Uo-tak" secondAttribute="top" id="LzE-BO-D1Z"/>
                             <constraint firstItem="65w-Uo-tak" firstAttribute="bottom" secondItem="VpB-9m-YzJ" secondAttribute="bottom" id="ONP-TN-w7M"/>
@@ -775,13 +773,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JGm-fz-Yx9"/>
         <segue reference="Nvt-PQ-hoC"/>
         <segue reference="mcL-er-hGx"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <resources>
-        <image name="Logo" width="268" height="83"/>
+        <image name="logosvg" width="268" height="83"/>
+        <namedColor name="SpaceR-ButtonFill">
+            <color red="0.98400002717971802" green="1" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="SpaceR-black">
             <color red="0.075000002980232239" green="0.067000001668930054" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
