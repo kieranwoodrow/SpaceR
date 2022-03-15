@@ -32,10 +32,10 @@ class RocketsController: UIViewController {
                 DispatchQueue.main.async {
                     self?.rocketTableView.reloadData()
                 }
-            case .failure(let error):
-                self?.displayErrorAlertForUnsuccessfulLogin(title: "Api did not find any rockets",
-                                                            errorMessage: error.localizedDescription,
-                                                            buttonTitle: "Ok")
+            case .failure:
+                self?.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulRocketApiCall.errorDescription!,
+                                        errorMessage: UIErrorAlerts.CustomError.unsuccessfulRocketApiCall.failureReason!,
+                                        buttonTitle: "Ok")
                 return
             }
         }

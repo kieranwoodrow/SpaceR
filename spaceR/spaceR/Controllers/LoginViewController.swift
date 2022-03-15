@@ -35,10 +35,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 unsuccessfulLogin()
             }
         } else {
-            self.displayErrorAlertForUnsuccessfulSignup(title: "Login Unsuccessful", errorMessage: "One or more of the fields are blank", buttonTitle: "Ok")
+            self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulLoginDueToMissingFields.errorDescription!, errorMessage: UIErrorAlerts.CustomError.unsuccessfulLoginDueToMissingFields.failureReason!, buttonTitle: "Ok")
         }
     }
-
+    
     func successfulLogin() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
@@ -48,8 +48,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func unsuccessfulLogin() {
-        self.displayErrorAlertForUnsuccessfulLogin(title: "Email and password",
-                                                   errorMessage: "Email or passsword is incorrect or you do not have an account with us.",
-                                                   buttonTitle: "Ok")
+        self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulLoginDueToInvalidAccountDetails.errorDescription!,
+                               errorMessage: UIErrorAlerts.CustomError.unsuccessfulLoginDueToInvalidAccountDetails.failureReason!,
+                               buttonTitle: "Ok")
     }
 }

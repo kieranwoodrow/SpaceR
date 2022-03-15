@@ -775,6 +775,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="JGm-fz-Yx9"/>
         <segue reference="Nvt-PQ-hoC"/>
         <segue reference="mcL-er-hGx"/>
     </inferredMetricsTieBreakers>

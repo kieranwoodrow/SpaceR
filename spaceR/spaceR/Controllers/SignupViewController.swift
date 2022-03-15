@@ -37,10 +37,10 @@ class SignupViewController: UIViewController {
             setSignupModelAttributes(firstName: safeFirstName, lastName: safeLastName, email: safeEmail, password: safePassword)
             return true
         } else {
-            self.displayErrorAlertForUnsuccessfulSignup(title: "Signup Unsuccessful", errorMessage: "One or more of the fields are blank", buttonTitle: "Ok")
+            self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulSignupDueToMisingFields.errorDescription!, errorMessage: UIErrorAlerts.CustomError.unsuccessfulSignupDueToMisingFields.failureReason!, buttonTitle: "Ok")
+        }
             return false
         }
-    }
     
     private func setSignupModelAttributes(firstName: String, lastName: String, email: String, password: String) {
         signUpViewModel.setUserFirstName(firstNameFromForm: firstName)
@@ -59,6 +59,6 @@ class SignupViewController: UIViewController {
     }
     
     private func unsuccessfullSignup() {
-        self.displayErrorAlertForUnsuccessfulSignup(title: "Signup Unsuccessful", errorMessage: "Did not add to database", buttonTitle: "Ok")
+        self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulDatabaseSignup.errorDescription!, errorMessage: UIErrorAlerts.CustomError.unsuccessfulDatabaseSignup.failureReason!, buttonTitle: "Ok")
     }
 }
