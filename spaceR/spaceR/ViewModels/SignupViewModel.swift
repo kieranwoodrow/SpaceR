@@ -34,7 +34,7 @@ class SignupViewModel {
     }
 
     func saveUserToDatabase() {
-        let newUser = User(context: self.coreDataPersistantObject ?? <#default value#>   )
+        let newUser = User(context: self.coreDataPersistantObject!  )
         newUser.firstName = userFirstName
         newUser.lastName = userLastName
         newUser.email = userEmail
