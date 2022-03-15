@@ -11,11 +11,30 @@ import UIKit
 
 extension UIViewController {
     
-    enum customErrorAlerts: Error {
-        case unsuccessfulLogin
+    enum CustomError: Error, LocalizedError {
+        case invalidLoginDueToMissingFieds
+        case invalidLoginDueToInvalidAccountDetails
+        case invalidSignupDueToMisingFields
         
-        case unsuccessfullSignup
-        
+        public var errorDescription: String? {
+            switch self {
+            case .invalidLoginDueToMissingFieds:
+                return NSLocalizedString(
+                    "The provided password is not valid.",
+                    comment: "Invalid Password"
+                )
+            case .invalidLoginDueToInvalidAccountDetails:
+                return NSLocalizedString(
+                    "The specified item could not be found.",
+                    comment: "Resource Not Found"
+                )
+            case .invalidSignupDueToMisingFields:
+                return NSLocalizedString(
+                    "An unexpected error occurred.",
+                    comment: "Unexpected Error"
+                )
+            }
+        }
     }
     
     func displayErrorAlertForUnsuccessfulLogin(title: String, errorMessage: String, buttonTitle: String) {

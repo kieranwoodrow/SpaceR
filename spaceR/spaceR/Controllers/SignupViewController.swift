@@ -37,7 +37,6 @@ class SignupViewController: UIViewController {
             setSignupModelAttributes(firstName: safeFirstName, lastName: safeLastName, email: safeEmail, password: safePassword)
             return true
         } else {
-            print("here 1")
             self.displayErrorAlertForUnsuccessfulSignup(title: "Signup Unsuccessful", errorMessage: "One or more of the fields are blank", buttonTitle: "Ok")
             return false
         }
