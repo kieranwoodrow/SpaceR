@@ -304,7 +304,7 @@
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="igF-E9-RQj"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -402,7 +402,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nim-lL-eLr">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Nim-lL-eLr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-JR-wyO" userLabel="TopView">
@@ -462,24 +462,18 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="55"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="55" id="Yqg-mG-gWX"/>
-                                                                    <constraint firstAttribute="width" constant="268" id="cWU-LG-GNI"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="cWU-LG-GNI"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" cornerStyle="dynamic">
-                                                                    <backgroundConfiguration key="background" cornerRadius="55"/>
-                                                                    <attributedString key="attributedTitle">
-                                                                        <fragment content="SUBMIT">
-                                                                            <attributes>
-                                                                                <color key="NSColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
+                                                                <buttonConfiguration key="configuration" style="filled" title="SUBMIT" cornerStyle="dynamic">
+                                                                    <backgroundConfiguration key="background" cornerRadius="55">
+                                                                        <color key="backgroundColor" name="SpaceR-orange"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                     <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <segue destination="uFu-oX-0Zk" kind="show" id="lPY-b5-wzC"/>
+                                                                    <segue destination="uFu-oX-0Zk" kind="show" id="mcL-er-hGx"/>
                                                                 </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RoB-xL-5q4">
@@ -504,7 +498,7 @@
                                                                             <color key="baseForegroundColor" name="SpaceR-orange"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
-                                                                            <segue destination="uFu-oX-0Zk" kind="show" id="NeN-vE-x4C"/>
+                                                                            <segue destination="uFu-oX-0Zk" kind="show" id="zXh-43-cqG"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -521,7 +515,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" alignment="fill" axis="horizontal" distribution="fillProportionally"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pr4-kT-KDi"/>
@@ -782,7 +776,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Nvt-PQ-hoC"/>
-        <segue reference="lPY-b5-wzC"/>
+        <segue reference="mcL-er-hGx"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <resources>
