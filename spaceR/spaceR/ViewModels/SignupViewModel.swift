@@ -14,12 +14,11 @@ class SignupViewModel {
     private var userLastName = ""
     private var userEmail = ""
     private var userPassword = ""
-    // swiftlint:disable force_cast
-    private let coreDataPersistantObject = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    // swiftlint:enable force_cast
     
-    func setUserFirstName(firstNameFromForm: String) {
-        userFirstName = firstNameFromForm
+    private let coreDataPersistantObject = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    
+    func setUserFirstName(name: String) {
+        userFirstName = name
     }
     
     func setUserLastName(lastNameFromForm: String) {
@@ -33,16 +32,16 @@ class SignupViewModel {
     func setUserPassword(passwordFromForm: String) {
         userPassword = passwordFromForm
     }
-    
+
     func saveUserToDatabase() {
-        let newUser = User(context: self.coreDataPersistantObject)
+        let newUser = User(context: self.coreDataPersistantObject ?? <#default value#>   )
         newUser.firstName = userFirstName
         newUser.lastName = userLastName
         newUser.email = userEmail
         newUser.password = userPassword
         
         do {
-            try self.coreDataPersistantObject.save()
+            try self.coreDataPersistantObject?.save()
         } catch {
             
         }

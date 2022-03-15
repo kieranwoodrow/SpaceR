@@ -11,30 +11,21 @@ import UIKit
 class LoginViewModel {
     
     private var user: [User] = []
-    // swiftlint:disable force_cast
-    private let coreDataPersistantObject = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    // swiftlint:enable force_cast
+    private let coreDataPersistantObject = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     func validateUserCredentials(userEmail: String, userPassword: String) -> Bool {
-        if validateUserEmailInLoginProcess(userEmail: userEmail) &&
-            validateUserPasswordInLoginProcess(userPassword: userPassword) {
-            return true
-        } else {
-            return false
-        }
+        return validateUserEmail(userEmail: userEmail) && validateUserPassword(userPassword: userPassword)
     }
     
-    func validateUserEmailInLoginProcess(userEmail: String) -> Bool {
+    func validateUserEmail(userEmail: String) -> Bool {
         var validEmail: Bool = false
         do {
-            try user = coreDataPersistantObject.fetch(User.fetchRequest())
+            try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
             if !user.isEmpty {
                 for users in user {
-                    // swiftlint:disable force_cast
-                    if users.value(forKey: "email") as! String == userEmail {
+                    if users.value(forKey: "email") as? String == userEmail {
                         validEmail = true
                     }
-                    // swiftlint:enable force_cast
                 }
             }
         } catch {
@@ -43,17 +34,16 @@ class LoginViewModel {
         return validEmail
     }
     
-    func validateUserPasswordInLoginProcess(userPassword: String) -> Bool {
+    func validateUserPassword(userPassword: String) -> Bool {
         var validPassword: Bool = false
         do {
-            try user = coreDataPersistantObject.fetch(User.fetchRequest())
+            try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
             if !user.isEmpty {
                 for users in user {
-                    // swiftlint:disable force_cast
-                    if users.value(forKey: "password") as! String == userPassword {
+                 
+                    if users.value(forKey: "password") as? String == userPassword {
                         validPassword = true
                     }
-                    // swiftlint:enable force_cast
                 }
             }
         } catch {

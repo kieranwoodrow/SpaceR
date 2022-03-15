@@ -9,8 +9,6 @@ import Foundation
 
 import UIKit
 
-class UIErrorAlerts {
-    
     enum CustomError: Error, LocalizedError {
         case unsuccessfulLoginDueToMissingFields
         case unsuccessfulLoginDueToInvalidAccountDetails
@@ -49,7 +47,6 @@ class UIErrorAlerts {
             }
         }
     }
-}
 
 extension UIViewController {
     

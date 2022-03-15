@@ -33,8 +33,8 @@ class RocketsController: UIViewController {
                     self?.rocketTableView.reloadData()
                 }
             case .failure:
-                self?.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulRocketApiCall.errorDescription!,
-                                        errorMessage: UIErrorAlerts.CustomError.unsuccessfulRocketApiCall.failureReason!,
+                self?.displayErrorAlert(title:CustomError.unsuccessfulRocketApiCall.errorDescription!,
+                                        errorMessage: CustomError.unsuccessfulRocketApiCall.failureReason!,
                                         buttonTitle: "Ok")
                 return
             }

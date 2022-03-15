@@ -35,7 +35,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 unsuccessfulLogin()
             }
         } else {
-            self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulLoginDueToMissingFields.errorDescription!, errorMessage: UIErrorAlerts.CustomError.unsuccessfulLoginDueToMissingFields.failureReason!, buttonTitle: "Ok")
+            self.displayErrorAlert(title: CustomError.unsuccessfulLoginDueToMissingFields.errorDescription!, errorMessage: CustomError.unsuccessfulLoginDueToMissingFields.failureReason!, buttonTitle: "Ok")
         }
     }
     
@@ -48,8 +48,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func unsuccessfulLogin() {
-        self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulLoginDueToInvalidAccountDetails.errorDescription!,
-                               errorMessage: UIErrorAlerts.CustomError.unsuccessfulLoginDueToInvalidAccountDetails.failureReason!,
+        self.displayErrorAlert(title: CustomError.unsuccessfulLoginDueToInvalidAccountDetails.errorDescription!,
+                               errorMessage: CustomError.unsuccessfulLoginDueToInvalidAccountDetails.failureReason!,
                                buttonTitle: "Ok")
     }
 }

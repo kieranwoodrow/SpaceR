@@ -21,11 +21,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction private func signupButtonClicked(_ sender: Any) {
-        if self.validateUserInputFromSignupFields() {
-                 self.successfulSignup()
-             } else {
-                 self.unsuccessfullSignup()
-             }
+        self.validateUserInputFromSignupFields() ? self.successfulSignup() : self.unsuccessfullSignup()
     }
     
     private func validateUserInputFromSignupFields() -> Bool {
@@ -37,13 +33,13 @@ class SignupViewController: UIViewController {
             setSignupModelAttributes(firstName: safeFirstName, lastName: safeLastName, email: safeEmail, password: safePassword)
             return true
         } else {
-            self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulSignupDueToMisingFields.errorDescription!, errorMessage: UIErrorAlerts.CustomError.unsuccessfulSignupDueToMisingFields.failureReason!, buttonTitle: "Ok")
+            self.displayErrorAlert(title: CustomError.unsuccessfulSignupDueToMisingFields.errorDescription!, errorMessage: CustomError.unsuccessfulSignupDueToMisingFields.failureReason!, buttonTitle: "Ok")
         }
             return false
         }
     
     private func setSignupModelAttributes(firstName: String, lastName: String, email: String, password: String) {
-        signUpViewModel.setUserFirstName(firstNameFromForm: firstName)
+        signUpViewModel.setUserFirstName(name: firstName)
         signUpViewModel.setUserLastName(lastNameFromForm: lastName)
         signUpViewModel.setUserEmail(emailFromForm: email)
         signUpViewModel.setUserPassword(passwordFromForm: password)
@@ -59,6 +55,6 @@ class SignupViewController: UIViewController {
     }
     
     private func unsuccessfullSignup() {
-        self.displayErrorAlert(title: UIErrorAlerts.CustomError.unsuccessfulDatabaseSignup.errorDescription!, errorMessage: UIErrorAlerts.CustomError.unsuccessfulDatabaseSignup.failureReason!, buttonTitle: "Ok")
+        self.displayErrorAlert(title: CustomError.unsuccessfulDatabaseSignup.errorDescription!, errorMessage: CustomError.unsuccessfulDatabaseSignup.failureReason!, buttonTitle: "Ok")
     }
 }
