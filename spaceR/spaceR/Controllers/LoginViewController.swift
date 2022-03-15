@@ -5,15 +5,12 @@
 //  Created by Kieran Woodrow on 2022/02/28.
 //
 
-
- 
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    
-    @IBOutlet weak var textFieldEmailID: UITextField!
-    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet private weak var textFieldEmailID: UITextField!
+    @IBOutlet private weak var textFieldPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,20 +26,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func loginSuccess(_ sender: Any) {
-        
+    @IBAction private func loginSuccess(_ sender: Any) {
         if let email = self.textFieldEmailID.text, !email.isEmpty,  email == "Admin",
            let password = self.textFieldPassword.text, !password.isEmpty, password == ("TestPass123") {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            if let viewController = storyBoard.instantiateViewController(withIdentifier: "RocketsController")
-                as? RocketsController {
-                viewController.emailText = "Welcome \(email)"
+            if let viewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
+                as? UITabBarController {
                 self.navigationController?.pushViewController(viewController, animated: false )
             }
-        }
-        else {
-            self.displayAlert(title: "Email and password",
-                              message: "Email or passsword is incorrect",
+        } else {
+            self.displayErrorAlertForLogin(title: "Email and password",
+                              errorMessage: "Email or passsword is incorrect",
                               buttonTitle: "Ok")
             return
         }

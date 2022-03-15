@@ -1,6 +1,6 @@
 //
 //  ForgotPasswordViewController.swift
-//  spaceR
+//  SpaceR
 //
 //  Created by Kieran Woodrow on 2022/02/28.
 //
@@ -11,8 +11,6 @@ class ForgotPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.isHidden = true
-        
     }
 }

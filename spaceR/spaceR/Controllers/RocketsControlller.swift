@@ -5,55 +5,60 @@
 //  Created by Kieran Woodrow on 2022/02/25.
 //
 
-
 import Foundation
 import UIKit
 
 class RocketsController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var emailIdLabel: UILabel!
-    var emailText = ""
-    private var rockets: [Rocket] = []
+    @IBOutlet private weak var rocketTableView: UITableView!
+    private lazy var rocketViewModel = RocketViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.emailIdLabel.text = self.emailText
-        getAllRockets()
-        setupTableView()
+        getAllRocketsFromAPI()
+        setTableView()
     }
     
-    private func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+    private func setTableView() {
+        rocketTableView.delegate = self
+        rocketTableView.dataSource = self
     }
     
-    func getAllRockets() {
-        URLSession.shared.getAllRocketsEndpointURL(url: Constants.getAllRocketsUrl, model: [Rocket].self){ [weak self]result in
+    private func getAllRocketsFromAPI() {
+        URLSession.shared.getAllRocketsEndpointURL(url: Constants.getAllRocketsUrl, model: [Rocket].self) {[weak self]result in
             switch result {
-            case .success(let userArray):
-                self?.rockets = userArray
-                self?.tableView.reloadData()
+            case .success(let rocketsArray):
+                self?.rocketViewModel.setAllRockets(rockets: rocketsArray)
+                DispatchQueue.main.async {
+                    self?.rocketTableView.reloadData()
+                }
             case .failure(let error):
-                print(error)
+                self?.displayErrorAlertForLogin(title: "Api did not find any rockets",
+                                                errorMessage: error.localizedDescription,
+                                                buttonTitle: "Ok")
+                return
             }
         }
     }
 }
 
 extension RocketsController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        rocketViewModel.getRocketCount()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "basic") else{
+        
+        guard let cell = rocketTableView.dequeueReusableCell(withIdentifier: "RocketTableViewCell", for: indexPath) as? UIRocketTableViewCell
+        else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = rockets[indexPath.item].name
+        
+        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rockets.count
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 400
     }
 }
-
-
