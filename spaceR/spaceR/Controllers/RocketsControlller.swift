@@ -33,8 +33,8 @@ class RocketsController: UIViewController {
                     self?.rocketTableView.reloadData()
                 }
             case .failure:
-                self?.displayErrorAlert(title:CustomError.unsuccessfulRocketApiCall.errorDescription!,
-                                        errorMessage: CustomError.unsuccessfulRocketApiCall.failureReason!,
+                self?.displayErrorAlert(title: .unsuccessfulRocketApiCall,
+                                        errorMessage: .unsuccessfulRocketApiCall,
                                         buttonTitle: "Ok")
                 return
             }
@@ -54,8 +54,7 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
-        
+    cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
         return cell
     }
     

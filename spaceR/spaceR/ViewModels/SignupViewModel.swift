@@ -17,24 +17,25 @@ class SignupViewModel {
     
     private let coreDataPersistantObject = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
-    func setUserFirstName(name: String) {
-        userFirstName = name
+    func set(firstName: String) {
+        userFirstName = firstName
     }
     
-    func setUserLastName(lastNameFromForm: String) {
-        userLastName = lastNameFromForm
+    func set(lastName: String) {
+        userLastName = lastName
     }
     
-    func setUserEmail(emailFromForm: String) {
-        userEmail = emailFromForm
+    func set(email: String) {
+        userEmail = email
     }
     
-    func setUserPassword(passwordFromForm: String) {
-        userPassword = passwordFromForm
+    func set(password: String) {
+        userPassword = password
     }
 
-    func saveUserToDatabase() {
-        let newUser = User(context: self.coreDataPersistantObject!  )
+    func saveUserToDatabase() throws {
+        guard let safeCoreData = self.coreDataPersistantObject else { return }
+        let newUser = User(context: safeCoreData)
         newUser.firstName = userFirstName
         newUser.lastName = userLastName
         newUser.email = userEmail
@@ -43,7 +44,7 @@ class SignupViewModel {
         do {
             try self.coreDataPersistantObject?.save()
         } catch {
-            
+            throw CustomError.unsuccessfulDatabaseSignup
         }
     }
     
