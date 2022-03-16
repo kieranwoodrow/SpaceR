@@ -17,6 +17,9 @@
 		D6183E4F27D8E7E30073F278 /* UIRocketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183E4E27D8E7E20073F278 /* UIRocketTableViewCell.swift */; };
 		D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */; };
 		D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */; };
+		D6DA798727DE114F00AFF396 /* spaceRModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798527DE114F00AFF396 /* spaceRModels.xcdatamodeld */; };
+		D6DA798A27DE137A00AFF396 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798927DE137A00AFF396 /* SignupViewModel.swift */; };
+		D6DA799027DE714E00AFF396 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798F27DE714E00AFF396 /* LoginViewModel.swift */; };
 		D6E9CF5D27C8CD6300AED244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5B27C8CD6300AED244 /* Main.storyboard */; };
 		D6E9CF5F27C8CD6600AED244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */; };
 		D6E9CF6227C8CD6600AED244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CF6027C8CD6600AED244 /* LaunchScreen.storyboard */; };
@@ -60,6 +63,9 @@
 		D6183E4E27D8E7E20073F278 /* UIRocketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRocketTableViewCell.swift; sourceTree = "<group>"; };
 		D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewImageStyling.swift; sourceTree = "<group>"; };
 		D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorAlerts.swift; sourceTree = "<group>"; };
+		D6DA798627DE114F00AFF396 /* spaceRModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spaceRModels.xcdatamodel; sourceTree = "<group>"; };
+		D6DA798927DE137A00AFF396 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		D6DA798F27DE714E00AFF396 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D6E9CF5227C8CD6300AED244 /* spaceR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaceR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E9CF5C27C8CD6300AED244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,8 +132,18 @@
 			isa = PBXGroup;
 			children = (
 				D6183E2627D761FE0073F278 /* RocketViewModel.swift */,
+				D6DA798927DE137A00AFF396 /* SignupViewModel.swift */,
+				D6DA798F27DE714E00AFF396 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D6DA798827DE129D00AFF396 /* CoredataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6DA798527DE114F00AFF396 /* spaceRModels.xcdatamodeld */,
+			);
+			path = CoredataModel;
 			sourceTree = "<group>";
 		};
 		D6E9CF4927C8CD6300AED244 = {
@@ -153,6 +169,7 @@
 		D6E9CF5427C8CD6300AED244 /* spaceR */ = {
 			isa = PBXGroup;
 			children = (
+				D6DA798827DE129D00AFF396 /* CoredataModel */,
 				D6E9CF7827C8D10300AED244 /* Config */,
 				D6183E2927D7620D0073F278 /* ViewModels */,
 				D6183E2527D757F00073F278 /* CustomUI */,
@@ -403,12 +420,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DA798A27DE137A00AFF396 /* SignupViewModel.swift in Sources */,
 				D6183E2727D761FE0073F278 /* RocketViewModel.swift in Sources */,
 				D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */,
 				D6183E4F27D8E7E30073F278 /* UIRocketTableViewCell.swift in Sources */,
+				D6DA798727DE114F00AFF396 /* spaceRModels.xcdatamodeld in Sources */,
 				D6183E0B27CC6FAD0073F278 /* SignupViewController.swift in Sources */,
 				D6E9CF6F27C8CF9D00AED244 /* Launches.swift in Sources */,
 				D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */,
+				D6DA799027DE714E00AFF396 /* LoginViewModel.swift in Sources */,
 				D6E9CF7227C8D01500AED244 /* RocketsControlller.swift in Sources */,
 				D6E9CF7527C8D0BC00AED244 /* AppDelegate.swift in Sources */,
 				D6183E4D27D875B40073F278 /* ImageApiFunction.swift in Sources */,
@@ -749,6 +769,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6DA798527DE114F00AFF396 /* spaceRModels.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6DA798627DE114F00AFF396 /* spaceRModels.xcdatamodel */,
+			);
+			currentVersion = D6DA798627DE114F00AFF396 /* spaceRModels.xcdatamodel */;
+			path = spaceRModels.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D6E9CF4A27C8CD6300AED244 /* Project object */;
 }

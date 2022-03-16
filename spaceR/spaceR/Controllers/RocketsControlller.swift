@@ -1,6 +1,6 @@
 //
 //  RocketsControlller.swift
-//  spaceR
+//  SpaceR
 //
 //  Created by Kieran Woodrow on 2022/02/25.
 //
@@ -32,10 +32,10 @@ class RocketsController: UIViewController {
                 DispatchQueue.main.async {
                     self?.rocketTableView.reloadData()
                 }
-            case .failure(let error):
-                self?.displayErrorAlertForLogin(title: "Api did not find any rockets",
-                                                errorMessage: error.localizedDescription,
-                                                buttonTitle: "Ok")
+            case .failure:
+                self?.displayErrorAlert(title: .unsuccessfulRocketApiCall,
+                                        errorMessage: .unsuccessfulRocketApiCall,
+                                        buttonTitle: "Ok")
                 return
             }
         }
@@ -53,8 +53,8 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-        
-        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
+      
+    cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
         return cell
     }
     

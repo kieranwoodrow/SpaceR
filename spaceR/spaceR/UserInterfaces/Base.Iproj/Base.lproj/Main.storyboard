@@ -15,17 +15,17 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="uFu-oX-0Zk" customClass="LoginViewController" customModule="spaceR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ft9-9a-FP6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="N62-JK-1MK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="822"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlA-XB-7LZ" userLabel="TopView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="394"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="411"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-2r-Wmg">
-                                                <rect key="frame" x="73" y="155.5" width="268" height="83"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-2r-Wmg">
+                                                <rect key="frame" x="73" y="164" width="268" height="83"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
                                         </subviews>
@@ -35,28 +35,29 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vld-SB-1F3" userLabel="MiddleView">
-                                        <rect key="frame" x="0.0" y="394" width="414" height="394"/>
+                                        <rect key="frame" x="0.0" y="411" width="414" height="411"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bxh-tq-sqq">
-                                                <rect key="frame" x="43" y="9" width="328" height="376"/>
+                                                <rect key="frame" x="43" y="18" width="328" height="375"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BPr-pt-EnY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="184"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="183.5"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-DS-GPX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="82"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-DS-GPX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="81.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUl-GD-W8K">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="28"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUl-GD-W8K">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="31.5"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
                                                                         <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJY-48-S73">
-                                                                        <rect key="frame" x="0.0" y="48" width="328" height="34"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJY-48-S73">
+                                                                        <rect key="frame" x="0.0" y="41.5" width="328" height="40"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="4H5-gi-K1w"/>
-                                                                            <constraint firstAttribute="height" constant="34" id="9B2-Wh-eei"/>
+                                                                            <constraint firstAttribute="height" constant="40" id="9B2-Wh-eei"/>
                                                                         </constraints>
                                                                         <color key="textColor" name="SpaceR-black"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -64,18 +65,20 @@
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WaX-Q4-8A8">
-                                                                <rect key="frame" x="0.0" y="102" width="328" height="82"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WaX-Q4-8A8">
+                                                                <rect key="frame" x="0.0" y="101.5" width="328" height="82"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-xJ-nt2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="28"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-xJ-nt2">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="32"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
                                                                         <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-wh-C2i">
-                                                                        <rect key="frame" x="0.0" y="48" width="328" height="34"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fi-wh-C2i">
+                                                                        <rect key="frame" x="0.0" y="42" width="328" height="40"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="GOZ-Nm-QeD"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="ydR-wJ-f8l"/>
                                                                         </constraints>
                                                                         <color key="textColor" name="SpaceR-black"/>
@@ -87,7 +90,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-wJ-FyX">
-                                                        <rect key="frame" x="29" y="192" width="270.5" height="184"/>
+                                                        <rect key="frame" x="29" y="191.5" width="270.5" height="183.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gz-qG-0mK">
                                                                 <rect key="frame" x="51" y="0.0" width="168.5" height="39.5"/>
@@ -96,13 +99,14 @@
                                                                     <backgroundConfiguration key="background"/>
                                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                     <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                                    <color key="baseBackgroundColor" name="SpaceR-white"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <segue destination="dnc-wB-42B" kind="show" id="JGm-fz-Yx9"/>
                                                                 </connections>
                                                             </button>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-SL-1sN">
-                                                                <rect key="frame" x="0.0" y="69.5" width="270.5" height="114.5"/>
+                                                                <rect key="frame" x="0.0" y="69.5" width="270.5" height="114"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQS-d1-cBm">
                                                                         <rect key="frame" x="1" y="0.0" width="268" height="55"/>
@@ -116,37 +120,32 @@
                                                                                 <color key="backgroundColor" name="SpaceR-orange"/>
                                                                             </backgroundConfiguration>
                                                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                                            <color key="baseForegroundColor" name="SpaceR-white"/>
                                                                             <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
-                                                                            <action selector="loginSuccess:" destination="uFu-oX-0Zk" eventType="touchUpInside" id="ttR-QH-ZO8"/>
-                                                                            <segue destination="6eD-md-6m9" kind="show" id="CV8-Nd-nzf"/>
+                                                                            <action selector="loginButtonClicked:" destination="uFu-oX-0Zk" eventType="touchUpInside" id="MXD-q8-1hs"/>
                                                                         </connections>
                                                                     </button>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6pi-SV-Ou8">
-                                                                        <rect key="frame" x="0.0" y="63" width="270.5" height="51.5"/>
+                                                                        <rect key="frame" x="0.0" y="63" width="270.5" height="51"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T5d-ye-3sS">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="270.5" height="51.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="270.5" height="51"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Eq-xf-Ul6">
                                                                                         <rect key="frame" x="0.0" y="15" width="184" height="21.5"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                                        <nil key="textColor"/>
+                                                                                        <color key="textColor" name="SpaceR-black"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unY-gW-hps">
-                                                                                        <rect key="frame" x="184" y="8.5" width="86.5" height="35"/>
+                                                                                        <rect key="frame" x="184" y="8" width="86.5" height="35"/>
                                                                                         <state key="normal" title="Button"/>
-                                                                                        <buttonConfiguration key="configuration" style="filled">
-                                                                                            <attributedString key="attributedTitle">
-                                                                                                <fragment content="Sign-up">
-                                                                                                    <attributes>
-                                                                                                        <font key="NSFont" size="18" name="Helvetica"/>
-                                                                                                    </attributes>
-                                                                                                </fragment>
-                                                                                            </attributedString>
+                                                                                        <buttonConfiguration key="configuration" style="filled" title="Sign-up">
+                                                                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                                                             <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                                                            <color key="baseBackgroundColor" name="SpaceR-white"/>
                                                                                         </buttonConfiguration>
                                                                                         <connections>
                                                                                             <segue destination="shc-TH-us8" kind="show" id="Nvt-PQ-hoC"/>
@@ -164,18 +163,19 @@
                                                 <variation key="heightClass=compact-widthClass=regular" distribution="fillProportionally" spacingType="standard"/>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="SpaceR-white"/>
                                         <constraints>
                                             <constraint firstItem="Bxh-tq-sqq" firstAttribute="centerY" secondItem="Vld-SB-1F3" secondAttribute="centerY" id="ccf-JZ-RZ4"/>
                                             <constraint firstItem="Bxh-tq-sqq" firstAttribute="centerX" secondItem="Vld-SB-1F3" secondAttribute="centerX" id="evL-IS-E4a"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="SpaceR-white"/>
                                 <variation key="heightClass=compact-widthClass=regular" alignment="fill" axis="horizontal" distribution="fillProportionally"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ic1-du-goo"/>
-                        <color key="backgroundColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
                             <constraint firstItem="Ic1-du-goo" firstAttribute="bottom" secondItem="N62-JK-1MK" secondAttribute="bottom" constant="-14" id="K6a-Wf-FSw"/>
                             <constraint firstItem="N62-JK-1MK" firstAttribute="trailing" secondItem="Ic1-du-goo" secondAttribute="trailing" id="RsT-SF-rSM"/>
@@ -202,41 +202,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-86-Xfg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="20" y="0.0" width="394" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3rJ-sc-nqm">
-                                        <rect key="frame" x="15" y="0.0" width="384" height="624"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="746"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-wW-HkD">
-                                                <rect key="frame" x="0.0" y="0.0" width="384" height="246"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="368"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-66-8M1">
-                                                        <rect key="frame" x="58" y="81.5" width="268" height="83"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-66-8M1">
+                                                        <rect key="frame" x="63" y="142.5" width="268" height="83"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="SpaceR-white"/>
                                                 <constraints>
                                                     <constraint firstItem="Sm5-66-8M1" firstAttribute="centerX" secondItem="aeK-wW-HkD" secondAttribute="centerX" id="L5B-AF-FT3"/>
                                                     <constraint firstItem="Sm5-66-8M1" firstAttribute="centerY" secondItem="aeK-wW-HkD" secondAttribute="centerY" id="Nwl-UM-jVn"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="afu-r8-Qi5">
-                                                <rect key="frame" x="0.0" y="246" width="384" height="378"/>
+                                                <rect key="frame" x="0.0" y="368" width="394" height="378"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iNy-VH-Kjd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="378"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="378"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-9t-B4f">
-                                                                <rect key="frame" x="28" y="0.0" width="328" height="72"/>
+                                                                <rect key="frame" x="33" y="0.0" width="328" height="72"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVu-XR-dru">
                                                                         <rect key="frame" x="0.0" y="0.0" width="328" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSh-qG-wJd">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSh-qG-wJd">
                                                                         <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="34" id="JIy-7T-zR5"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="R5T-zI-5hY"/>
@@ -248,16 +250,17 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p1S-D5-JNt">
-                                                                <rect key="frame" x="28" y="102" width="328" height="72"/>
+                                                                <rect key="frame" x="33" y="102" width="328" height="72"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NX-Wg-GGC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="328" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <nil key="highlightedColor"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-1s-Y2b">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Your surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZE-1s-Y2b">
                                                                         <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="gbN-1W-glz"/>
                                                                             <constraint firstAttribute="height" constant="34" id="raH-Lm-Hrf"/>
@@ -269,16 +272,17 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TdF-Ou-E23">
-                                                                <rect key="frame" x="28" y="204" width="328" height="72"/>
+                                                                <rect key="frame" x="33" y="204" width="328" height="72"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2Z-d5-h6o">
                                                                         <rect key="frame" x="0.0" y="0.0" width="64.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <nil key="highlightedColor"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfB-mD-y6y">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfB-mD-y6y">
                                                                         <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="fFl-uH-5ZY"/>
                                                                             <constraint firstAttribute="height" constant="34" id="lXH-ed-TOP"/>
@@ -290,22 +294,24 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-Lk-lwL">
-                                                                <rect key="frame" x="28" y="306" width="328" height="72"/>
+                                                                <rect key="frame" x="33" y="306" width="328" height="72"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJx-Bf-t5w">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="28"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="22"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                                         <color key="textColor" name="SpaceR-black"/>
-                                                                        <nil key="highlightedColor"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdr-xs-R2Y">
-                                                                        <rect key="frame" x="0.0" y="38" width="328" height="34"/>
+                                                                        <rect key="frame" x="0.0" y="32" width="328" height="40"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="34" id="Zjm-Nk-i4z"/>
+                                                                            <constraint firstAttribute="height" constant="40" id="Zjm-Nk-i4z"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="igF-E9-RQj"/>
                                                                         </constraints>
+                                                                        <color key="textColor" name="SpaceR-black"/>
                                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -313,13 +319,14 @@
                                                         <variation key="heightClass=compact-widthClass=regular" distribution="fillProportionally" spacing="10"/>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" name="SpaceR-white"/>
                                                 <variation key="heightClass=compact-widthClass=regular" distribution="equalCentering"/>
                                             </stackView>
                                         </subviews>
-                                        <variation key="heightClass=compact-widthClass=regular" distribution="equalSpacing"/>
+                                        <variation key="heightClass=compact-widthClass=regular" distribution="fillProportionally"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KuZ-3q-Wa9">
-                                        <rect key="frame" x="73" y="664" width="268" height="110"/>
+                                        <rect key="frame" x="63" y="786" width="268" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zco-SE-aIz">
                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="55"/>
@@ -328,53 +335,35 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="pVl-7d-g7b"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" cornerStyle="dynamic" titleAlignment="center">
+                                                <buttonConfiguration key="configuration" style="filled" title="SIGN UP" cornerStyle="dynamic" titleAlignment="center">
                                                     <backgroundConfiguration key="background" cornerRadius="55">
                                                         <color key="backgroundColor" name="SpaceR-orange"/>
                                                     </backgroundConfiguration>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="SIGN UP">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                    <color key="baseForegroundColor" name="SpaceR-white"/>
                                                     <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signupButtonClicked:" destination="shc-TH-us8" eventType="touchUpInside" id="4kV-Ax-RyT"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HM-bT-YUB">
                                                 <rect key="frame" x="72.5" y="55" width="123" height="55"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-bR-XdA">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-bR-XdA">
                                                         <rect key="frame" x="0.0" y="0.0" width="60.5" height="55"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Back to">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.074509803921568626" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="18" name="Helvetica"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                        <color key="textColor" name="SpaceR-black"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrZ-fQ-DO4">
                                                         <rect key="frame" x="60.5" y="0.0" width="62.5" height="55"/>
+                                                        <color key="tintColor" name="SpaceR-white"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="login">
-                                                                    <attributes>
-                                                                        <color key="NSBackgroundColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <color key="NSColor" red="1" green="0.55686274509803924" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <font key="NSFont" size="18" name="Helvetica"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
+                                                        <buttonConfiguration key="configuration" style="filled" title="login">
+                                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                                             <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                            <color key="baseBackgroundColor" name="SpaceR-white"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <segue destination="uFu-oX-0Zk" kind="show" id="cyw-Wk-OUv"/>
@@ -385,139 +374,166 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" name="SpaceR-white"/>
                                 <variation key="heightClass=compact-widthClass=regular" alignment="center" axis="horizontal" distribution="fillEqually"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bpm-Re-zUs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
-                            <constraint firstItem="f2x-86-Xfg" firstAttribute="leading" secondItem="Bpm-Re-zUs" secondAttribute="leading" id="7bs-ID-6DS"/>
-                            <constraint firstItem="f2x-86-Xfg" firstAttribute="bottom" secondItem="Bpm-Re-zUs" secondAttribute="bottom" id="Lms-iF-us1"/>
-                            <constraint firstItem="f2x-86-Xfg" firstAttribute="top" secondItem="Bpm-Re-zUs" secondAttribute="top" id="Uzk-Ov-uuP"/>
-                            <constraint firstItem="f2x-86-Xfg" firstAttribute="trailing" secondItem="Bpm-Re-zUs" secondAttribute="trailing" id="zUT-tl-7AK"/>
+                            <constraint firstItem="f2x-86-Xfg" firstAttribute="top" secondItem="ZAm-3K-rX5" secondAttribute="top" id="Ffk-1b-MSv"/>
+                            <constraint firstAttribute="bottom" secondItem="f2x-86-Xfg" secondAttribute="bottom" id="Kaa-Qn-eiI"/>
+                            <constraint firstItem="f2x-86-Xfg" firstAttribute="leading" secondItem="Bpm-Re-zUs" secondAttribute="leading" constant="20" id="Uo0-CS-gE9"/>
+                            <constraint firstAttribute="trailing" secondItem="f2x-86-Xfg" secondAttribute="trailing" id="em3-ZA-N4T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yet-YR-hn0"/>
+                    <connections>
+                        <outlet property="userEmail" destination="SfB-mD-y6y" id="A33-QX-Mbw"/>
+                        <outlet property="userFirstName" destination="RSh-qG-wJd" id="qQN-45-qJq"/>
+                        <outlet property="userLastName" destination="tZE-1s-Y2b" id="HTA-oC-s8B"/>
+                        <outlet property="userPassword" destination="Gdr-xs-R2Y" id="Ah0-Xc-FBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32A-3D-oWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1175.3623188405797" y="842.41071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password View Controller-->
         <scene sceneID="B2Z-4V-Geh">
             <objects>
-                <viewController id="dnc-wB-42B" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordViewController" id="dnc-wB-42B" customClass="ForgotPasswordViewController" customModule="spaceR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YDh-Z0-VTg" customClass="SCNView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-3C-Z70">
-                                <rect key="frame" x="73" y="273" width="268" height="83"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="Qha-N7-J3K"/>
-                                    <constraint firstAttribute="width" constant="268" id="y5i-yb-mhO"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDw-r1-JIP">
-                                <rect key="frame" x="43" y="411" width="65" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="CHt-Le-WI7"/>
-                                    <constraint firstAttribute="height" constant="29" id="EXn-ww-dEq"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Email">
-                                        <attributes>
-                                            <font key="NSFont" size="24" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <color key="highlightedColor" name="SpaceR-black"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ip-zl-abV">
-                                <rect key="frame" x="43" y="465" width="328" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="JyZ-KC-S4U"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="Kg9-b5-dz6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-dK-Ywr">
-                                <rect key="frame" x="73" y="584" width="268" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="caz-5O-TXn"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="zS9-k6-7m0"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="dynamic">
-                                    <backgroundConfiguration key="background" cornerRadius="55"/>
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="SUBMIT">
-                                            <attributes>
-                                                <color key="NSColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" name="SpaceR-orange"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="uFu-oX-0Zk" kind="show" id="lPY-b5-wzC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-B7-Ckg">
-                                <rect key="frame" x="136" y="663" width="142" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="7pe-Ez-p7Y"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="lGp-Je-znK"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Back to login">
-                                            <attributes>
-                                                <color key="NSColor" red="0.074509803921568626" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="18" name="Helvetica-Oblique"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Nim-lL-eLr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-JR-wyO" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="421"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-3C-Z70">
+                                                <rect key="frame" x="73" y="169" width="268" height="83"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="SpaceR-white"/>
+                                        <constraints>
+                                            <constraint firstItem="EQH-3C-Z70" firstAttribute="centerY" secondItem="j7M-JR-wyO" secondAttribute="centerY" id="bHH-5b-jna"/>
+                                            <constraint firstItem="EQH-3C-Z70" firstAttribute="centerX" secondItem="j7M-JR-wyO" secondAttribute="centerX" id="wNc-rv-nuR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlD-MG-BoY" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="421" width="414" height="421"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="o5s-Su-qdr">
+                                                <rect key="frame" x="43" y="101.5" width="328" height="218"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HdA-NU-0Ng">
+                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="78"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-k7-nli">
+                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="78"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDw-r1-JIP">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <color key="highlightedColor" name="SpaceR-black"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ip-zl-abV">
+                                                                        <rect key="frame" x="0.0" y="38" width="328" height="40"/>
+                                                                        <color key="backgroundColor" name="SpaceR-white"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="ZeU-XF-ILD"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="oDU-SJ-fI8"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Cpf-wG-5bW">
+                                                        <rect key="frame" x="30" y="108" width="268" height="110"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEB-dK-Ywr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="55"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="55" id="Yqg-mG-gWX"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="cWU-LG-GNI"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="SUBMIT" cornerStyle="dynamic">
+                                                                    <backgroundConfiguration key="background" cornerRadius="55">
+                                                                        <color key="backgroundColor" name="SpaceR-orange"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                                    <color key="baseForegroundColor" name="SpaceR-white"/>
+                                                                    <color key="baseBackgroundColor" name="SpaceR-orange"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="uFu-oX-0Zk" kind="show" id="mcL-er-hGx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RoB-xL-5q4">
+                                                                <rect key="frame" x="72.5" y="75" width="123" height="35"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc1-gZ-o7b">
+                                                                        <rect key="frame" x="0.0" y="7" width="60.5" height="21"/>
+                                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                                        <color key="textColor" name="SpaceR-black"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPB-B7-Ckg">
+                                                                        <rect key="frame" x="60.5" y="0.0" width="62.5" height="35"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="login">
+                                                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                                                            <color key="baseForegroundColor" name="SpaceR-orange"/>
+                                                                            <color key="baseBackgroundColor" name="SpaceR-white"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <segue destination="uFu-oX-0Zk" kind="show" id="zXh-43-cqG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="SpaceR-white"/>
+                                        <constraints>
+                                            <constraint firstItem="o5s-Su-qdr" firstAttribute="centerX" secondItem="nlD-MG-BoY" secondAttribute="centerX" id="GaS-Px-WXg"/>
+                                            <constraint firstItem="o5s-Su-qdr" firstAttribute="centerY" secondItem="nlD-MG-BoY" secondAttribute="centerY" id="rra-o7-fn6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="SpaceR-white"/>
+                                <variation key="heightClass=compact-widthClass=regular" alignment="fill" axis="horizontal" distribution="fillProportionally"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pr4-kT-KDi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
-                            <constraint firstItem="wDw-r1-JIP" firstAttribute="leading" secondItem="Pr4-kT-KDi" secondAttribute="leading" constant="43" id="2Yt-sk-G7A"/>
-                            <constraint firstItem="EQH-3C-Z70" firstAttribute="leading" secondItem="Pr4-kT-KDi" secondAttribute="leading" constant="73" id="5gw-mr-7MU"/>
-                            <constraint firstItem="0ip-zl-abV" firstAttribute="leading" secondItem="Pr4-kT-KDi" secondAttribute="leading" constant="43" id="IBc-5z-dzk"/>
-                            <constraint firstItem="Pr4-kT-KDi" firstAttribute="trailing" secondItem="EQH-3C-Z70" secondAttribute="trailing" constant="73" id="KBt-Te-Ybv"/>
-                            <constraint firstItem="0ip-zl-abV" firstAttribute="top" secondItem="wDw-r1-JIP" secondAttribute="bottom" constant="25" id="NuY-u5-eWZ"/>
-                            <constraint firstItem="0ip-zl-abV" firstAttribute="centerX" secondItem="YDh-Z0-VTg" secondAttribute="centerX" id="O4z-kh-oc6"/>
-                            <constraint firstItem="sPB-B7-Ckg" firstAttribute="top" secondItem="uEB-dK-Ywr" secondAttribute="bottom" constant="24" id="PCM-zi-57H"/>
-                            <constraint firstItem="uEB-dK-Ywr" firstAttribute="top" secondItem="0ip-zl-abV" secondAttribute="bottom" constant="85" id="PzX-Ks-VIC"/>
-                            <constraint firstItem="wDw-r1-JIP" firstAttribute="top" secondItem="EQH-3C-Z70" secondAttribute="bottom" constant="55" id="RbJ-eW-0ml"/>
-                            <constraint firstItem="Pr4-kT-KDi" firstAttribute="trailing" secondItem="uEB-dK-Ywr" secondAttribute="trailing" constant="73" id="WzM-NK-Ilz"/>
-                            <constraint firstItem="sPB-B7-Ckg" firstAttribute="leading" secondItem="Pr4-kT-KDi" secondAttribute="leading" constant="136" id="YWK-Vu-O5G"/>
-                            <constraint firstItem="EQH-3C-Z70" firstAttribute="top" secondItem="Pr4-kT-KDi" secondAttribute="top" constant="185" id="Z4I-Dp-Elr"/>
-                            <constraint firstItem="Pr4-kT-KDi" firstAttribute="trailing" secondItem="0ip-zl-abV" secondAttribute="trailing" constant="43" id="coN-GV-OUq"/>
-                            <constraint firstItem="Pr4-kT-KDi" firstAttribute="trailing" secondItem="sPB-B7-Ckg" secondAttribute="trailing" constant="136" id="fmR-Nu-4xT"/>
-                            <constraint firstItem="sPB-B7-Ckg" firstAttribute="centerX" secondItem="YDh-Z0-VTg" secondAttribute="centerX" id="iEc-D8-SH9"/>
-                            <constraint firstItem="EQH-3C-Z70" firstAttribute="centerX" secondItem="YDh-Z0-VTg" secondAttribute="centerX" id="iEj-LS-qR5"/>
-                            <constraint firstItem="uEB-dK-Ywr" firstAttribute="leading" secondItem="Pr4-kT-KDi" secondAttribute="leading" constant="73" id="iyq-VM-9Pl"/>
-                            <constraint firstItem="uEB-dK-Ywr" firstAttribute="centerX" secondItem="YDh-Z0-VTg" secondAttribute="centerX" id="sUz-b2-wRD"/>
-                            <constraint firstItem="Pr4-kT-KDi" firstAttribute="trailing" secondItem="wDw-r1-JIP" secondAttribute="trailing" constant="306" id="sei-ze-SWY"/>
+                            <constraint firstAttribute="trailing" secondItem="Nim-lL-eLr" secondAttribute="trailing" id="A1a-Mw-dbE"/>
+                            <constraint firstItem="Nim-lL-eLr" firstAttribute="top" secondItem="YDh-Z0-VTg" secondAttribute="top" id="O6p-AR-7HK"/>
+                            <constraint firstAttribute="bottom" secondItem="Nim-lL-eLr" secondAttribute="bottom" id="TSC-2r-Odn"/>
+                            <constraint firstItem="Nim-lL-eLr" firstAttribute="leading" secondItem="YDh-Z0-VTg" secondAttribute="leading" id="hhP-EU-fXj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HhT-qX-cPP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlH-gT-sn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461" y="1148"/>
+            <point key="canvasLocation" x="10" y="747"/>
         </scene>
-        <!--Item-->
+        <!--Rockets-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="RocketsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="RocketsController" customModule="spaceR" customModuleProvider="target" sceneMemberID="viewController">
@@ -525,23 +541,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-NX-Np6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-NX-Np6">
                                 <rect key="frame" x="31" y="88" width="337" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="4" indentationWidth="10" reuseIdentifier="RocketTableViewCell" rowHeight="237" id="QYi-e0-AFt" customClass="UIRocketTableViewCell" customModule="spaceR" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="4" indentationWidth="10" reuseIdentifier="RocketTableViewCell" rowHeight="237" id="QYi-e0-AFt" customClass="UIRocketTableViewCell" customModule="spaceR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="337" height="237"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QYi-e0-AFt" id="rfD-fo-ErW">
                                             <rect key="frame" x="0.0" y="0.0" width="337" height="237"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-qu-gzH">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-qu-gzH">
                                                     <rect key="frame" x="20" y="11" width="297" height="215"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tct-9Q-dLw">
-                                                            <rect key="frame" x="28.5" y="0.0" width="240" height="173.5"/>
+                                                            <rect key="frame" x="50" y="0.0" width="197.5" height="163.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJH-lR-shA">
                                                             <rect key="frame" x="115.5" y="183.5" width="66.5" height="31.5"/>
@@ -550,6 +566,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <variation key="heightClass=compact-widthClass=regular" alignment="center" axis="horizontal" distribution="fill"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -571,7 +588,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="GKE-fI-Z6S"/>
+                    <tabBarItem key="tabBarItem" title="Rockets" id="GKE-fI-Z6S"/>
                     <connections>
                         <outlet property="rocketTableView" destination="UZv-NX-Np6" id="vJL-Ho-9Cr"/>
                     </connections>
@@ -655,11 +672,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KJ-yD-EAu" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="kJt-ot-0d8">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kJt-ot-0d8">
                                                 <rect key="frame" x="73" y="152" width="268" height="83"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="SpaceR-white"/>
+                                        <color key="tintColor" name="SpaceR-ButtonFill"/>
                                         <constraints>
                                             <constraint firstItem="kJt-ot-0d8" firstAttribute="centerX" secondItem="3KJ-yD-EAu" secondAttribute="centerX" id="U1S-8J-ghq"/>
                                             <constraint firstItem="kJt-ot-0d8" firstAttribute="centerY" secondItem="3KJ-yD-EAu" secondAttribute="centerY" id="laL-rn-uaJ"/>
@@ -684,6 +703,7 @@
                                                                 <color key="backgroundColor" name="SpaceR-orange"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                            <color key="baseForegroundColor" name="SpaceR-white"/>
                                                             <color key="baseBackgroundColor" name="SpaceR-orange"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -692,10 +712,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11w-dp-5o8">
                                                         <rect key="frame" x="0.0" y="85" width="268" height="55"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="Bmj-Gi-PEg"/>
                                                         </constraints>
+                                                        <color key="tintColor" name="SpaceR-ButtonFill"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="SIGN UP" cornerStyle="dynamic" titleAlignment="center">
                                                             <backgroundConfiguration key="background" cornerRadius="56">
@@ -726,7 +746,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="65w-Uo-tak"/>
-                        <color key="backgroundColor" red="0.98431372549019602" green="1" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="SpaceR-white"/>
                         <constraints>
                             <constraint firstItem="VpB-9m-YzJ" firstAttribute="top" secondItem="65w-Uo-tak" secondAttribute="top" id="LzE-BO-D1Z"/>
                             <constraint firstItem="65w-Uo-tak" firstAttribute="bottom" secondItem="VpB-9m-YzJ" secondAttribute="bottom" id="ONP-TN-w7M"/>
@@ -758,12 +778,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nvt-PQ-hoC"/>
-        <segue reference="yKS-rE-r2a"/>
+        <segue reference="yid-Xa-51n"/>
+        <segue reference="zXh-43-cqG"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <resources>
-        <image name="Logo" width="268" height="83"/>
+        <image name="logo" width="268" height="83"/>
+        <namedColor name="SpaceR-ButtonFill">
+            <color red="0.98400002717971802" green="1" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="SpaceR-black">
             <color red="0.075000002980232239" green="0.067000001668930054" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

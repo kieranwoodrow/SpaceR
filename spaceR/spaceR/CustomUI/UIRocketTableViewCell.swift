@@ -1,6 +1,6 @@
 //
 //  UIRocketTableViewCell.swift
-//  spaceR
+//  SpaceR
 //
 //  Created by Kieran Woodrow on 2022/03/09.
 //
@@ -15,7 +15,6 @@ class UIRocketTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
     }
     

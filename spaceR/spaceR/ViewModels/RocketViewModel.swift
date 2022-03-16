@@ -28,11 +28,11 @@ class RocketViewModel {
     }
     
     func getRocketImage(index: Int) -> String {
-        if index == 3 {
-            return allRockets[index].images[1] ?? ""
-    } else {
-            return allRockets[index].images[0] ?? ""
+        var rocketImage = ""
+        if let safeImage = allRockets[index].images.randomElement() {
+            rocketImage = safeImage ?? ""
         }
+        return rocketImage
     }
     
     func getRocketTitle(index: Int) -> String {
