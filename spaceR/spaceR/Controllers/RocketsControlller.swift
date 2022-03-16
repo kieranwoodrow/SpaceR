@@ -53,7 +53,7 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-        
+      
     cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
         return cell
     }
