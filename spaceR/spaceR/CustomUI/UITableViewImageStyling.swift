@@ -8,19 +8,19 @@
 import Foundation
 import UIKit
 
+enum TableType {
+    case rocketTable
+    case launchpadTable
+}
+
 extension UIImageView {
     
-    func imageStyle(type: String) {
+    func imageStyle(type: TableType) {
         switch (type) {
-            
-        case type where type == "launchpadTable":
+        case .launchpadTable:
             self.layer.cornerRadius = 20
-            
-        case type where type == "rocketTable":
+        case .rocketTable:
             self.layer.cornerRadius = 30
-            
-        default:
-            self.layer.cornerRadius = 0
         }
     }
 }

@@ -10,8 +10,8 @@ import UIKit
 
 class UILaunchpadTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var launchpadTableViewTitle: UILabel!
-    @IBOutlet weak var launchpadTableViewImage: UIImageView!
+    @IBOutlet private weak var launchpadTableViewTitle: UILabel!
+    @IBOutlet private weak var launchpadTableViewImage: UIImageView!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -29,7 +29,7 @@ class UILaunchpadTableViewCell: UITableViewCell {
     }
     
     func launchpadImageStyling() {
-        launchpadTableViewImage.imageStyle(type: "launchpadTable")
+        launchpadTableViewImage.imageStyle(type: .launchpadTable)
     }
     
     func setLaunchpadCell(image: String,title: String, atIndex: Int) {

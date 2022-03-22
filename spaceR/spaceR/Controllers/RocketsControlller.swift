@@ -44,7 +44,7 @@ class RocketsController: UIViewController {
 
 extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        rocketViewModel.getRocketCount()
+        rocketViewModel.rocketCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

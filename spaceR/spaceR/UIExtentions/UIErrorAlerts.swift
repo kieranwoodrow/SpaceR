@@ -32,7 +32,6 @@ enum CustomError: Error, LocalizedError {
         case .unsuccessfulLaunchpadApiCall:
             return "Api call for launchpads unsuccessful"
         }
-        
     }
     
     var failureReason: String? {

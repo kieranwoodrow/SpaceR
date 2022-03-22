@@ -10,7 +10,7 @@ import UIKit
 
 class LaunchpadViewController: UIViewController {
     
-    @IBOutlet weak var launchpadTableView: UITableView!
+    @IBOutlet private weak var launchpadTableView: UITableView!
     private lazy var launchpadViewModel = LaunchpadViewModel()
     
     override func viewDidLoad() {
@@ -36,7 +36,6 @@ class LaunchpadViewController: UIViewController {
                 self?.displayErrorAlert(title: .unsuccessfulLaunchpadApiCall,
                                         errorMessage: .unsuccessfulLaunchpadApiCall,
                                         buttonTitle: "Ok")
-                return
             }
         }
     }
@@ -44,7 +43,7 @@ class LaunchpadViewController: UIViewController {
 
 extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        launchpadViewModel.getLaunchpadCount()
+        launchpadViewModel.launchpadCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
