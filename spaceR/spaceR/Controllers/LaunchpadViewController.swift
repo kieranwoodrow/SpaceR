@@ -53,8 +53,13 @@ extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setLaunchpadCell(launchpadImage: launchpadViewModel.getLaunchpadImage(index: indexPath.item), launchpadTitle: launchpadViewModel.getLaunchpadTitle(index: indexPath.item),  atIndex: indexPath.item)
+        cell.setLaunchpadCell(image: launchpadViewModel.getLaunchpadImage(index: indexPath.item),title: launchpadViewModel.getLaunchpadTitle(index: indexPath.item),  atIndex: indexPath.item)
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        
+    
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

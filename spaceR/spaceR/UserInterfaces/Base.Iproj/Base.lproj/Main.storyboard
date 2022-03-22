@@ -531,7 +531,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlH-gT-sn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="747"/>
+            <point key="canvasLocation" x="-396" y="773"/>
         </scene>
         <!--Rockets-->
         <scene sceneID="tne-QT-ifu">
@@ -825,7 +825,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JGm-fz-Yx9"/>
         <segue reference="Nvt-PQ-hoC"/>
         <segue reference="zXh-43-cqG"/>
     </inferredMetricsTieBreakers>

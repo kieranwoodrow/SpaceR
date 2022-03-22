@@ -62,4 +62,8 @@ class LaunchpadViewModel {
     func getLauchSuccessRate(index: Int) -> Int {
         return allLaunchpads[index].launchSuccesses ?? 0
     }
+    
+    func getLauchpadLogitude(index: Int) -> Double {
+        return allLaunchpads[index].longitude ?? 0.0
+    }
 }

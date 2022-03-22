@@ -32,9 +32,9 @@ class UILaunchpadTableViewCell: UITableViewCell {
         launchpadTableViewImage.imageStyle(type: "launchpadTable")
     }
     
-    func setLaunchpadCell(launchpadImage: String, launchpadTitle: String, atIndex: Int) {
-        setLaunchpadTableViewImage(launchpadImage: launchpadImage)
-        setLaunchpadTableViewTitle(launchpadTitle: launchpadTitle)
+    func setLaunchpadCell(image: String,title: String, atIndex: Int) {
+        setLaunchpadTableViewImage(launchpadImage: image)
+        setLaunchpadTableViewTitle(launchpadTitle: title)
         launchpadImageStyling()
     }
 }
