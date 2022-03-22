@@ -15,6 +15,7 @@ enum CustomError: Error, LocalizedError {
     case unsuccessfulSignupDueToMisingFields
     case unsuccessfulDatabaseSignup
     case unsuccessfulRocketApiCall
+    case unsuccessfulLaunchpadApiCall
     
     var errorDescription: String? {
         switch self {
@@ -27,7 +28,9 @@ enum CustomError: Error, LocalizedError {
         case .unsuccessfulDatabaseSignup:
             return "Database save unsuccessful"
         case .unsuccessfulRocketApiCall:
-            return "Api call unsuccessful"
+            return "Api call for rockets unsuccessful"
+        case .unsuccessfulLaunchpadApiCall:
+            return "Api call for launchpads unsuccessful"
         }
         
     }
@@ -44,6 +47,8 @@ enum CustomError: Error, LocalizedError {
             return "User info did not get saved to database"
         case .unsuccessfulRocketApiCall:
             return "Rockets information has not been loaded successfully"
+        case .unsuccessfulLaunchpadApiCall:
+            return "Launchpad information has not been loaded successfully"
         }
     }
 }

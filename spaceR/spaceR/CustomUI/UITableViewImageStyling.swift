@@ -10,7 +10,17 @@ import UIKit
 
 extension UIImageView {
     
-    func imageStyle() {
-        self.layer.cornerRadius = 30
+    func imageStyle(type: String) {
+        switch (type) {
+            
+        case type where type == "launchpadTable":
+            self.layer.cornerRadius = 20
+            
+        case type where type == "rocketTable":
+            self.layer.cornerRadius = 30
+            
+        default:
+            self.layer.cornerRadius = 0
+        }
     }
 }

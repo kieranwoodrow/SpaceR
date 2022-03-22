@@ -49,7 +49,6 @@ class SignupViewController: UIViewController {
         do {
             
             try self.signUpViewModel.saveUserToDatabase()
-            
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             if let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
                 as? LoginViewController {

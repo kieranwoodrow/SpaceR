@@ -1,6 +1,6 @@
 //
 //  Launchpads.swift
-//  spaceR
+//  SpaceR
 //
 //  Created by Kieran Woodrow on 2022/03/16.
 //
@@ -19,8 +19,8 @@ struct Launchpads: Codable {
     let longitude: Double?
     let launchAttempts: Int?
     let launchSuccesses: Int?
-    let rocketsLaunched: [UUID?]
-    let launches: [UUID?]
+    let rocketsLaunched: [String?]
+    let launches: [String]
     let details: String?
     let images: Images?
     

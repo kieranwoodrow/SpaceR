@@ -25,7 +25,7 @@ class RocketsController: UIViewController {
     }
     
     private func getAllRocketsFromAPI() {
-        URLSession.shared.getAllRocketsEndpointURL(url: Constants.getAllRocketsUrl, model: [Rocket].self) {[weak self]result in
+        URLSession.shared.getDataFromApi(url: Constants.getAllRocketsUrl, model: [Rocket].self) {[weak self]result in
             switch result {
             case .success(let rocketsArray):
                 self?.rocketViewModel.setAllRockets(rockets: rocketsArray)
