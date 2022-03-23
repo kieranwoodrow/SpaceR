@@ -15,7 +15,10 @@ class UIRocketTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20,
+                                                                     left: 20,
+                                                                     bottom: 20,
+                                                                     right: 20))
     }
     
     func setRocketTableViewTitle(rocketTitle: String) {
@@ -29,7 +32,7 @@ class UIRocketTableViewCell: UITableViewCell {
     }
     
     func rocketImageStyling() {
-        rocketTableViewImage.imageStyle(type: "rocketTable")
+        rocketTableViewImage.imageStyle(type: .rocketTable)
     }
     
     func setRocketCell(rocketImage: String, rocketTitle: String, atIndex: Int) {

@@ -32,7 +32,6 @@ enum CustomError: Error, LocalizedError {
         case .unsuccessfulLaunchpadApiCall:
             return "Api call for launchpads unsuccessful"
         }
-        
     }
     
     var failureReason: String? {
@@ -59,7 +58,8 @@ extension UIViewController {
         let alert = UIAlertController(title: title.errorDescription,
                                       message: errorMessage.failureReason,
                                       preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: buttonTitle, style: UIAlertAction.Style.default,
+        alert.addAction(UIAlertAction(title: buttonTitle,
+                                      style: UIAlertAction.Style.default,
                                       handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

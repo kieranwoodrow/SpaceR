@@ -48,15 +48,14 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = rocketTableView.dequeueReusableCell(withIdentifier: "RocketTableViewCell",
-                                                             for: indexPath) as? UIRocketTableViewCell
+        guard let cell = rocketTableView.dequeueReusableCell(withIdentifier: "RocketTableViewCell", for: indexPath) as? UIRocketTableViewCell
         else {
             return UITableViewCell()
         }
-      
-    cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),
-                       rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
-                       atIndex: indexPath.item)
+        
+        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),
+                           rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
+                           atIndex: indexPath.item)
         return cell
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 class LaunchpadViewController: UIViewController {
     
-    @IBOutlet weak var launchpadTableView: UITableView!
+    @IBOutlet private weak var launchpadTableView: UITableView!
     private lazy var launchpadViewModel = LaunchpadViewModel()
     
     override func viewDidLoad() {
@@ -57,14 +57,6 @@ extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
                               title: launchpadViewModel.getLaunchpadTitle(index: indexPath.item),
                               atIndex: indexPath.item)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyBoard.instantiateViewController(withIdentifier: "LaunchpadInfoViewController")
-            as? LaunchpadInfoViewController {
-            self.navigationController?.pushViewController(viewController, animated: false )
-        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
