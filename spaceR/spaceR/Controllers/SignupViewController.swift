@@ -33,7 +33,9 @@ class SignupViewController: UIViewController {
             setSignupModelAttributes(firstName: safeFirstName, lastName: safeLastName, email: safeEmail, password: safePassword)
             return true
         } else {
-            self.displayErrorAlert(title: .unsuccessfulSignupDueToMisingFields, errorMessage: .unsuccessfulSignupDueToMisingFields, buttonTitle: "Ok")
+            self.displayErrorAlert(title: .unsuccessfulSignupDueToMisingFields,
+                                   errorMessage: .unsuccessfulSignupDueToMisingFields,
+                                   buttonTitle: "Ok")
         }
         return false
     }
@@ -55,11 +57,15 @@ class SignupViewController: UIViewController {
                 self.navigationController?.pushViewController(viewController, animated: false )
             }
         } catch {
-            self.displayErrorAlert(title: .unsuccessfulDatabaseSignup, errorMessage: .unsuccessfulDatabaseSignup, buttonTitle: "Ok")
+            self.displayErrorAlert(title: .unsuccessfulDatabaseSignup,
+                                   errorMessage: .unsuccessfulDatabaseSignup,
+                                   buttonTitle: "Ok")
         }
     }
     
     private func unsuccessfullSignup() {
-        self.displayErrorAlert(title: .unsuccessfulDatabaseSignup, errorMessage: .unsuccessfulDatabaseSignup, buttonTitle: "Ok")
+        self.displayErrorAlert(title: .unsuccessfulDatabaseSignup,
+                               errorMessage: .unsuccessfulDatabaseSignup,
+                               buttonTitle: "Ok")
     }
 }

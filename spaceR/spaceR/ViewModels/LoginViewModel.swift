@@ -40,7 +40,7 @@ class LoginViewModel {
             try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
             if !user.isEmpty {
                 for users in user {
-                 
+                    
                     if users.value(forKey: "password") as? String == userPassword {
                         validPassword = true
                     }

@@ -18,14 +18,7 @@ class LaunchpadViewModel {
     func setAllLaunchpads(launchpads: [Launchpads]) {
         allLaunchpads = launchpads
     }
-    
-    var launchpadList: [Launchpads] { return allLaunchpads }
-    
     var launchpadCount: Int { return allLaunchpads.count }
-    
-    func getLaunchpadName(index: Int) -> String {
-        return allLaunchpads[index].lauchpadName ?? ""
-    }
     
     func getLaunchpadImage(index: Int) -> String {
         var launchpadImage = ""
@@ -37,29 +30,5 @@ class LaunchpadViewModel {
     
     func getLaunchpadTitle(index: Int) -> String {
         return allLaunchpads[index].lauchpadName ?? ""
-    }
-    
-    func getLaunchpadLocation(index: Int) -> String {
-        return allLaunchpads[index].location ?? "Location not found"
-    }
-    
-    func getLaunchpadRegion(index: Int) -> String {
-        return allLaunchpads[index].region ?? "This region is undisclosed"
-    }
-    
-    func getLaunchpadDetails(index: Int) -> String {
-        return  allLaunchpads[index].details ?? "This launch has no details"
-    }
-    
-    func getLaunchAttempts(index: Int) -> Int {
-        return allLaunchpads[index].launchAttempts ?? 0
-    }
-    
-    func getLauchSuccessRate(index: Int) -> Int {
-        return allLaunchpads[index].launchSuccesses ?? 0
-    }
-    
-    func getLauchpadLogitude(index: Int) -> Double {
-        return allLaunchpads[index].longitude ?? 0.0
     }
 }

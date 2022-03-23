@@ -36,7 +36,6 @@ class RocketsController: UIViewController {
                 self?.displayErrorAlert(title: .unsuccessfulRocketApiCall,
                                         errorMessage: .unsuccessfulRocketApiCall,
                                         buttonTitle: "Ok")
-                return
             }
         }
     }
@@ -53,8 +52,10 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-      
-    cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
+        
+        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),
+                           rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
+                           atIndex: indexPath.item)
         return cell
     }
     

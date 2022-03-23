@@ -44,7 +44,6 @@ extension URLSession {
             } catch {
                 completion(.failure(error))
             }
-            
         }
         apiTask.resume()
     }

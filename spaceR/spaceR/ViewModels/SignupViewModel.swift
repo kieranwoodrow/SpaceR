@@ -32,7 +32,7 @@ class SignupViewModel {
     func set(password: String) {
         userPassword = password
     }
-
+    
     func saveUserToDatabase() throws {
         guard let safeCoreData = self.coreDataPersistantObject else { return }
         let newUser = User(context: safeCoreData)
