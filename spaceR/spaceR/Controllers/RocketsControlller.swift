@@ -25,7 +25,7 @@ class RocketsController: UIViewController {
     }
     
     private func getAllRocketsFromAPI() {
-        URLSession.shared.getAllRocketsEndpointURL(url: Constants.getAllRocketsUrl, model: [Rocket].self) {[weak self]result in
+        URLSession.shared.getDataFromApi(url: Constants.getAllRocketsUrl, model: [Rocket].self) {[weak self]result in
             switch result {
             case .success(let rocketsArray):
                 self?.rocketViewModel.setAllRockets(rockets: rocketsArray)
@@ -36,7 +36,6 @@ class RocketsController: UIViewController {
                 self?.displayErrorAlert(title: .unsuccessfulRocketApiCall,
                                         errorMessage: .unsuccessfulRocketApiCall,
                                         buttonTitle: "Ok")
-                return
             }
         }
     }
@@ -44,7 +43,7 @@ class RocketsController: UIViewController {
 
 extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        rocketViewModel.getRocketCount()
+        rocketViewModel.rocketCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,8 +52,10 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-      
-    cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
+        
+        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),
+                           rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
+                           atIndex: indexPath.item)
         return cell
     }
     

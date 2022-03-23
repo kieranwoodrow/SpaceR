@@ -20,25 +20,25 @@ struct Launch: Codable {
     let id, rocket, launchpad: UUID?
     
     private enum CodingKeys: String, CodingKey {
-            case fairlings
-            case links
-            case staticFireDateUtc = "static_fire_date_utc"
-            case details
-            case name
-            case dateUtc = "date_utc"
-            case dateLocal = "date_local"
-            case success
-            case upcoming
-            case failures
-            case crew
-            case ships
-            case capsules
-            case flightNumber = "flight_number"
-            case cores
-            case id
-            case rocket
-            case launchpad
-        }
+        case fairlings
+        case links
+        case staticFireDateUtc = "static_fire_date_utc"
+        case details
+        case name
+        case dateUtc = "date_utc"
+        case dateLocal = "date_local"
+        case success
+        case upcoming
+        case failures
+        case crew
+        case ships
+        case capsules
+        case flightNumber = "flight_number"
+        case cores
+        case id
+        case rocket
+        case launchpad
+    }
 }
 
 struct Fairlings: Codable {
@@ -46,11 +46,11 @@ struct Fairlings: Codable {
     let ships: [UUID?]
     
     private enum CodingKeys: String, CodingKey {
-            case reused
-            case recoveryAttempt = "recovery_attempt"
-            case recovered
-            case ships
-        }
+        case reused
+        case recoveryAttempt = "recovery_attempt"
+        case recovered
+        case ships
+    }
 }
 
 struct Links: Codable {
@@ -60,15 +60,15 @@ struct Links: Codable {
     let presskit, webcast, youtubeId, article, wikipedia: String?
     
     private enum CodingKeys: String, CodingKey {
-            case patch
-            case reddit
-            case flickr
-            case presskit
-            case webcast
-            case youtubeId = "youtube_id"
-            case article
-            case wikipedia
-        }
+        case patch
+        case reddit
+        case flickr
+        case presskit
+        case webcast
+        case youtubeId = "youtube_id"
+        case article
+        case wikipedia
+    }
 }
 
 struct Patch: Codable {
@@ -100,14 +100,14 @@ struct Cores: Codable {
     let landingType: String?
     
     private enum CodingKeys: String, CodingKey {
-            case core
-            case landpad
-            case flight
-            case gridfins
-            case legs
-            case reused
-            case landingAttempt = "landing_attempt"
-            case landingSuccess = "landing_success"
-            case landingType = "landing_type"
-        }
+        case core
+        case landpad
+        case flight
+        case gridfins
+        case legs
+        case reused
+        case landingAttempt = "landing_attempt"
+        case landingSuccess = "landing_success"
+        case landingType = "landing_type"
+    }
 }

@@ -35,7 +35,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 unsuccessfulLogin()
             }
         } else {
-            self.displayErrorAlert(title: .unsuccessfulLoginDueToMissingFields, errorMessage: .unsuccessfulLoginDueToMissingFields, buttonTitle: "Ok")
+            self.displayErrorAlert(title: .unsuccessfulLoginDueToMissingFields,
+                                   errorMessage: .unsuccessfulLoginDueToMissingFields,
+                                   buttonTitle: "Ok")
         }
     }
     

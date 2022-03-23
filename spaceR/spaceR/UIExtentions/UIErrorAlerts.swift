@@ -15,6 +15,7 @@ enum CustomError: Error, LocalizedError {
     case unsuccessfulSignupDueToMisingFields
     case unsuccessfulDatabaseSignup
     case unsuccessfulRocketApiCall
+    case unsuccessfulLaunchpadApiCall
     
     var errorDescription: String? {
         switch self {
@@ -27,9 +28,10 @@ enum CustomError: Error, LocalizedError {
         case .unsuccessfulDatabaseSignup:
             return "Database save unsuccessful"
         case .unsuccessfulRocketApiCall:
-            return "Api call unsuccessful"
+            return "Api call for rockets unsuccessful"
+        case .unsuccessfulLaunchpadApiCall:
+            return "Api call for launchpads unsuccessful"
         }
-        
     }
     
     var failureReason: String? {
@@ -44,6 +46,8 @@ enum CustomError: Error, LocalizedError {
             return "User info did not get saved to database"
         case .unsuccessfulRocketApiCall:
             return "Rockets information has not been loaded successfully"
+        case .unsuccessfulLaunchpadApiCall:
+            return "Launchpad information has not been loaded successfully"
         }
     }
 }
@@ -51,8 +55,12 @@ enum CustomError: Error, LocalizedError {
 extension UIViewController {
     
     func displayErrorAlert(title: CustomError, errorMessage: CustomError, buttonTitle: String) {
-        let alert = UIAlertController(title: title.errorDescription, message: errorMessage.failureReason, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: buttonTitle, style: UIAlertAction.Style.default, handler: nil))
+        let alert = UIAlertController(title: title.errorDescription,
+                                      message: errorMessage.failureReason,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: buttonTitle,
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
