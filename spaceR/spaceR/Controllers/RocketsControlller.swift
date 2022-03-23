@@ -36,7 +36,6 @@ class RocketsController: UIViewController {
                 self?.displayErrorAlert(title: .unsuccessfulRocketApiCall,
                                         errorMessage: .unsuccessfulRocketApiCall,
                                         buttonTitle: "Ok")
-                return
             }
         }
     }
@@ -44,17 +43,20 @@ class RocketsController: UIViewController {
 
 extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        rocketViewModel.getRocketCount()
+        rocketViewModel.rocketCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = rocketTableView.dequeueReusableCell(withIdentifier: "RocketTableViewCell", for: indexPath) as? UIRocketTableViewCell
+        guard let cell = rocketTableView.dequeueReusableCell(withIdentifier: "RocketTableViewCell",
+                                                             for: indexPath) as? UIRocketTableViewCell
         else {
             return UITableViewCell()
         }
       
-    cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item), rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),  atIndex: indexPath.item)
+    cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),
+                       rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
+                       atIndex: indexPath.item)
         return cell
     }
     

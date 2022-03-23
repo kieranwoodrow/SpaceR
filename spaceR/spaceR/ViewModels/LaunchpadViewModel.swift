@@ -19,13 +19,9 @@ class LaunchpadViewModel {
         allLaunchpads = launchpads
     }
     
-    func getAllRockets() -> [Launchpads] {
-        return allLaunchpads
-    }
+    var launchpadList: [Launchpads] { return allLaunchpads }
     
-    func getLaunchpadCount() -> Int {
-        return allLaunchpads.count
-    }
+    var launchpadCount: Int { return allLaunchpads.count }
     
     func getLaunchpadName(index: Int) -> String {
         return allLaunchpads[index].lauchpadName ?? ""

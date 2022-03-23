@@ -36,7 +36,6 @@ class LaunchpadViewController: UIViewController {
                 self?.displayErrorAlert(title: .unsuccessfulLaunchpadApiCall,
                                         errorMessage: .unsuccessfulLaunchpadApiCall,
                                         buttonTitle: "Ok")
-                return
             }
         }
     }
@@ -44,16 +43,19 @@ class LaunchpadViewController: UIViewController {
 
 extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        launchpadViewModel.getLaunchpadCount()
+        launchpadViewModel.launchpadCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = launchpadTableView.dequeueReusableCell(withIdentifier: "LaunchpadTableViewCell", for: indexPath) as? UILaunchpadTableViewCell
+        guard let cell = launchpadTableView.dequeueReusableCell(withIdentifier: "LaunchpadTableViewCell",
+                                                                for: indexPath) as? UILaunchpadTableViewCell
         else {
             return UITableViewCell()
         }
         
-        cell.setLaunchpadCell(image: launchpadViewModel.getLaunchpadImage(index: indexPath.item),title: launchpadViewModel.getLaunchpadTitle(index: indexPath.item),  atIndex: indexPath.item)
+        cell.setLaunchpadCell(image: launchpadViewModel.getLaunchpadImage(index: indexPath.item),
+                              title: launchpadViewModel.getLaunchpadTitle(index: indexPath.item),
+                              atIndex: indexPath.item)
         return cell
     }
     

@@ -19,13 +19,9 @@ class RocketViewModel {
         allRockets = rockets
     }
     
-    func getAllRockets() -> [Rocket] {
-        return allRockets
-    }
+    var rocketList: [Rocket] { return allRockets }
     
-    func getRocketCount() -> Int {
-        return allRockets.count
-    }
+    var rocketCount: Int { return allRockets.count }
     
     func getRocketImage(index: Int) -> String {
         var rocketImage = ""
