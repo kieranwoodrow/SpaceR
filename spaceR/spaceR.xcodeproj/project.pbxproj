@@ -19,7 +19,6 @@
 		D665E91227EB246C00DB118E /* RocketsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D665E91127EB246C00DB118E /* RocketsInfoViewController.swift */; };
 		D665E91627EB3E3A00DB118E /* RocketInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D665E91527EB3E3A00DB118E /* RocketInfoViewModel.swift */; };
 		D6B671FA27E2814B001F2EF4 /* Launchpads.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B671F927E2814B001F2EF4 /* Launchpads.swift */; };
-		D6B671FC27E3373B001F2EF4 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6B671FB27E3373B001F2EF4 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg */; };
 		D6B671FE27E4F131001F2EF4 /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */; };
 		D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */; };
 		D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */; };
@@ -71,7 +70,6 @@
 		D665E91127EB246C00DB118E /* RocketsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsInfoViewController.swift; sourceTree = "<group>"; };
 		D665E91527EB3E3A00DB118E /* RocketInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoViewModel.swift; sourceTree = "<group>"; };
 		D6B671F927E2814B001F2EF4 /* Launchpads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpads.swift; sourceTree = "<group>"; };
-		D6B671FB27E3373B001F2EF4 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg"; path = "../../../../../Desktop/IOS Grad Program/Assets_SpaceR/Images/JPEG/ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg"; sourceTree = "<group>"; };
 		D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
 		D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewImageStyling.swift; sourceTree = "<group>"; };
 		D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorAlerts.swift; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 		D6E9CF8027C8D28F00AED244 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D6B671FB27E3373B001F2EF4 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg */,
 				D6E9CF5E27C8CD6600AED244 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -390,7 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E9CF6227C8CD6600AED244 /* LaunchScreen.storyboard in Resources */,
-				D6B671FC27E3373B001F2EF4 /* ivan-diaz-YOy-ek-aBR0-unsplash (2).jpg in Resources */,
 				D6E9CF5F27C8CD6600AED244 /* Assets.xcassets in Resources */,
 				D6E9CF5D27C8CD6300AED244 /* Main.storyboard in Resources */,
 			);

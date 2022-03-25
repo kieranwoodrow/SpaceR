@@ -9,6 +9,7 @@ import UIKit
 
 class RocketsInfoViewController: UIViewController {
 
+    @IBOutlet weak var rocketName: UILabel!
     @IBOutlet weak var rocketDescription: UILabel!
     
     private lazy var rocketInfoViewModel = RocketInfoViewModel()
@@ -16,6 +17,11 @@ class RocketsInfoViewController: UIViewController {
         super.viewDidLoad()
         // Test implementation
         rocketDescription.text = rocketInfoViewModel.rocketDescription
+        
+        rocketName.text = rocketInfoViewModel.rocketName
+        
+        print(rocketDescription.text)
+        
 
     }
     

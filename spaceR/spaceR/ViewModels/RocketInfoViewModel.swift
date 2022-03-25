@@ -18,5 +18,9 @@ class RocketInfoViewModel {
     var rocketDescription: String {
         return rocket?.description ?? ""
     }
+    
+    var rocketName: String {
+        return rocket?.name ?? ""
+    }
 
 }
