@@ -579,7 +579,6 @@
                                         <connections>
                                             <outlet property="rocketTableViewImage" destination="tct-9Q-dLw" id="sEi-i1-AzG"/>
                                             <outlet property="rocketTableViewTitle" destination="nJH-lR-shA" id="cPu-A2-7CS"/>
-                                            <segue destination="Phe-fu-igv" kind="show" identifier="RocketsInfoViewControllerSegue" id="4fm-7K-yEv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -597,6 +596,7 @@
                     <navigationItem key="navigationItem" id="d4A-Tx-rEL"/>
                     <connections>
                         <outlet property="rocketTableView" destination="UZv-NX-Np6" id="vJL-Ho-9Cr"/>
+                        <segue destination="Phe-fu-igv" kind="show" identifier="RocketsInfoViewControllerSegue" id="LIG-l7-bTi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -937,7 +937,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JGm-fz-Yx9"/>
         <segue reference="Nvt-PQ-hoC"/>
         <segue reference="zXh-43-cqG"/>
     </inferredMetricsTieBreakers>

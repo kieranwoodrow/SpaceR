@@ -71,7 +71,6 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "RocketsInfoViewControllerSegue" {
             if let rocketInfoPage = segue.destination as? RocketsInfoViewController {
                 let row = self.rocketTableView?.indexPathForSelectedRow?.row ?? 0
-
                 rocketInfoPage.set(rocketInfo: rocketViewModel.getRocket(atIndex: row))
             }
         }
