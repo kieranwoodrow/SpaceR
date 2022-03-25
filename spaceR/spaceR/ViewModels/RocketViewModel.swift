@@ -23,15 +23,19 @@ class RocketViewModel {
     
     var rocketCount: Int { return allRockets.count }
     
-    func getRocketImage(index: Int) -> String {
+    func getRocketImage(atIndex: Int) -> String {
         var rocketImage = ""
-        if let safeImage = allRockets[index].images.randomElement() {
+        if let safeImage = allRockets[atIndex].images.randomElement() {
             rocketImage = safeImage ?? ""
         }
         return rocketImage
     }
     
-    func getRocketTitle(index: Int) -> String {
-        return allRockets[index].name ?? ""
+    func getRocketTitle(atIndex: Int) -> String {
+        return allRockets[atIndex].name ?? ""
+    }
+    
+    func getRocket(atIndex: Int) -> Rocket {
+        return allRockets[atIndex]
     }
 }

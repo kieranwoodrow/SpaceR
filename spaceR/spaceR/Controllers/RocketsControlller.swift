@@ -53,13 +53,27 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),
-                           rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
+        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(atIndex: indexPath.item),
+                           rocketTitle: rocketViewModel.getRocketTitle(atIndex: indexPath.item),
                            atIndex: indexPath.item)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "RocketsInfoViewControllerSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RocketsInfoViewControllerSegue" {
+            if let rocketInfoPage = segue.destination as? RocketsInfoViewController {
+                let row = self.rocketTableView?.indexPathForSelectedRow?.row ?? 0
+
+                rocketInfoPage.set(rocketInfo: rocketViewModel.getRocket(atIndex: row))
+            }
+        }
     }
 }

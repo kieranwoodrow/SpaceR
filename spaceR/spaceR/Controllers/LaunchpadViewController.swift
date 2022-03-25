@@ -53,8 +53,8 @@ extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setLaunchpadCell(image: launchpadViewModel.getLaunchpadImage(index: indexPath.item),
-                              title: launchpadViewModel.getLaunchpadTitle(index: indexPath.item),
+        cell.setLaunchpadCell(image: launchpadViewModel.getLaunchpadImage(atIndex: indexPath.item),
+                              title: launchpadViewModel.getLaunchpadTitle(atIndex: indexPath.item),
                               atIndex: indexPath.item)
         return cell
     }
