@@ -9,9 +9,14 @@ import Foundation
 
 class LaunchpadViewModel {
     
+    private var repository: LaunchpadRepositoryType?
+    private weak var delegate: ViewModelDelegate?
     private var allLaunchpads: [Launchpads]
     
-    init() {
+    init(repository: LaunchpadRepositoryType,
+         delegate: ViewModelDelegate) {
+        self.repository = repository
+        self.delegate = delegate
         self.allLaunchpads = []
     }
     
@@ -30,5 +35,17 @@ class LaunchpadViewModel {
     
     func getLaunchpadTitle(index: Int) -> String {
         return allLaunchpads[index].lauchpadName ?? ""
+    }
+    
+    func getAllLaunchpadsFromAPI() {
+        repository?.fetchLaunchpads(completion: {[weak self] result in
+            switch result {
+            case .success(let launchpadArray):
+                self?.setAllLaunchpads(launchpads: launchpadArray)
+                self?.delegate?.reloadView()
+            case .failure(let error):
+                self?.delegate?.show(error: error.rawValue)
+            }
+        })
     }
 }

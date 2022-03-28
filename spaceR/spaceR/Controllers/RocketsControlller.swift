@@ -5,17 +5,17 @@
 //  Created by Kieran Woodrow on 2022/02/25.
 //
 
-import Foundation
 import UIKit
 
 class RocketsController: UIViewController {
     
     @IBOutlet private weak var rocketTableView: UITableView!
-    private lazy var rocketViewModel = RocketViewModel()
+    private lazy var rocketViewModel = RocketViewModel(repository: RocketRepository(),
+                                                       delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAllRocketsFromAPI()
+        rocketViewModel.getAllRocketsFromAPI()
         setTableView()
     }
     
@@ -23,25 +23,10 @@ class RocketsController: UIViewController {
         rocketTableView.delegate = self
         rocketTableView.dataSource = self
     }
-    
-    private func getAllRocketsFromAPI() {
-        URLSession.shared.getDataFromApi(url: Constants.getAllRocketsUrl, model: [Rocket].self) {[weak self]result in
-            switch result {
-            case .success(let rocketsArray):
-                self?.rocketViewModel.setAllRockets(rockets: rocketsArray)
-                DispatchQueue.main.async {
-                    self?.rocketTableView.reloadData()
-                }
-            case .failure:
-                self?.displayErrorAlert(title: .unsuccessfulRocketApiCall,
-                                        errorMessage: .unsuccessfulRocketApiCall,
-                                        buttonTitle: "Ok")
-            }
-        }
-    }
 }
 
 extension RocketsController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         rocketViewModel.rocketCount
     }
@@ -61,5 +46,19 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
+    }
+}
+
+extension RocketsController: ViewModelDelegate {
+    
+    func reloadView() {
+        rocketTableView.reloadData()
+        
+    }
+    
+    func show(error: String) {
+        self.displayErrorAlert(title: .unsuccessfulRocketApiCall,
+                               errorMessage: .unsuccessfulRocketApiCall,
+                               buttonTitle: "OK")
     }
 }
