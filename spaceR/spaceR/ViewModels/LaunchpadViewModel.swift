@@ -25,7 +25,7 @@ class LaunchpadViewModel {
     }
     var launchpadCount: Int { return allLaunchpads.count }
     
-    func getLaunchpadImage(index: Int) -> String {
+    func launchpadImage(index: Int) -> String {
         var launchpadImage = ""
         if let safeImage = allLaunchpads[index].images?.largeImage.randomElement() {
             launchpadImage = safeImage ?? ""
@@ -33,11 +33,11 @@ class LaunchpadViewModel {
         return launchpadImage
     }
     
-    func getLaunchpadTitle(index: Int) -> String {
+    func launchpadTitle(index: Int) -> String {
         return allLaunchpads[index].lauchpadName ?? ""
     }
     
-    func getAllLaunchpadsFromAPI() {
+    func getAllLaunchpads() {
         repository?.fetchLaunchpads(completion: {[weak self] result in
             switch result {
             case .success(let launchpadArray):

@@ -15,7 +15,7 @@ class RocketsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rocketViewModel.getAllRocketsFromAPI()
+        rocketViewModel.getAllRockets()
         setTableView()
     }
     
@@ -38,8 +38,8 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setRocketCell(rocketImage: rocketViewModel.getRocketImage(index: indexPath.item),
-                           rocketTitle: rocketViewModel.getRocketTitle(index: indexPath.item),
+        cell.setRocketCell(rocketImage: rocketViewModel.rocketImage(index: indexPath.item),
+                           rocketTitle: rocketViewModel.rocketTitle(index: indexPath.item),
                            atIndex: indexPath.item)
         return cell
     }
@@ -53,7 +53,6 @@ extension RocketsController: ViewModelDelegate {
     
     func reloadView() {
         rocketTableView.reloadData()
-        
     }
     
     func show(error: String) {

@@ -7,22 +7,23 @@
 
 import Foundation
 
- func call<Generic: Codable>(with request: URLRequest, model: Generic.Type, completion: @escaping((Result<Generic, APIError>) -> Void)) {
-     
+func call<Generic: Codable>(with request: URLRequest, model: Generic.Type,
+                            completion: @escaping((Result<Generic, APIError>) -> Void)) {
+    
     let dataTask = URLSession.shared.dataTask(with: request) { data, _, error in
         guard error == nil else {
-                completion(.failure(.invalidUrl))
+            completion(.failure(.invalidUrl))
             return
         }
         do {
             guard let data = data else {
-                    completion(.failure(.invalidData))
+                completion(.failure(.invalidData))
                 return
             }
             let object = try JSONDecoder().decode(model, from: data)
-                completion(Result.success(object))
+            completion(Result.success(object))
         } catch {
-                completion(Result.failure(.parsingError))
+            completion(Result.failure(.parsingError))
         }
     }
     dataTask.resume()

@@ -30,7 +30,10 @@ class SignupViewController: UIViewController {
            let safeEmail = self.userEmail.text, !safeEmail.isEmpty,
            let safePassword = self.userPassword.text,
            !safePassword.isEmpty {
-            setSignupModelAttributes(firstName: safeFirstName, lastName: safeLastName, email: safeEmail, password: safePassword)
+            setSignupModelAttributes(firstName: safeFirstName,
+                                     lastName: safeLastName,
+                                     email: safeEmail,
+                                     password: safePassword)
             return true
         } else {
             self.displayErrorAlert(title: .unsuccessfulSignupDueToMisingFields,

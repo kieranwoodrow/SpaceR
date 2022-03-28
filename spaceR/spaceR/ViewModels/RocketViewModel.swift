@@ -25,7 +25,7 @@ class RocketViewModel {
         self.allRockets = []
     }
     
-    func setAllRockets(rockets: [Rocket]) {
+    func set(rockets: [Rocket]) {
         allRockets = rockets
     }
     
@@ -33,7 +33,7 @@ class RocketViewModel {
     
     var rocketCount: Int { return allRockets?.count ?? 0 }
     
-    func getRocketImage(index: Int) -> String {
+    func rocketImage(index: Int) -> String {
         var rocketImage = ""
         if let safeImage = allRockets?[index].images.randomElement() {
             rocketImage = safeImage ?? ""
@@ -41,15 +41,15 @@ class RocketViewModel {
         return rocketImage
     }
     
-    func getRocketTitle(index: Int) -> String {
+    func rocketTitle(index: Int) -> String {
         return allRockets?[index].name ?? ""
     }
     
-    func getAllRocketsFromAPI() {
+    func getAllRockets() {
         repository?.fetchRockets(completion: {[weak self] result in
             switch result {
             case .success(let rocketsArray):
-                self?.setAllRockets(rockets: rocketsArray)
+                self?.set(rockets: rocketsArray)
                 self?.delegate?.reloadView()
             case .failure(let error):
                 self?.delegate?.show(error: error.rawValue)
