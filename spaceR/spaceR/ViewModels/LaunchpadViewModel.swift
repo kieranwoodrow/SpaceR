@@ -20,9 +20,10 @@ class LaunchpadViewModel {
         self.allLaunchpads = []
     }
     
-    func setAllLaunchpads(launchpads: [Launchpads]) {
+    func set(launchpads: [Launchpads]) {
         allLaunchpads = launchpads
     }
+    
     var launchpadCount: Int { return allLaunchpads.count }
     
     func launchpadImage(index: Int) -> String {
@@ -41,7 +42,7 @@ class LaunchpadViewModel {
         repository?.fetchLaunchpads(completion: {[weak self] result in
             switch result {
             case .success(let launchpadArray):
-                self?.setAllLaunchpads(launchpads: launchpadArray)
+                self?.set(launchpads: launchpadArray)
                 self?.delegate?.reloadView()
             case .failure(let error):
                 self?.delegate?.show(error: error.rawValue)
