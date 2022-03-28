@@ -10,32 +10,55 @@ import UIKit
 
 class LoginViewModel {
     
-    private var user: [User] = []
+    private var userEmail: String?
+    private var userPassword: String?
+    private var user: [User]
+    private weak var delegate: ViewModelDelegate?
     private let coreDataPersistantObject = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
-    func validateUserCredentials(userEmail: String, userPassword: String) -> Bool {
-        return validateUserEmail(userEmail: userEmail) && validateUserPassword(userPassword: userPassword)
+    init(delegate: ViewModelDelegate) {
+        self.delegate = delegate
+        self.userEmail = ""
+        self.userPassword = ""
+        self.user = []
     }
     
-    func validateUserEmail(userEmail: String) -> Bool {
+    func validateUserCredentials(userEmail: String?, userPassword: String?) throws -> Bool {
+        do {
+            return try validateUserEmail(userEmail: userEmail) && validateUserPassword(userPassword: userPassword)
+        } catch {
+            throw error
+        }
+    }
+    
+    func validateUserEmail(userEmail: String?) throws -> Bool {
         var validEmail: Bool = false
+        if let safeUserEmail = userEmail,
+           !safeUserEmail.isEmpty {
+            self.userEmail = safeUserEmail
+        }
         do {
             try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
             if !user.isEmpty {
                 for users in user {
-                    if users.value(forKey: "email") as? String == userEmail {
+                    if users.value(forKey: "email") as? String == self.userEmail {
                         validEmail = true
                     }
                 }
             }
         } catch {
             validEmail = false
+            throw CustomError.unsuccessfulLoginDueToMissingFields
         }
         return validEmail
     }
     
-    func validateUserPassword(userPassword: String) -> Bool {
+    func validateUserPassword(userPassword: String?) throws -> Bool {
         var validPassword: Bool = false
+        if let safeUserPassword = userPassword,
+           !safeUserPassword.isEmpty {
+            self.userPassword = safeUserPassword
+        }
         do {
             try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
             if !user.isEmpty {
@@ -48,6 +71,7 @@ class LoginViewModel {
             }
         } catch {
             validPassword = false
+            throw CustomError.unsuccessfulLoginDueToMissingFields
         }
         return validPassword
     }

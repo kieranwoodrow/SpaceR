@@ -11,7 +11,7 @@ class LaunchpadViewModel {
     
     private var repository: LaunchpadRepositoryType?
     private weak var delegate: ViewModelDelegate?
-    private var allLaunchpads: [Launchpads]
+    private var allLaunchpads: [Launchpads]?
     
     init(repository: LaunchpadRepositoryType,
          delegate: ViewModelDelegate) {
@@ -20,29 +20,27 @@ class LaunchpadViewModel {
         self.allLaunchpads = []
     }
     
-    func set(launchpads: [Launchpads]) {
-        allLaunchpads = launchpads
+    var launchpadCount: Int {
+        return allLaunchpads?.count ?? 0
     }
-    
-    var launchpadCount: Int { return allLaunchpads.count }
     
     func launchpadImage(index: Int) -> String {
         var launchpadImage = ""
-        if let safeImage = allLaunchpads[index].images?.largeImage.randomElement() {
+        if let safeImage = allLaunchpads?[index].images?.largeImage.randomElement() {
             launchpadImage = safeImage ?? ""
         }
         return launchpadImage
     }
     
     func launchpadTitle(index: Int) -> String {
-        return allLaunchpads[index].lauchpadName ?? ""
+        return allLaunchpads?[index].lauchpadName ?? ""
     }
     
     func getAllLaunchpads() {
         repository?.fetchLaunchpads(completion: {[weak self] result in
             switch result {
             case .success(let launchpadArray):
-                self?.set(launchpads: launchpadArray)
+                self?.allLaunchpads = launchpadArray
                 self?.delegate?.reloadView()
             case .failure(let error):
                 self?.delegate?.show(error: error.rawValue)

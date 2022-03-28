@@ -10,27 +10,40 @@ import UIKit
 
 class SignupViewModel {
     
-    private var userFirstName = ""
-    private var userLastName = ""
-    private var userEmail = ""
-    private var userPassword = ""
+    private var userFirstName: String
+    private var userLastName: String
+    private var userEmail: String
+    private var userPassword: String
+    private weak var delegate: ViewModelDelegate?
     
-    private let coreDataPersistantObject = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    private let coreDataPersistantObject = (UIApplication.shared.delegate
+                                            as? AppDelegate)?.persistentContainer.viewContext
     
-    func set(firstName: String) {
-        userFirstName = firstName
+    init(delegate: ViewModelDelegate) {
+        self.delegate = delegate
+        self.userFirstName = ""
+        self.userLastName = ""
+        self.userEmail = ""
+        self.userPassword = ""
     }
     
-    func set(lastName: String) {
-        userLastName = lastName
-    }
-    
-    func set(email: String) {
-        userEmail = email
-    }
-    
-    func set(password: String) {
-        userPassword = password
+    func validateUserInput(userFirstName: String?, userLastName: String?,
+                           userEmail: String?, userPassword: String?) throws -> Bool {
+        var validPassword: Bool = false
+        if let safeFirstName = userFirstName, !safeFirstName.isEmpty,
+           let safeLastName = userLastName, !safeLastName.isEmpty,
+           let safeEmail = userEmail, !safeEmail.isEmpty,
+           let safePassword = userPassword, !safePassword.isEmpty {
+            self.userFirstName = safeFirstName
+            self.userLastName = safeLastName
+            self.userEmail = safeEmail
+            self.userPassword = safePassword
+            validPassword = true
+        } else {
+            validPassword = false
+            throw CustomError.unsuccessfulSignupDueToMisingFields
+        }
+        return validPassword
     }
     
     func saveUserToDatabase() throws {

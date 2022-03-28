@@ -16,10 +16,14 @@ protocol RocketRepositoryType: AnyObject {
 class RocketRepository: RocketRepositoryType {
     
     func fetchRockets(completion: @escaping (RocketResult)) {
-        request(endpoint: Constants.getAllRocketsUrl, method: Method.GET, completion: completion)
+        request(endpoint: Constants.getAllRocketsUrl,
+                method: Method.GET,
+                completion: completion)
     }
     
-    private func request<T: Codable>(endpoint: String, method: Method, completion: @escaping((Result<T, APIError>) -> Void)) {
+    private func request<T: Codable>(endpoint: String,
+                                     method: Method,
+                                     completion: @escaping((Result<T, APIError>) -> Void)) {
         guard let url = URL(string: endpoint) else {
             completion(.failure(.internalError))
             return

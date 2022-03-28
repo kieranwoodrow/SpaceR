@@ -25,13 +25,13 @@ class RocketViewModel {
         self.allRockets = []
     }
     
-    func set(rockets: [Rocket]) {
-        allRockets = rockets
+    var rocketList: [Rocket] {
+        return allRockets ?? []
     }
     
-    var rocketList: [Rocket] { return allRockets ?? [] }
-    
-    var rocketCount: Int { return allRockets?.count ?? 0 }
+    var rocketCount: Int {
+        return allRockets?.count ?? 0
+    }
     
     func rocketImage(index: Int) -> String {
         var rocketImage = ""
@@ -49,7 +49,7 @@ class RocketViewModel {
         repository?.fetchRockets(completion: {[weak self] result in
             switch result {
             case .success(let rocketsArray):
-                self?.set(rockets: rocketsArray)
+                self?.allRockets = rocketsArray
                 self?.delegate?.reloadView()
             case .failure(let error):
                 self?.delegate?.show(error: error.rawValue)

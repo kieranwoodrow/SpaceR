@@ -7,11 +7,18 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, ViewModelDelegate {
+    func reloadView() {
+        
+    }
+    
+    func show(error: String) {
+        
+    }
     
     @IBOutlet private weak var textFieldEmailID: UITextField!
     @IBOutlet private weak var textFieldPassword: UITextField!
-    private lazy var loginViewModel = LoginViewModel()
+    private lazy var loginViewModel = LoginViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +34,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction private func loginButtonClicked(_ sender: Any) {
-        if let safeEmail = self.textFieldEmailID.text, !safeEmail.isEmpty,
-           let safePassword = self.textFieldPassword.text, !safePassword.isEmpty {
-            if loginViewModel.validateUserCredentials(userEmail: safeEmail, userPassword: safePassword) {
-                successfulLogin()
-            } else {
-                unsuccessfulLogin()
-            }
-        } else {
+        do {
+            try loginViewModel.validateUserCredentials(userEmail: textFieldEmailID.text,
+                                               userPassword: textFieldPassword.text) ? successfulLogin() : unsuccessfulLogin()
+        } catch {
             self.displayErrorAlert(title: .unsuccessfulLoginDueToMissingFields,
                                    errorMessage: .unsuccessfulLoginDueToMissingFields,
                                    buttonTitle: "Ok")
         }
+            
     }
     
     func successfulLogin() {
