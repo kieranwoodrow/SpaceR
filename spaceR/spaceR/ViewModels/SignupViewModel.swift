@@ -34,29 +34,22 @@ class SignupViewModel {
         self.saveStatus = false
     }
     
-    func handleSaveRequest(firstName: String?, lastName: String?, email: String?, password: String?) {
-        
+    func handleSaveRequest(firstName: String, lastName: String, email: String, password: String) {
         if validateUserInput(userFirstName: firstName, userLastName: lastName, userEmail: email, userPassword: password) {
             saveUserToDatabase() ? delegate?.reloadView() : delegate?.show(error: .unsuccessfulDatabaseSignup)
         } else {
             delegate?.show(error: .unsuccessfulSignupDueToMisingFields)
         }
-        
     }
     
-    func validateUserInput(userFirstName: String?, userLastName: String?,
-                           userEmail: String?, userPassword: String?) -> Bool {
-        if let safeFirstName = userFirstName, !safeFirstName.isEmpty,
-           let safeLastName = userLastName, !safeLastName.isEmpty,
-           let safeEmail = userEmail, !safeEmail.isEmpty,
-           let safePassword = userPassword, !safePassword.isEmpty {
-            self.userFirstName = safeFirstName
-            self.userLastName = safeLastName
-            self.userEmail = safeEmail
-            self.userPassword = safePassword
+    func validateUserInput(userFirstName: String, userLastName: String,
+                           userEmail: String, userPassword: String) -> Bool {
+        if !userFirstName.isEmpty, !userLastName.isEmpty, !userEmail.isEmpty,!userPassword.isEmpty {
+            self.userFirstName = userFirstName
+            self.userLastName = userLastName
+            self.userEmail = userEmail
+            self.userPassword = userPassword
             validCredentials = true
-        } else {
-            validCredentials = false
         }
         return validCredentials
     }
@@ -64,7 +57,7 @@ class SignupViewModel {
     func saveUserToDatabase() -> Bool {
         repository?.saveUser(firstName: userFirstName, lastName: userLastName,
                              email: userEmail, password: userPassword,
-                             completion: {[weak self] result in
+                             completion: { [weak self] result in
             switch result {
             case .success(let savedSuccessfully):
                 self?.saveStatus = savedSuccessfully

@@ -28,8 +28,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction private func loginButtonClicked(_ sender: Any) {
-        loginViewModel.validateUserCredentials(userEmail: textFieldEmailID.text,
-                                               userPassword: textFieldPassword.text)
+        loginViewModel.validateUserCredentials(userEmail: textFieldEmailID?.text ?? "" ,
+                                               userPassword: textFieldPassword?.text ?? "")
     }
 }
 

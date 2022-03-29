@@ -26,16 +26,15 @@ class LoginViewModel {
         self.validPassword = false
     }
     
-    func validateUserCredentials(userEmail: String?, userPassword: String?) {
+    func validateUserCredentials(userEmail: String, userPassword: String) {
         validateEmail(userEmail: userEmail) && validatePassword(userPassword: userPassword)
         ? delegate?.reloadView() : delegate?.show(error: .unsuccessfulLoginDueToInvalidAccountDetails)
     }
     
-    func validateEmail(userEmail: String?) -> Bool {
-        if let safeUserEmail = userEmail,
-           !safeUserEmail.isEmpty {
-            self.userEmail = safeUserEmail
-            repository?.fetchEmail(email: safeUserEmail, completion: { [weak self] result in
+    func validateEmail(userEmail: String) -> Bool {
+        if !userEmail.isEmpty {
+            self.userEmail = userEmail
+            repository?.fetchEmail(email: userEmail, completion: { [weak self] result in
                 switch result {
                 case .success(let email):
                     if self?.userEmail == email {
@@ -51,11 +50,10 @@ class LoginViewModel {
         return validEmail
     }
     
-    func validatePassword(userPassword: String?) -> Bool {
-        if let safeUserPassword = userPassword,
-           !safeUserPassword.isEmpty {
-            self.userPassword = safeUserPassword
-            repository?.fetchPassword(password: safeUserPassword, completion: { [weak self] result in
+    func validatePassword(userPassword: String) -> Bool {
+           if !userPassword.isEmpty {
+            self.userPassword = userPassword
+            repository?.fetchPassword(password: userPassword, completion: { [weak self] result in
                 switch result {
                 case .success(let password):
                     if self?.userPassword == password {

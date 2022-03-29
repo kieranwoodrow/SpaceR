@@ -22,9 +22,9 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction private func signupButtonClicked(_ sender: Any) {
-        signUpViewModel.handleSaveRequest(firstName: userFirstName.text,
-                                          lastName: userLastName.text,
-                                          email: userEmail.text, password: userPassword.text)
+        signUpViewModel.handleSaveRequest(firstName: userFirstName?.text ?? "",
+                                          lastName: userLastName?.text ?? "",
+                                          email: userEmail?.text ?? "", password: userPassword?.text ?? "")
     }
 }
 
