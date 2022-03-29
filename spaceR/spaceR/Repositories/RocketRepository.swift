@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias RocketResult = (Result<[Rocket], APIError>) -> Void
+typealias RocketResult = (Result<[Rocket], CustomError>) -> Void
 
 protocol RocketRepositoryType: AnyObject {
     func fetchRockets(completion: @escaping(RocketResult))
@@ -23,7 +23,7 @@ class RocketRepository: RocketRepositoryType {
     
     private func request<T: Codable>(endpoint: String,
                                      method: Method,
-                                     completion: @escaping((Result<T, APIError>) -> Void)) {
+                                     completion: @escaping((Result<T, CustomError>) -> Void)) {
         guard let url = URL(string: endpoint) else {
             completion(.failure(.internalError))
             return
@@ -33,6 +33,5 @@ class RocketRepository: RocketRepositoryType {
         request.httpMethod = "\(method)"
         request.allHTTPHeaderFields = ["Content-Type": "application/json"]
         call(with: request, model: T.self, completion: completion)
-        
     }
 }

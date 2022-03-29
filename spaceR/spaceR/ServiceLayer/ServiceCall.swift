@@ -7,8 +7,13 @@
 
 import Foundation
 
+enum Method {
+    case GET
+    case POST
+}
+
 func call<Generic: Codable>(with request: URLRequest, model: Generic.Type,
-                            completion: @escaping((Result<Generic, APIError>) -> Void)) {
+                            completion: @escaping((Result<Generic, CustomError>) -> Void)) {
     
     let dataTask = URLSession.shared.dataTask(with: request) { data, _, error in
         guard error == nil else {

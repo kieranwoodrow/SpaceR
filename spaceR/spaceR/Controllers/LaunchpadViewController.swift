@@ -55,9 +55,7 @@ extension LaunchpadViewController: ViewModelDelegate {
         launchpadTableView.reloadData()
     }
     
-    func show(error: String) {
-        self.displayErrorAlert(title: .unsuccessfulLaunchpadApiCall,
-                               errorMessage: .unsuccessfulRocketApiCall,
-                               buttonTitle: "OK")
+    func show(error: CustomError) {
+        self.displayErrorAlert(title: error, errorMessage: error, buttonTitle: "OK")
     }
 }

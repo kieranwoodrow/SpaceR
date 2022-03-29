@@ -10,68 +10,63 @@ import UIKit
 
 class LoginViewModel {
     
+    private var validPassword: Bool
+    private var validEmail: Bool
     private var userEmail: String?
     private var userPassword: String?
-    private var user: [User]
     private weak var delegate: ViewModelDelegate?
-    private let coreDataPersistantObject = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    private weak var repository: LoginRepositoryType?
     
-    init(delegate: ViewModelDelegate) {
+    init(repository: LoginRepositoryType,
+         delegate: ViewModelDelegate) {
         self.delegate = delegate
-        self.userEmail = ""
+        self.repository = repository
         self.userPassword = ""
-        self.user = []
+        self.validEmail = false
+        self.validPassword = false
     }
     
-    func validateUserCredentials(userEmail: String?, userPassword: String?) throws -> Bool {
-        do {
-            return try validateUserEmail(userEmail: userEmail) && validateUserPassword(userPassword: userPassword)
-        } catch {
-            throw error
-        }
+    func validateUserCredentials(userEmail: String?, userPassword: String?) {
+        validateEmail(userEmail: userEmail) && validatePassword(userPassword: userPassword)
+        ? delegate?.reloadView() : delegate?.show(error: .unsuccessfulLoginDueToInvalidAccountDetails)
     }
     
-    func validateUserEmail(userEmail: String?) throws -> Bool {
-        var validEmail: Bool = false
+    func validateEmail(userEmail: String?) -> Bool {
         if let safeUserEmail = userEmail,
            !safeUserEmail.isEmpty {
             self.userEmail = safeUserEmail
-        }
-        do {
-            try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
-            if !user.isEmpty {
-                for users in user {
-                    if users.value(forKey: "email") as? String == self.userEmail {
-                        validEmail = true
+            repository?.fetchEmail(email: safeUserEmail, completion: { [weak self] result in
+                switch result {
+                case .success(let email):
+                    if self?.userEmail == email {
+                        self?.validEmail = true
                     }
+                case .failure(let error):
+                    self?.delegate?.show(error: error)
                 }
-            }
-        } catch {
-            validEmail = false
-            throw CustomError.unsuccessfulLoginDueToMissingFields
+            })
+        } else {
+            delegate?.show(error: .unsuccessfulLoginDueToMissingFields)
         }
         return validEmail
     }
     
-    func validateUserPassword(userPassword: String?) throws -> Bool {
-        var validPassword: Bool = false
+    func validatePassword(userPassword: String?) -> Bool {
         if let safeUserPassword = userPassword,
            !safeUserPassword.isEmpty {
             self.userPassword = safeUserPassword
-        }
-        do {
-            try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
-            if !user.isEmpty {
-                for users in user {
-                    
-                    if users.value(forKey: "password") as? String == userPassword {
-                        validPassword = true
+            repository?.fetchPassword(password: safeUserPassword, completion: { [weak self] result in
+                switch result {
+                case .success(let password):
+                    if self?.userPassword == password {
+                        self?.validPassword = true
                     }
+                case .failure(let error):
+                    self?.delegate?.show(error: error)
                 }
-            }
-        } catch {
-            validPassword = false
-            throw CustomError.unsuccessfulLoginDueToMissingFields
+            })
+        } else {
+            delegate?.show(error: .unsuccessfulLoginDueToMissingFields)
         }
         return validPassword
     }

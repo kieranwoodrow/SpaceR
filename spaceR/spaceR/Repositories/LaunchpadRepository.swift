@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias LaunchpadResult = (Result<[Launchpads], APIError>) -> Void
+typealias LaunchpadResult = (Result<[Launchpads], CustomError>) -> Void
 
 protocol LaunchpadRepositoryType: AnyObject {
     func fetchLaunchpads(completion: @escaping(LaunchpadResult))
@@ -23,7 +23,7 @@ class LaunchpadRepository: LaunchpadRepositoryType {
     
     private func request<T: Codable>(endpoint: String,
                                      method: Method,
-                                     completion: @escaping((Result<T, APIError>) -> Void)) {
+                                     completion: @escaping((Result<T, CustomError>) -> Void)) {
         guard let url = URL(string: endpoint) else {
             completion(.failure(.internalError))
             return
@@ -33,6 +33,5 @@ class LaunchpadRepository: LaunchpadRepositoryType {
         request.httpMethod = "\(method)"
         request.allHTTPHeaderFields = ["Content-Type": "application/json"]
         call(with: request, model: T.self, completion: completion)
-        
     }
 }

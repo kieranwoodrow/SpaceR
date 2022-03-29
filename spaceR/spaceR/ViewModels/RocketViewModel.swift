@@ -9,7 +9,7 @@ import Foundation
 
 protocol ViewModelDelegate: AnyObject {
     func reloadView()
-    func show(error: String)
+    func show(error: CustomError)
 }
 
 class RocketViewModel {
@@ -52,7 +52,7 @@ class RocketViewModel {
                 self?.allRockets = rocketsArray
                 self?.delegate?.reloadView()
             case .failure(let error):
-                self?.delegate?.show(error: error.rawValue)
+                self?.delegate?.show(error: error)
             }
         })
     }

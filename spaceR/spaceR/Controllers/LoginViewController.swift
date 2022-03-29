@@ -7,18 +7,12 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate, ViewModelDelegate {
-    func reloadView() {
-        
-    }
-    
-    func show(error: String) {
-        
-    }
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet private weak var textFieldEmailID: UITextField!
     @IBOutlet private weak var textFieldPassword: UITextField!
-    private lazy var loginViewModel = LoginViewModel(delegate: self)
+    private lazy var loginViewModel = LoginViewModel(repository: LoginRepository(),
+                                                     delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,18 +28,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate, ViewModelDeleg
     }
     
     @IBAction private func loginButtonClicked(_ sender: Any) {
-        do {
-            try loginViewModel.validateUserCredentials(userEmail: textFieldEmailID.text,
-                                               userPassword: textFieldPassword.text) ? successfulLogin() : unsuccessfulLogin()
-        } catch {
-            self.displayErrorAlert(title: .unsuccessfulLoginDueToMissingFields,
-                                   errorMessage: .unsuccessfulLoginDueToMissingFields,
-                                   buttonTitle: "Ok")
-        }
-            
+        loginViewModel.validateUserCredentials(userEmail: textFieldEmailID.text,
+                                               userPassword: textFieldPassword.text)
     }
+}
+
+extension LoginViewController: ViewModelDelegate {
     
-    func successfulLogin() {
+    func reloadView() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
             as? UITabBarController {
@@ -53,9 +43,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, ViewModelDeleg
         }
     }
     
-    func unsuccessfulLogin() {
-        self.displayErrorAlert(title: .unsuccessfulLoginDueToInvalidAccountDetails,
-                               errorMessage: .unsuccessfulLoginDueToInvalidAccountDetails,
-                               buttonTitle: "Ok")
+    func show(error: CustomError) {
+        self.displayErrorAlert(title: error, errorMessage: error, buttonTitle: "OK")
     }
 }

@@ -43,7 +43,7 @@ class LaunchpadViewModel {
                 self?.allLaunchpads = launchpadArray
                 self?.delegate?.reloadView()
             case .failure(let error):
-                self?.delegate?.show(error: error.rawValue)
+                self?.delegate?.show(error: error)
             }
         })
     }

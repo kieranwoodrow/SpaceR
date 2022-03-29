@@ -8,12 +8,13 @@
 import UIKit
 
 class SignupViewController: UIViewController {
- 
+    
     @IBOutlet private weak var userFirstName: UITextField!
     @IBOutlet private weak var userLastName: UITextField!
     @IBOutlet private weak var userEmail: UITextField!
     @IBOutlet private weak var userPassword: UITextField!
-    private lazy var signUpViewModel = SignupViewModel(delegate: self)
+    private lazy var signUpViewModel = SignupViewModel(repository: SignupRepository(),
+                                                       delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,51 +22,23 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction private func signupButtonClicked(_ sender: Any) {
-        do {
-            try
-                signUpViewModel.validateUserInput(userFirstName: userFirstName.text,
-                                          userLastName: userLastName.text,
-                                          userEmail: userEmail.text,
-                                          userPassword: userPassword.text) ? self.successfulSignup() : self.unsuccessfullSignup()
-        } catch {
-            self.displayErrorAlert(title: .unsuccessfulSignupDueToMisingFields,
-                                   errorMessage: .unsuccessfulSignupDueToMisingFields,
-                                   buttonTitle: "Ok")
-        }
-    }
-    
-    private func successfulSignup() {
-        do {
-            try self.signUpViewModel.saveUserToDatabase()
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            if let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
-                as? LoginViewController {
-                self.navigationController?.pushViewController(viewController, animated: false )
-            }
-        } catch {
-            self.displayErrorAlert(title: .unsuccessfulDatabaseSignup,
-                                   errorMessage: .unsuccessfulDatabaseSignup,
-                                   buttonTitle: "Ok")
-        }
-    }
-    
-    private func unsuccessfullSignup() {
-        self.displayErrorAlert(title: .unsuccessfulDatabaseSignup,
-                               errorMessage: .unsuccessfulDatabaseSignup,
-                               buttonTitle: "Ok")
+        signUpViewModel.handleSaveRequest(firstName: userFirstName.text,
+                                          lastName: userLastName.text,
+                                          email: userEmail.text, password: userPassword.text)
     }
 }
 
 extension SignupViewController: ViewModelDelegate {
     
     func reloadView() {
-        return
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+            as? LoginViewController {
+            self.navigationController?.pushViewController(viewController, animated: false )
+        }
     }
     
-    func show(error: String) {
-        self.displayErrorAlert(title: .unsuccessfulRocketApiCall,
-                               errorMessage: .unsuccessfulRocketApiCall,
-                               buttonTitle: "OK")
+    func show(error: CustomError) {
+        self.displayErrorAlert(title: error, errorMessage: error, buttonTitle: "OK")
     }
-    
 }

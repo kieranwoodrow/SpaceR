@@ -55,9 +55,7 @@ extension RocketsController: ViewModelDelegate {
         rocketTableView.reloadData()
     }
     
-    func show(error: String) {
-        self.displayErrorAlert(title: .unsuccessfulRocketApiCall,
-                               errorMessage: .unsuccessfulRocketApiCall,
-                               buttonTitle: "OK")
+    func show(error: CustomError) {
+        self.displayErrorAlert(title: error, errorMessage: error, buttonTitle: "OK")
     }
 }

@@ -16,6 +16,12 @@ enum CustomError: Error, LocalizedError {
     case unsuccessfulDatabaseSignup
     case unsuccessfulRocketApiCall
     case unsuccessfulLaunchpadApiCall
+    case invalidResponse
+    case invalidRequest
+    case invalidUrl
+    case invalidData
+    case internalError
+    case parsingError
     
     var errorDescription: String? {
         switch self {
@@ -31,6 +37,18 @@ enum CustomError: Error, LocalizedError {
             return "Api call for rockets unsuccessful"
         case .unsuccessfulLaunchpadApiCall:
             return "Api call for launchpads unsuccessful"
+        case .invalidResponse:
+            return "Invalid response"
+        case .invalidRequest:
+            return "Invalid request"
+        case .invalidUrl:
+            return "Inva;id URL"
+        case .invalidData:
+            return "Invalid data"
+        case .internalError:
+            return "Internal error"
+        case .parsingError:
+            return "Passing error"
         }
     }
     
@@ -48,6 +66,18 @@ enum CustomError: Error, LocalizedError {
             return "Rockets information has not been loaded successfully"
         case .unsuccessfulLaunchpadApiCall:
             return "Launchpad information has not been loaded successfully"
+        case .invalidResponse:
+            return "The response is invalid"
+        case .invalidRequest:
+            return "The request is invalid"
+        case .invalidUrl:
+            return "The URL is invalid"
+        case .invalidData:
+            return "The data is invalid"
+        case .internalError:
+            return "There was an internal error"
+        case .parsingError:
+            return "There was a parsing error"
         }
     }
 }

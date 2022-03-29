@@ -19,8 +19,9 @@
 		D6B671FE27E4F131001F2EF4 /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */; };
 		D6C18C5A27F1C97300E040CE /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C5927F1C97300E040CE /* RocketRepository.swift */; };
 		D6C18C5C27F1C98D00E040CE /* LaunchpadRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C5B27F1C98D00E040CE /* LaunchpadRepository.swift */; };
-		D6C18C5F27F1CF2900E040CE /* ServiceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C5E27F1CF2900E040CE /* ServiceErrors.swift */; };
 		D6C18C6227F1D31700E040CE /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6127F1D31700E040CE /* ServiceCall.swift */; };
+		D6C18C6427F2F86300E040CE /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6327F2F86300E040CE /* LoginRepository.swift */; };
+		D6C18C6627F3017D00E040CE /* SignupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6527F3017D00E040CE /* SignupRepository.swift */; };
 		D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */; };
 		D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */; };
 		D6DA798727DE114F00AFF396 /* spaceRModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798527DE114F00AFF396 /* spaceRModels.xcdatamodeld */; };
@@ -70,8 +71,9 @@
 		D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
 		D6C18C5927F1C97300E040CE /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
 		D6C18C5B27F1C98D00E040CE /* LaunchpadRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadRepository.swift; sourceTree = "<group>"; };
-		D6C18C5E27F1CF2900E040CE /* ServiceErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrors.swift; sourceTree = "<group>"; };
 		D6C18C6127F1D31700E040CE /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
+		D6C18C6327F2F86300E040CE /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		D6C18C6527F3017D00E040CE /* SignupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRepository.swift; sourceTree = "<group>"; };
 		D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewImageStyling.swift; sourceTree = "<group>"; };
 		D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorAlerts.swift; sourceTree = "<group>"; };
 		D6DA798627DE114F00AFF396 /* spaceRModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spaceRModels.xcdatamodel; sourceTree = "<group>"; };
@@ -155,6 +157,8 @@
 			children = (
 				D6C18C5927F1C97300E040CE /* RocketRepository.swift */,
 				D6C18C5B27F1C98D00E040CE /* LaunchpadRepository.swift */,
+				D6C18C6327F2F86300E040CE /* LoginRepository.swift */,
+				D6C18C6527F3017D00E040CE /* SignupRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -162,7 +166,6 @@
 		D6C18C6027F1CF3B00E040CE /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				D6C18C5E27F1CF2900E040CE /* ServiceErrors.swift */,
 				D6C18C6127F1D31700E040CE /* ServiceCall.swift */,
 			);
 			path = ServiceLayer;
@@ -450,9 +453,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6DA798A27DE137A00AFF396 /* SignupViewModel.swift in Sources */,
+				D6C18C6427F2F86300E040CE /* LoginRepository.swift in Sources */,
 				D6183E2727D761FE0073F278 /* RocketViewModel.swift in Sources */,
 				D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */,
 				D6C18C6227F1D31700E040CE /* ServiceCall.swift in Sources */,
+				D6C18C6627F3017D00E040CE /* SignupRepository.swift in Sources */,
 				D6183E4F27D8E7E30073F278 /* UIRocketTableViewCell.swift in Sources */,
 				D6DA798727DE114F00AFF396 /* spaceRModels.xcdatamodeld in Sources */,
 				D6183E0B27CC6FAD0073F278 /* SignupViewController.swift in Sources */,
@@ -470,7 +475,6 @@
 				D6E9CF6D27C8CF2A00AED244 /* Rocket.swift in Sources */,
 				D665E90A27E7E21600DB118E /* LaunchpadViewModel.swift in Sources */,
 				D665E90C27E9D23C00DB118E /* UILaunchpadTableViewCell.swift in Sources */,
-				D6C18C5F27F1CF2900E040CE /* ServiceErrors.swift in Sources */,
 				D6B671FA27E2814B001F2EF4 /* Launchpads.swift in Sources */,
 				D6C18C5A27F1C97300E040CE /* RocketRepository.swift in Sources */,
 				D6E9CF7727C8D0E500AED244 /* SceneDelegate.swift in Sources */,
