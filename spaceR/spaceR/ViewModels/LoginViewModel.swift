@@ -28,45 +28,41 @@ class LoginViewModel {
     }
     
     func validateUserCredentials(userEmail: String, userPassword: String) {
-        validateEmail(userEmail: userEmail) && validatePassword(userPassword: userPassword)
-        ? delegate?.reloadView() : delegate?.show(error: .unsuccessfulLoginDueToInvalidAccountDetails)
-    }
-    
-    func validateEmail(userEmail: String) -> Bool {
-        if !userEmail.isEmpty {
-            self.userEmail = userEmail
-            repository?.fetchEmail(email: userEmail, completion: { [weak self] result in
-                switch result {
-                case .success(let email):
-                    if self?.userEmail == email {
-                        self?.validEmail = true
-                    }
-                case .failure(let error):
-                    self?.delegate?.show(error: error)
-                }
-            })
+        if !userEmail.isEmpty && !userPassword.isEmpty {
+            validateEmail(userEmail: userEmail) && validatePassword(userPassword: userPassword)
+            ? delegate?.reloadView() : delegate?.show(error: .unsuccessfulLoginDueToInvalidAccountDetails)
         } else {
             delegate?.show(error: .unsuccessfulLoginDueToMissingFields)
         }
+    }
+    
+    func validateEmail(userEmail: String) -> Bool {
+        self.userEmail = userEmail
+        repository?.fetchEmail(email: userEmail, completion: { [weak self] result in
+            switch result {
+            case .success(let email):
+                if self?.userEmail == email {
+                    self?.validEmail = true
+                }
+            case .failure(let error):
+                self?.delegate?.show(error: error)
+            }
+        })
         return validEmail
     }
     
     func validatePassword(userPassword: String) -> Bool {
-           if !userPassword.isEmpty {
-            self.userPassword = userPassword
-            repository?.fetchPassword(password: userPassword, completion: { [weak self] result in
-                switch result {
-                case .success(let password):
-                    if self?.userPassword == password {
-                        self?.validPassword = true
-                    }
-                case .failure(let error):
-                    self?.delegate?.show(error: error)
+        self.userPassword = userPassword
+        repository?.fetchPassword(password: userPassword, completion: { [weak self] result in
+            switch result {
+            case .success(let password):
+                if self?.userPassword == password {
+                    self?.validPassword = true
                 }
-            })
-        } else {
-            delegate?.show(error: .unsuccessfulLoginDueToMissingFields)
-        }
+            case .failure(let error):
+                self?.delegate?.show(error: error)
+            }
+        })
         return validPassword
     }
 }
