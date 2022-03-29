@@ -21,6 +21,7 @@ class LoginViewModel {
          delegate: ViewModelDelegate) {
         self.delegate = delegate
         self.repository = repository
+        self.userEmail = ""
         self.userPassword = ""
         self.validEmail = false
         self.validPassword = false
