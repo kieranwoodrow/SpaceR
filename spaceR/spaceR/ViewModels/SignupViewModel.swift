@@ -17,7 +17,7 @@ class SignupViewModel {
     private var validCredentials: Bool
     private var saveStatus: Bool
     private weak var delegate: ViewModelDelegate?
-    private weak var repository: SignupRepositoryType?
+    private var repository: SignupRepositoryType?
     
     private let coreDataPersistantObject = (UIApplication.shared.delegate
                                             as? AppDelegate)?.persistentContainer.viewContext

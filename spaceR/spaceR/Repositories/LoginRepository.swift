@@ -32,12 +32,10 @@ class LoginRepository: LoginRepositoryType {
             if !user.isEmpty {
                 for users in user {
                     completion(Result.success(users.value(forKey: "email") as? String ?? ""))
-                    return
                 }
             }
         } catch {
             completion(Result.failure(.unsuccessfulLoginDueToInvalidAccountDetails))
-            return
         }
     }
     
@@ -46,7 +44,8 @@ class LoginRepository: LoginRepositoryType {
             try user = coreDataPersistantObject?.fetch(User.fetchRequest()) ?? []
             if !user.isEmpty {
                 for users in user {
-                    completion(Result.success(users.value(forKey: "password") as? String ?? ""))
+                    let test = users.value(forKey: "password") as? String ?? ""
+                    completion(Result.success(test))
                 }
             }
         } catch {

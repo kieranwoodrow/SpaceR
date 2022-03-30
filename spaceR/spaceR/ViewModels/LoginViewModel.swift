@@ -15,7 +15,7 @@ class LoginViewModel {
     private var userEmail: String?
     private var userPassword: String?
     private weak var delegate: ViewModelDelegate?
-    private weak var repository: LoginRepositoryType?
+    private var repository: LoginRepositoryType?
     
     init(repository: LoginRepositoryType,
          delegate: ViewModelDelegate) {
