@@ -22,7 +22,8 @@ class SignupRepository: SignupRepositoryType {
     
     private var user: [User]
     private var successFulSignup: Bool
-    private let coreDataPersistantObject = (UIApplication.shared.delegate as?           AppDelegate)?.persistentContainer.viewContext
+    private let coreDataPersistantObject = (UIApplication.shared.delegate as?
+                                            AppDelegate)?.persistentContainer.viewContext
     
     init() {
         self.user = []

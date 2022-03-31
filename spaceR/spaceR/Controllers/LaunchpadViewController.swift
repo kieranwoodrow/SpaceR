@@ -52,7 +52,9 @@ extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
 extension LaunchpadViewController: ViewModelDelegate {
     
     func reloadView() {
-        launchpadTableView.reloadData()
+        DispatchQueue.main.async {
+            self.launchpadTableView.reloadData()
+        }
     }
     
     func show(error: CustomError) {

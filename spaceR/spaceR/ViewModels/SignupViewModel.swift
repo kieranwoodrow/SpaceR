@@ -19,9 +19,6 @@ class SignupViewModel {
     private weak var delegate: ViewModelDelegate?
     private var repository: SignupRepositoryType?
     
-    private let coreDataPersistantObject = (UIApplication.shared.delegate
-                                            as? AppDelegate)?.persistentContainer.viewContext
-    
     init(repository: SignupRepositoryType,
          delegate: ViewModelDelegate) {
         self.delegate = delegate
