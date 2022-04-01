@@ -26,7 +26,9 @@ func call<Generic: Codable>(with request: URLRequest, model: Generic.Type,
                 return
             }
             let object = try JSONDecoder().decode(model, from: data)
-            completion(Result.success(object))
+            DispatchQueue.main.async {
+                completion(Result.success(object))
+            }
         } catch {
             completion(Result.failure(.parsingError))
         }

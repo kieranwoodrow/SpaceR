@@ -52,9 +52,7 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
 extension RocketsController: ViewModelDelegate {
     
     func reloadView() {
-        DispatchQueue.main.async {
-            self.rocketTableView.reloadData()
-        }
+        self.rocketTableView.reloadData()
     }
     
     func show(error: CustomError) {
