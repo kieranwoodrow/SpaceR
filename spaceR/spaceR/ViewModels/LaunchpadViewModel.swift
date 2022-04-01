@@ -9,26 +9,42 @@ import Foundation
 
 class LaunchpadViewModel {
     
-    private var allLaunchpads: [Launchpads]
+    private var repository: LaunchpadRepositoryType?
+    private weak var delegate: ViewModelDelegate?
+    private var allLaunchpads: [Launchpads]?
     
-    init() {
+    init(repository: LaunchpadRepositoryType,
+         delegate: ViewModelDelegate) {
+        self.repository = repository
+        self.delegate = delegate
         self.allLaunchpads = []
     }
     
-    func setAllLaunchpads(launchpads: [Launchpads]) {
-        allLaunchpads = launchpads
+    var launchpadCount: Int {
+        return allLaunchpads?.count ?? 0
     }
-    var launchpadCount: Int { return allLaunchpads.count }
     
-    func getLaunchpadImage(index: Int) -> String {
+    func launchpadImage(index: Int) -> String {
         var launchpadImage = ""
-        if let safeImage = allLaunchpads[index].images?.largeImage.randomElement() {
+        if let safeImage = allLaunchpads?[index].images?.largeImage.randomElement() {
             launchpadImage = safeImage ?? ""
         }
         return launchpadImage
     }
     
-    func getLaunchpadTitle(index: Int) -> String {
-        return allLaunchpads[index].lauchpadName ?? ""
+    func launchpadTitle(index: Int) -> String {
+        return allLaunchpads?[index].lauchpadName ?? ""
+    }
+    
+    func getAllLaunchpads() {
+        repository?.fetchLaunchpads(completion: { [weak self] result in
+            switch result {
+            case .success(let launchpadArray):
+                self?.allLaunchpads = launchpadArray
+                self?.delegate?.reloadView()
+            case .failure(let error):
+                self?.delegate?.show(error: error)
+            }
+        })
     }
 }
