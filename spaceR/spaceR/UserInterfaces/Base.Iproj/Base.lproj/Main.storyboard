@@ -397,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32A-3D-oWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175.3623188405797" y="842.41071428571422"/>
+            <point key="canvasLocation" x="-1484" y="859"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="B2Z-4V-Geh">
@@ -531,9 +531,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlH-gT-sn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-396" y="773"/>
+            <point key="canvasLocation" x="-607" y="858"/>
         </scene>
-        <!--Rockets-->
+        <!--Rockets Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="RocketsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="RocketsController" customModule="spaceR" customModuleProvider="target" sceneMemberID="viewController">
@@ -542,7 +542,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-NX-Np6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="4" indentationWidth="10" reuseIdentifier="RocketTableViewCell" rowHeight="237" id="QYi-e0-AFt" customClass="UIRocketTableViewCell" customModule="spaceR" customModuleProvider="target">
@@ -593,16 +593,16 @@
                             <constraint firstItem="UZv-NX-Np6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UJf-m6-enF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rockets" id="GKE-fI-Z6S"/>
+                    <navigationItem key="navigationItem" id="y7Z-dM-4iV"/>
                     <connections>
                         <outlet property="rocketTableView" destination="UZv-NX-Np6" id="vJL-Ho-9Cr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718.84057971014499" y="69.642857142857139"/>
+            <point key="canvasLocation" x="719" y="842"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="SEr-TM-BJ0">
             <objects>
                 <viewController id="Mfb-ed-zFV" sceneMemberID="viewController">
@@ -621,13 +621,13 @@
                         <viewLayoutGuide key="safeArea" id="8kf-r0-uon"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rx9-ZQ-Qnc"/>
+                    <navigationItem key="navigationItem" id="Hsk-Bw-4vr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGF-SW-Z6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501" y="70"/>
+            <point key="canvasLocation" x="1967" y="834"/>
         </scene>
-        <!--Launchpads-->
+        <!--Launchpad View Controller-->
         <scene sceneID="ZA2-ha-T7V">
             <objects>
                 <viewController id="zBN-uT-xIg" customClass="LaunchpadViewController" customModule="spaceR" customModuleProvider="target" sceneMemberID="viewController">
@@ -636,7 +636,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zpi-wu-EUp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LaunchpadTableViewCell" rowHeight="151" id="0kb-ic-3qE" customClass="UILaunchpadTableViewCell" customModule="spaceR" customModuleProvider="target">
@@ -676,14 +676,14 @@
                             <constraint firstItem="2el-p4-4ZV" firstAttribute="trailing" secondItem="Zpi-wu-EUp" secondAttribute="trailing" id="aHh-nL-xMr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Launchpads" id="EeQ-T9-s9b"/>
+                    <navigationItem key="navigationItem" id="U0J-wm-rU4"/>
                     <connections>
                         <outlet property="launchpadTableView" destination="Zpi-wu-EUp" id="Gpv-7x-Okk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2w-gb-9sQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2462.3188405797105" y="69.642857142857139"/>
+            <point key="canvasLocation" x="3345" y="834"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y9q-Zz-W5l">
@@ -696,14 +696,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="DxT-gK-45B"/>
-                        <segue destination="Mfb-ed-zFV" kind="relationship" relationship="viewControllers" id="Po2-Y9-tr8"/>
-                        <segue destination="zBN-uT-xIg" kind="relationship" relationship="viewControllers" id="K3O-MA-LlO"/>
+                        <segue destination="ZcJ-7M-3Yg" kind="relationship" relationship="viewControllers" id="DxT-gK-45B"/>
+                        <segue destination="fUO-85-8F7" kind="relationship" relationship="viewControllers" id="Po2-Y9-tr8"/>
+                        <segue destination="dEC-FQ-7fp" kind="relationship" relationship="viewControllers" id="K3O-MA-LlO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bW5-No-l8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296" y="-658"/>
+            <point key="canvasLocation" x="1967" y="-668"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="utU-8V-5iW">
@@ -822,6 +822,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NM0-tn-WFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2422" y="91"/>
+        </scene>
+        <!--Rockets-->
+        <scene sceneID="GVW-kP-tyI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZcJ-7M-3Yg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rockets" id="GKE-fI-Z6S"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NQP-Sp-yWx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xPA-SV-mSX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfa-ws-cdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="57"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="mXD-aa-6aB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fUO-85-8F7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rx9-ZQ-Qnc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f08-KZ-n79">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mfb-ed-zFV" kind="relationship" relationship="rootViewController" id="NQZ-72-5qE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a95-lu-ZSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="57"/>
+        </scene>
+        <!--Launchpads-->
+        <scene sceneID="HjE-Fx-S2G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dEC-FQ-7fp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Launchpads" id="EeQ-T9-s9b"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FSs-H5-QSk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zBN-uT-xIg" kind="relationship" relationship="rootViewController" id="p0V-5P-Yrz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0R-We-Fel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3345" y="57"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
