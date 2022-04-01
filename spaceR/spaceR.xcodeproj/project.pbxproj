@@ -22,6 +22,8 @@
 		D6C18C6227F1D31700E040CE /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6127F1D31700E040CE /* ServiceCall.swift */; };
 		D6C18C6427F2F86300E040CE /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6327F2F86300E040CE /* LoginRepository.swift */; };
 		D6C18C6627F3017D00E040CE /* SignupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6527F3017D00E040CE /* SignupRepository.swift */; };
+		D6C18C6827F70FB300E040CE /* RocketInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6727F70FB300E040CE /* RocketInfoViewController.swift */; };
+		D6C18C6A27F70FCE00E040CE /* RocketInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6927F70FCE00E040CE /* RocketInfoViewModel.swift */; };
 		D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */; };
 		D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */; };
 		D6DA798727DE114F00AFF396 /* spaceRModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798527DE114F00AFF396 /* spaceRModels.xcdatamodeld */; };
@@ -74,6 +76,8 @@
 		D6C18C6127F1D31700E040CE /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
 		D6C18C6327F2F86300E040CE /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		D6C18C6527F3017D00E040CE /* SignupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRepository.swift; sourceTree = "<group>"; };
+		D6C18C6727F70FB300E040CE /* RocketInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoViewController.swift; sourceTree = "<group>"; };
+		D6C18C6927F70FCE00E040CE /* RocketInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoViewModel.swift; sourceTree = "<group>"; };
 		D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewImageStyling.swift; sourceTree = "<group>"; };
 		D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorAlerts.swift; sourceTree = "<group>"; };
 		D6DA798627DE114F00AFF396 /* spaceRModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spaceRModels.xcdatamodel; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D665E90927E7E21600DB118E /* LaunchpadViewModel.swift */,
+				D6C18C6927F70FCE00E040CE /* RocketInfoViewModel.swift */,
 				D6183E2627D761FE0073F278 /* RocketViewModel.swift */,
 				D6DA798927DE137A00AFF396 /* SignupViewModel.swift */,
 				D6DA798F27DE714E00AFF396 /* LoginViewModel.swift */,
@@ -233,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E9CF7127C8D01500AED244 /* RocketsControlller.swift */,
+				D6C18C6727F70FB300E040CE /* RocketInfoViewController.swift */,
 				D6183E0827CC6E900073F278 /* LoginViewController.swift */,
 				D6183E0A27CC6FAD0073F278 /* SignupViewController.swift */,
 				D6183E0C27CC70EC0073F278 /* ForgotPasswordViewController.swift */,
@@ -463,6 +469,7 @@
 				D6183E0B27CC6FAD0073F278 /* SignupViewController.swift in Sources */,
 				D6E9CF6F27C8CF9D00AED244 /* Launches.swift in Sources */,
 				D6B671FE27E4F131001F2EF4 /* LaunchpadViewController.swift in Sources */,
+				D6C18C6827F70FB300E040CE /* RocketInfoViewController.swift in Sources */,
 				D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */,
 				D6DA799027DE714E00AFF396 /* LoginViewModel.swift in Sources */,
 				D6E9CF7227C8D01500AED244 /* RocketsControlller.swift in Sources */,
@@ -475,6 +482,7 @@
 				D6E9CF6D27C8CF2A00AED244 /* Rocket.swift in Sources */,
 				D665E90A27E7E21600DB118E /* LaunchpadViewModel.swift in Sources */,
 				D665E90C27E9D23C00DB118E /* UILaunchpadTableViewCell.swift in Sources */,
+				D6C18C6A27F70FCE00E040CE /* RocketInfoViewModel.swift in Sources */,
 				D6B671FA27E2814B001F2EF4 /* Launchpads.swift in Sources */,
 				D6C18C5A27F1C97300E040CE /* RocketRepository.swift in Sources */,
 				D6E9CF7727C8D0E500AED244 /* SceneDelegate.swift in Sources */,
