@@ -47,6 +47,21 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "RocketInfoViewControllerSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RocketInfoViewControllerSegue" {
+            if let rocketInfoPage = segue.destination as? RocketInfoViewController {
+                let row = self.rocketTableView?.indexPathForSelectedRow?.row ?? 0
+                //rocketInfoPage.set(rocketInfo: rocketViewModel.getRocket(atIndex: row))
+                
+            }
+        }
+        
+    }
 }
 
 extension RocketsController: ViewModelDelegate {

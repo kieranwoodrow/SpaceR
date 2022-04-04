@@ -597,17 +597,17 @@
                     <navigationItem key="navigationItem" id="y7Z-dM-4iV"/>
                     <connections>
                         <outlet property="rocketTableView" destination="UZv-NX-Np6" id="vJL-Ho-9Cr"/>
-                        <segue destination="0OE-QI-2m2" kind="show" id="gic-x3-2cn"/>
+                        <segue destination="0OE-QI-2m2" kind="show" identifier="RocketInfoViewControllerSegue" id="gic-x3-2cn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="722" y="847"/>
         </scene>
-        <!--View Controller-->
+        <!--Rocket Info View Controller-->
         <scene sceneID="ctY-9p-nvz">
             <objects>
-                <viewController id="0OE-QI-2m2" sceneMemberID="viewController">
+                <viewController id="0OE-QI-2m2" customClass="RocketInfoViewController" customModule="spaceR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dg0-Mj-fiE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -639,16 +639,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="279"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="JRF-rf-lU4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="155.5" height="87"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="87"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RocketName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-xo-oQL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="31.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    RocketName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-xo-oQL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="31.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                                 <color key="textColor" name="SpaceR-orange"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uG-qa-Sc8">
-                                                                <rect key="frame" x="40" y="55.5" width="75.5" height="31.5"/>
+                                                                <rect key="frame" x="51" y="55.5" width="75.5" height="31.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
