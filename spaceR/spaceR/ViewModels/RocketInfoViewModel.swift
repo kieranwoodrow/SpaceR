@@ -7,9 +7,14 @@
 
 import Foundation
 
-class RocketInfoVieModel {
+class RocketInfoViewModel {
     
     private var rocket: Rocket?
+    private weak var delegate: ViewModelDelegate?
+    
+    init(delegate: ViewModelDelegate) {
+        self.delegate = delegate
+    }
     
     func set(rocket: Rocket) {
         self.rocket = rocket

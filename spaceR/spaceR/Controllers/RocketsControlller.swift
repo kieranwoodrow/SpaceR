@@ -39,8 +39,7 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.setRocketCell(rocketImage: rocketViewModel.rocketImage(index: indexPath.item),
-                           rocketTitle: rocketViewModel.rocketTitle(index: indexPath.item),
-                           atIndex: indexPath.item)
+                           rocketTitle: rocketViewModel.rocketTitle(index: indexPath.item))
         return cell
     }
     
@@ -56,11 +55,11 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "RocketInfoViewControllerSegue" {
             if let rocketInfoPage = segue.destination as? RocketInfoViewController {
                 let row = self.rocketTableView?.indexPathForSelectedRow?.row ?? 0
-                //rocketInfoPage.set(rocketInfo: rocketViewModel.getRocket(atIndex: row))
-                
+                if let safeRocket = rocketViewModel.getRocket(atIndex: row) {
+                    rocketInfoPage.set(rocket: safeRocket)
+                }
             }
         }
-        
     }
 }
 

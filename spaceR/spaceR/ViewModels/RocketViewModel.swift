@@ -25,12 +25,12 @@ class RocketViewModel {
         self.allRockets = []
     }
     
-    var rocketList: [Rocket] {
-        return allRockets ?? []
-    }
-    
     var rocketCount: Int {
         return allRockets?.count ?? 0
+    }
+    
+    func getRocket(atIndex: Int) -> Rocket? {
+        return allRockets?[atIndex]
     }
     
     func rocketImage(index: Int) -> String {
