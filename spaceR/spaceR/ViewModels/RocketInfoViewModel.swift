@@ -67,4 +67,16 @@ class RocketInfoViewModel {
     var diameter: Double {
         return rocket?.diameter?.meters ?? 0.0
     }
+    
+    func rocketImage() -> String {
+        var rocketImage = ""
+        if let safeImage = rocket?.images.randomElement() {
+            rocketImage = safeImage ?? ""
+        }
+        return rocketImage
+    }
+    
+    var image: URL? {
+        return URL(string: (rocket?.images.randomElement() ?? "") ?? "")
+    }
 }

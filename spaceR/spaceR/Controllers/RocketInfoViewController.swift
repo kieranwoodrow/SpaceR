@@ -20,14 +20,8 @@ class RocketInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rocketName.text = rocketInfoViewModel.rocketName
-        self.location.text = rocketInfoViewModel.country
-        self.rocketDescription.text = rocketInfoViewModel.rocketDescription
         setCollectionView()
-        DispatchQueue.main.async {
-            self.reloadView()
-        }
-        
+        setUILabels()
     }
     
     func set(rocket: Rocket) {
@@ -37,7 +31,15 @@ class RocketInfoViewController: UIViewController {
     private func setCollectionView() {
         rocketCollectionView.delegate = self
         rocketCollectionView.dataSource = self
-        
+    }
+    
+    private func setUILabels() {
+        self.rocketName.text = rocketInfoViewModel.rocketName
+        self.location.text = rocketInfoViewModel.country
+        self.rocketDescription.text = rocketInfoViewModel.rocketDescription
+        if let url = rocketInfoViewModel.image {
+            self.rocketImage.getImagesFromURL(imageURL: url )
+        }
     }
 }
 
@@ -59,7 +61,6 @@ extension RocketInfoViewController: UICollectionViewDelegate, UICollectionViewDa
         }
         
         cell.setRocketCell(viewModel: rocketInfoViewModel, indexPath: indexPath.item)
-        
         return cell
     }
 }
