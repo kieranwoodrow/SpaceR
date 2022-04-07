@@ -25,7 +25,6 @@
 		D6C18C6827F70FB300E040CE /* RocketInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6727F70FB300E040CE /* RocketInfoViewController.swift */; };
 		D6C18C6A27F70FCE00E040CE /* RocketInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6927F70FCE00E040CE /* RocketInfoViewModel.swift */; };
 		D6C18C6C27F71DAA00E040CE /* UIRocketInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C6B27F71DAA00E040CE /* UIRocketInfoCollectionViewCell.swift */; };
-		D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */; };
 		D6DA798427DB5C0E00AFF396 /* UIErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */; };
 		D6DA798727DE114F00AFF396 /* spaceRModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798527DE114F00AFF396 /* spaceRModels.xcdatamodeld */; };
 		D6DA798A27DE137A00AFF396 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA798927DE137A00AFF396 /* SignupViewModel.swift */; };
@@ -80,7 +79,6 @@
 		D6C18C6727F70FB300E040CE /* RocketInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		D6C18C6927F70FCE00E040CE /* RocketInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoViewModel.swift; sourceTree = "<group>"; };
 		D6C18C6B27F71DAA00E040CE /* UIRocketInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRocketInfoCollectionViewCell.swift; sourceTree = "<group>"; };
-		D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewImageStyling.swift; sourceTree = "<group>"; };
 		D6DA798327DB5C0E00AFF396 /* UIErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorAlerts.swift; sourceTree = "<group>"; };
 		D6DA798627DE114F00AFF396 /* spaceRModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spaceRModels.xcdatamodel; sourceTree = "<group>"; };
 		D6DA798927DE137A00AFF396 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 				D6C18C6B27F71DAA00E040CE /* UIRocketInfoCollectionViewCell.swift */,
 				D665E90B27E9D23C00DB118E /* UILaunchpadTableViewCell.swift */,
 				D6183E4E27D8E7E20073F278 /* UIRocketTableViewCell.swift */,
-				D6DA798127DB56A100AFF396 /* UITableViewImageStyling.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -473,7 +470,6 @@
 				D6E9CF6F27C8CF9D00AED244 /* Launches.swift in Sources */,
 				D6B671FE27E4F131001F2EF4 /* LaunchpadViewController.swift in Sources */,
 				D6C18C6827F70FB300E040CE /* RocketInfoViewController.swift in Sources */,
-				D6DA798227DB56A100AFF396 /* UITableViewImageStyling.swift in Sources */,
 				D6DA799027DE714E00AFF396 /* LoginViewModel.swift in Sources */,
 				D6E9CF7227C8D01500AED244 /* RocketsControlller.swift in Sources */,
 				D6E9CF7527C8D0BC00AED244 /* AppDelegate.swift in Sources */,
