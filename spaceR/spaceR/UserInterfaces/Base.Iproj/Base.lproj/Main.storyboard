@@ -670,7 +670,7 @@
                                                 <rect key="frame" x="0.0" y="100" width="414" height="142"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="10" id="yNZ-At-aEC">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yNZ-At-aEC">
                                                     <size key="itemSize" width="58" height="70"/>
                                                     <size key="estimatedItemSize" width="150" height="70"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1062,7 +1062,7 @@
         <segue reference="Nvt-PQ-hoC"/>
         <segue reference="yKS-rE-r2a"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+    <color key="tintColor" name="SpaceR-black"/>
     <resources>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="logo" width="268" height="83"/>
