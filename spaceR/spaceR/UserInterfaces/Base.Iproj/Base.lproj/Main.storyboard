@@ -636,8 +636,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnd-ug-FmF" userLabel="MiddleView">
                                         <rect key="frame" x="0.0" y="261.5" width="414" height="251"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JRF-rf-lU4">
-                                                <rect key="frame" x="31" y="12" width="155.5" height="73"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JRF-rf-lU4">
+                                                <rect key="frame" x="5" y="12" width="155.5" height="73"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RocketName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-xo-oQL">
                                                         <rect key="frame" x="0.0" y="0.0" width="155.5" height="31.5"/>
@@ -723,12 +723,16 @@
                                             </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JRF-rf-lU4" firstAttribute="leading" secondItem="cnd-ug-FmF" secondAttribute="leading" constant="5" id="Crp-PG-J0q"/>
+                                            <constraint firstItem="JRF-rf-lU4" firstAttribute="top" secondItem="cnd-ug-FmF" secondAttribute="top" constant="12" id="R6e-5R-DXM"/>
+                                        </constraints>
                                     </view>
                                     <view clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJJ-O8-q6w" userLabel="BottomView">
                                         <rect key="frame" x="0.0" y="522.5" width="414" height="251.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H41-1p-7TX">
-                                                <rect key="frame" x="8" y="0.0" width="398" height="251.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H41-1p-7TX">
+                                                <rect key="frame" x="8" y="0.0" width="398" height="201.5"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -746,7 +750,7 @@
                                             <constraint firstItem="H41-1p-7TX" firstAttribute="leading" secondItem="eJJ-O8-q6w" secondAttribute="leading" constant="8" id="X2C-yA-dwf"/>
                                             <constraint firstAttribute="trailing" secondItem="H41-1p-7TX" secondAttribute="trailing" constant="8" id="ZXG-uy-OzT"/>
                                             <constraint firstItem="H41-1p-7TX" firstAttribute="top" secondItem="eJJ-O8-q6w" secondAttribute="top" id="vR3-Uv-Sb4"/>
-                                            <constraint firstAttribute="bottom" secondItem="H41-1p-7TX" secondAttribute="bottom" id="yYu-GM-2ZG"/>
+                                            <constraint firstAttribute="bottom" secondItem="H41-1p-7TX" secondAttribute="bottom" constant="50" id="yYu-GM-2ZG"/>
                                         </constraints>
                                     </view>
                                 </subviews>

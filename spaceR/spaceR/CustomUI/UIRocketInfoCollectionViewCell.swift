@@ -50,17 +50,17 @@ class UIRocketInfoCollectionViewCell: UICollectionViewCell {
             heading = "Fuel Type B"
             info = viewModel.fuelTypeB
         case indexPath where indexPath == 5:
-            heading = "Active"
-            info = String(viewModel.status)
-        case indexPath where indexPath == 6:
             heading = "Mass"
             info = String(viewModel.mass) + "kg"
-        case indexPath where indexPath == 7:
+        case indexPath where indexPath == 6:
             heading = "Height"
             info = String(viewModel.height) + "m"
-        case indexPath where indexPath == 8:
+        case indexPath where indexPath == 7:
             heading = "Diameter"
             info = String(viewModel.diameter) + "m"
+        case indexPath where indexPath == 8:
+            heading = "Active"
+            info = String(viewModel.status)
         default:
             heading = ""
             info = ""
