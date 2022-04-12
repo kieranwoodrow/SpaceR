@@ -15,6 +15,7 @@
 		D6183E4F27D8E7E30073F278 /* UIRocketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6183E4E27D8E7E20073F278 /* UIRocketTableViewCell.swift */; };
 		D665E90A27E7E21600DB118E /* LaunchpadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D665E90927E7E21600DB118E /* LaunchpadViewModel.swift */; };
 		D665E90C27E9D23C00DB118E /* UILaunchpadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D665E90B27E9D23C00DB118E /* UILaunchpadTableViewCell.swift */; };
+		D6A0200528043E2A001A4A0B /* RocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0200428043E2A001A4A0B /* RocketTests.swift */; };
 		D6B671FA27E2814B001F2EF4 /* Launchpads.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B671F927E2814B001F2EF4 /* Launchpads.swift */; };
 		D6B671FE27E4F131001F2EF4 /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */; };
 		D6C18C5A27F1C97300E040CE /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C5927F1C97300E040CE /* RocketRepository.swift */; };
@@ -40,7 +41,6 @@
 		D6E9CF7A27C8D16900AED244 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CF7927C8D16900AED244 /* Constants.swift */; };
 		D6E9CFD427C936B100AED244 /* spaceRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CFD327C936B100AED244 /* spaceRUITests.swift */; };
 		D6E9CFD627C936B100AED244 /* spaceRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CFD527C936B100AED244 /* spaceRUITestsLaunchTests.swift */; };
-		D6E9CFF027C936FE00AED244 /* spaceRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CFEF27C936FE00AED244 /* spaceRTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +69,7 @@
 		D6183E4E27D8E7E20073F278 /* UIRocketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRocketTableViewCell.swift; sourceTree = "<group>"; };
 		D665E90927E7E21600DB118E /* LaunchpadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewModel.swift; sourceTree = "<group>"; };
 		D665E90B27E9D23C00DB118E /* UILaunchpadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILaunchpadTableViewCell.swift; sourceTree = "<group>"; };
+		D6A0200428043E2A001A4A0B /* RocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RocketTests.swift; path = SpacerTests/RocketTests.swift; sourceTree = SOURCE_ROOT; };
 		D6B671F927E2814B001F2EF4 /* Launchpads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpads.swift; sourceTree = "<group>"; };
 		D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
 		D6C18C5927F1C97300E040CE /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		D6E9CFD327C936B100AED244 /* spaceRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceRUITests.swift; sourceTree = "<group>"; };
 		D6E9CFD527C936B100AED244 /* spaceRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceRUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D6E9CFED27C936FE00AED244 /* spaceRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spaceRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6E9CFEF27C936FE00AED244 /* spaceRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaceRTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,7 +301,7 @@
 		D6E9CFEE27C936FE00AED244 /* spaceRTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6E9CFEF27C936FE00AED244 /* spaceRTests.swift */,
+				D6A0200428043E2A001A4A0B /* RocketTests.swift */,
 			);
 			path = spaceRTests;
 			sourceTree = "<group>";
@@ -502,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6E9CFF027C936FE00AED244 /* spaceRTests.swift in Sources */,
+				D6A0200528043E2A001A4A0B /* RocketTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
