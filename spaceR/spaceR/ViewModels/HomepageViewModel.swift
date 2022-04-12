@@ -9,13 +9,13 @@ import Foundation
 
 class HomepageViewModel {
     
-    private var repository: HistoryRepositoryType?
+    private var historyRepository: HistoryRepositoryType?
     private weak var delegate: ViewModelDelegate?
     private var historicEvents: [History]?
     
     init(repository: HistoryRepositoryType,
          delegate: ViewModelDelegate) {
-        self.repository = repository
+        self.historyRepository = repository
         self.delegate = delegate
         self.historicEvents = []
     }
@@ -37,7 +37,7 @@ class HomepageViewModel {
     }
     
     func getAllHistory() {
-        repository?.fetchHistory(completion: { [weak self] result in
+        historyRepository?.fetchHistory(completion: { [weak self] result in
             switch result {
             case .success(let historyArray):
                 self?.historicEvents = historyArray
