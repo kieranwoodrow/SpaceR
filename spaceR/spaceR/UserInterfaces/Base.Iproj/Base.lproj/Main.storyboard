@@ -1090,15 +1090,19 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3H-Kc-YdQ">
                                                                             <rect key="frame" x="0.0" y="128" width="366" height="50"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f4-a3-qyj">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="21"/>
-                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f4-a3-qyj">
+                                                                                    <rect key="frame" x="10" y="10" width="346" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="trailing" secondItem="0f4-a3-qyj" secondAttribute="trailing" constant="10" id="AoU-aN-hSe"/>
+                                                                                <constraint firstItem="0f4-a3-qyj" firstAttribute="leading" secondItem="i3H-Kc-YdQ" secondAttribute="leading" constant="10" id="U1n-Eo-fRj"/>
+                                                                                <constraint firstItem="0f4-a3-qyj" firstAttribute="top" secondItem="i3H-Kc-YdQ" secondAttribute="top" constant="10" id="kAD-k5-Gm0"/>
+                                                                            </constraints>
                                                                         </view>
                                                                     </subviews>
                                                                     <constraints>
