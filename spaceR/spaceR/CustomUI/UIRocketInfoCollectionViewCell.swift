@@ -10,8 +10,8 @@ import UIKit
 
 class UIRocketInfoCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var rocketCollectionViewTitle: UILabel!
-    @IBOutlet weak var rocketCollectionViewInfo: UILabel!
+    @IBOutlet private weak var rocketCollectionViewTitle: UILabel!
+    @IBOutlet private weak var rocketCollectionViewInfo: UILabel!
     private var heading = ""
     private var info = ""
     

@@ -68,11 +68,25 @@ class RocketTests: XCTestCase {
         XCTAssertEqual(viewModel.rocketImage(index: 0), "")
     }
     
-    func testgetRocketReturnsCorrectRocket() {
+    func testGetRocketReturnsCorrectRocket() {
         repository.failed = false
         repository.selectedEmptyRocket = false
         viewModel.getAllRockets()
         XCTAssertEqual(viewModel.getRocket(atIndex: 0)?.id, "11001100" )
+    }
+    
+    func testGetAllRocketsSuccess() {
+        repository.failed = false
+        viewModel.getAllRockets()
+        XCTAssert(delegate.reloadViewCalled)
+        XCTAssertFalse(delegate.showErrorCalled)
+    }
+    
+    func testGetAllRocketsFailure() {
+        repository.failed = true
+        viewModel.getAllRockets()
+        XCTAssert(delegate.showErrorCalled)
+        XCTAssertFalse(delegate.reloadViewCalled)
     }
     
     class MockRepository: RocketRepositoryType {
@@ -115,12 +129,16 @@ class RocketTests: XCTestCase {
     }
     
     class MockDelegate: ViewModelDelegate {
+        
+        var showErrorCalled = false
+        var reloadViewCalled = false
+        
         func reloadView() {
-            
+            reloadViewCalled = true
         }
         
         func show(error: CustomError) {
-            
+            showErrorCalled = true
         }
     }
 }
