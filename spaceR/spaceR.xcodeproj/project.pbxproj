@@ -16,6 +16,7 @@
 		D665E90A27E7E21600DB118E /* LaunchpadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D665E90927E7E21600DB118E /* LaunchpadViewModel.swift */; };
 		D665E90C27E9D23C00DB118E /* UILaunchpadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D665E90B27E9D23C00DB118E /* UILaunchpadTableViewCell.swift */; };
 		D6A0200528043E2A001A4A0B /* RocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0200428043E2A001A4A0B /* RocketTests.swift */; };
+		D6A2F6AD28059722006D6FB6 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A2F6AC28059722006D6FB6 /* History.swift */; };
 		D6B671FA27E2814B001F2EF4 /* Launchpads.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B671F927E2814B001F2EF4 /* Launchpads.swift */; };
 		D6B671FE27E4F131001F2EF4 /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */; };
 		D6C18C5A27F1C97300E040CE /* RocketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C18C5927F1C97300E040CE /* RocketRepository.swift */; };
@@ -70,6 +71,7 @@
 		D665E90927E7E21600DB118E /* LaunchpadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewModel.swift; sourceTree = "<group>"; };
 		D665E90B27E9D23C00DB118E /* UILaunchpadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILaunchpadTableViewCell.swift; sourceTree = "<group>"; };
 		D6A0200428043E2A001A4A0B /* RocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RocketTests.swift; path = SpacerTests/RocketTests.swift; sourceTree = SOURCE_ROOT; };
+		D6A2F6AC28059722006D6FB6 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		D6B671F927E2814B001F2EF4 /* Launchpads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpads.swift; sourceTree = "<group>"; };
 		D6B671FD27E4F131001F2EF4 /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
 		D6C18C5927F1C97300E040CE /* RocketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRepository.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				D6E9CF6E27C8CF9D00AED244 /* Launches.swift */,
 				D6E9CF6C27C8CF2A00AED244 /* Rocket.swift */,
 				D6B671F927E2814B001F2EF4 /* Launchpads.swift */,
+				D6A2F6AC28059722006D6FB6 /* History.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				D6E9CF6D27C8CF2A00AED244 /* Rocket.swift in Sources */,
 				D665E90A27E7E21600DB118E /* LaunchpadViewModel.swift in Sources */,
 				D665E90C27E9D23C00DB118E /* UILaunchpadTableViewCell.swift in Sources */,
+				D6A2F6AD28059722006D6FB6 /* History.swift in Sources */,
 				D6C18C6A27F70FCE00E040CE /* RocketInfoViewModel.swift in Sources */,
 				D6B671FA27E2814B001F2EF4 /* Launchpads.swift in Sources */,
 				D6C18C5A27F1C97300E040CE /* RocketRepository.swift in Sources */,

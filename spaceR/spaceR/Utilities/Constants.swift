@@ -11,4 +11,5 @@ struct Constants {
     static let getAllRocketsUrl = "https://api.spacexdata.com/v4/rockets"
     static let getAllLaunchesUrl = "https://api.spacexdata.com/v5/launches"
     static let getAllLaunchpadsUrl = "https://api.spacexdata.com/v4/launchpads"
+    static let getHistoryUrl = "https://api.spacexdata.com/v4/history"
 }
