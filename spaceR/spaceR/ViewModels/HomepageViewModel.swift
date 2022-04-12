@@ -32,7 +32,7 @@ class HomepageViewModel {
         return historicEvents?[index].eventDate ?? ""
     }
     
-    func historicEventDetails(index: Int) -> String {
+    func historicEventDescription(index: Int) -> String {
         return historicEvents?[index].details ?? ""
     }
     

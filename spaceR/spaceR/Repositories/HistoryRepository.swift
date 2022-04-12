@@ -35,4 +35,3 @@ class HistoryRepository: HistoryRepositoryType {
         call(with: request, model: T.self, completion: completion)
     }
 }
-
