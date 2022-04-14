@@ -703,13 +703,13 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXl-Ee-cXS">
                                                                             <rect key="frame" x="6.5" y="0.0" width="35" height="27.5"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" name="SpaceR-black"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB4-Yz-Tie">
                                                                             <rect key="frame" x="10.5" y="32.5" width="27.5" height="27.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" name="SpaceR-black"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -1038,6 +1038,7 @@
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-Kz-hFm">
                                                 <rect key="frame" x="18" y="8" width="378" height="225.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BLB-gO-U1U">
                                                     <size key="itemSize" width="366" height="178"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1055,49 +1056,37 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Rsv-rZ-fMx">
                                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="178"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-hi-KjI">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="67.5"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFw-gR-jMF">
-                                                                                    <rect key="frame" x="10" y="10" width="48.5" height="31.5"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                            <constraints>
-                                                                                <constraint firstItem="IFw-gR-jMF" firstAttribute="leading" secondItem="Nal-hi-KjI" secondAttribute="leading" constant="10" id="0Lz-A6-pPj"/>
-                                                                                <constraint firstItem="IFw-gR-jMF" firstAttribute="top" secondItem="Nal-hi-KjI" secondAttribute="top" constant="10" id="Sfg-xC-aqB"/>
-                                                                            </constraints>
-                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFw-gR-jMF">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="31.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                                            <color key="textColor" name="SpaceR-black"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="878-jG-dTg">
-                                                                            <rect key="frame" x="0.0" y="67.5" width="366" height="60.5"/>
+                                                                            <rect key="frame" x="0.0" y="31.5" width="366" height="80.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCk-kG-8Fl">
                                                                                     <rect key="frame" x="200" y="10" width="36" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
+                                                                                    <color key="textColor" name="SpaceR-black"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                             <constraints>
                                                                                 <constraint firstItem="TCk-kG-8Fl" firstAttribute="top" secondItem="878-jG-dTg" secondAttribute="top" constant="10" id="DP4-FU-BKW"/>
                                                                                 <constraint firstItem="TCk-kG-8Fl" firstAttribute="leading" secondItem="878-jG-dTg" secondAttribute="leading" constant="200" id="E6C-hy-z5e"/>
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3H-Kc-YdQ">
-                                                                            <rect key="frame" x="0.0" y="128" width="366" height="50"/>
+                                                                            <rect key="frame" x="0.0" y="112" width="366" height="66"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f4-a3-qyj">
                                                                                     <rect key="frame" x="10" y="10" width="346" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
+                                                                                    <color key="textColor" name="SpaceR-black"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="trailing" secondItem="0f4-a3-qyj" secondAttribute="trailing" constant="10" id="AoU-aN-hSe"/>
                                                                                 <constraint firstItem="0f4-a3-qyj" firstAttribute="leading" secondItem="i3H-Kc-YdQ" secondAttribute="leading" constant="10" id="U1n-Eo-fRj"/>
@@ -1105,11 +1094,13 @@
                                                                             </constraints>
                                                                         </view>
                                                                     </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="i3H-Kc-YdQ" firstAttribute="centerX" secondItem="Rsv-rZ-fMx" secondAttribute="centerX" id="5dt-8W-2vy"/>
                                                                     </constraints>
                                                                 </stackView>
                                                             </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="Rsv-rZ-fMx" secondAttribute="bottom" id="NJA-wS-lmU"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Rsv-rZ-fMx" secondAttribute="trailing" id="Xsd-SV-K6g"/>
@@ -1117,6 +1108,7 @@
                                                                 <constraint firstItem="Rsv-rZ-fMx" firstAttribute="top" secondItem="oJl-it-jjr" secondAttribute="top" id="wvD-h1-ATI"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="customSize" width="366" height="178"/>
                                                         <connections>
                                                             <outlet property="historicEventDate" destination="TCk-kG-8Fl" id="VWm-Tm-6q9"/>
@@ -1127,7 +1119,7 @@
                                                 </cells>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Ei3-Kz-hFm" firstAttribute="leading" secondItem="C2b-nv-glC" secondAttribute="leading" constant="18" id="56J-bn-DPC"/>
                                             <constraint firstAttribute="trailing" secondItem="Ei3-Kz-hFm" secondAttribute="trailing" constant="18" id="WbK-v2-0wB"/>
@@ -1136,6 +1128,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <variation key="heightClass=compact-widthClass=regular" alignment="fill" axis="horizontal"/>
                             </stackView>
                         </subviews>
@@ -1265,9 +1258,6 @@
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
