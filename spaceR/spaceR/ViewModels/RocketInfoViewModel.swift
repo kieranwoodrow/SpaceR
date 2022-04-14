@@ -68,7 +68,7 @@ class RocketInfoViewModel {
         return rocket?.diameter?.meters ?? 0.0
     }
     
-    func rocketImage() -> String {
+    var rocketImage: String {
         var rocketImage = ""
         if let safeImage = rocket?.images.randomElement() {
             rocketImage = safeImage ?? ""

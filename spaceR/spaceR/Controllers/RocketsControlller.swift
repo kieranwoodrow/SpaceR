@@ -15,7 +15,7 @@ class RocketsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rocketViewModel.getAllRockets()
+        rocketViewModel.allRockets()
         setTableView()
     }
     
@@ -55,7 +55,7 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "RocketInfoViewControllerSegue" {
             if let rocketInfoPage = segue.destination as? RocketInfoViewController {
                 let row = self.rocketTableView?.indexPathForSelectedRow?.row ?? 0
-                if let safeRocket = rocketViewModel.getRocket(atIndex: row) {
+                if let safeRocket = rocketViewModel.rocket(atIndex: row) {
                     rocketInfoPage.set(rocket: safeRocket)
                 }
             }

@@ -16,40 +16,40 @@ class RocketViewModel {
     
     private var repository: RocketRepositoryType?
     private weak var delegate: ViewModelDelegate?
-    private var allRockets: [Rocket]?
+    private var rockets: [Rocket]?
     
     init(repository: RocketRepositoryType,
          delegate: ViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
-        self.allRockets = []
+        self.rockets = []
     }
     
     var rocketCount: Int {
-        return allRockets?.count ?? 0
+        return rockets?.count ?? 0
     }
     
-    func getRocket(atIndex: Int) -> Rocket? {
-        return allRockets?[atIndex]
+    func rocket(atIndex: Int) -> Rocket? {
+        return rockets?[atIndex]
     }
     
     func rocketImage(index: Int) -> String {
         var rocketImage = ""
-        if let safeImage = allRockets?[index].images.randomElement() {
+        if let safeImage = rockets?[index].images.randomElement() {
             rocketImage = safeImage ?? ""
         }
         return rocketImage
     }
     
     func rocketTitle(index: Int) -> String {
-        return allRockets?[index].name ?? ""
+        return rockets?[index].name ?? ""
     }
     
-    func getAllRockets() {
+    func allRockets() {
         repository?.fetchRockets(completion: { [weak self] result in
             switch result {
             case .success(let rocketsArray):
-                self?.allRockets = rocketsArray
+                self?.rockets = rocketsArray
                 self?.delegate?.reloadView()
             case .failure(let error):
                 self?.delegate?.show(error: error)
