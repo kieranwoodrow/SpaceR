@@ -15,8 +15,6 @@ class RocketInfoViewController: UIViewController {
     @IBOutlet weak var rocketCollectionView: UICollectionView!
     @IBOutlet private weak var rocketDescription: UILabel!
     private lazy var rocketInfoViewModel = RocketInfoViewModel(delegate: self)
-    private var heading = ""
-    private var info = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +48,7 @@ extension RocketInfoViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        rocketInfoViewModel.headingsCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,7 +58,7 @@ extension RocketInfoViewController: UICollectionViewDelegate, UICollectionViewDa
             return UICollectionViewCell()
         }
         
-        cell.setRocketCell(viewModel: rocketInfoViewModel, indexPath: indexPath.item)
+        cell.setRocketCell(headings: rocketInfoViewModel.setHeadings(indexPath: indexPath.item))
         return cell
     }
 }
