@@ -8,7 +8,6 @@
 import Foundation
 
 struct History: Codable {
-    
     let title: String?
     let eventDate: String?
     let details:String?

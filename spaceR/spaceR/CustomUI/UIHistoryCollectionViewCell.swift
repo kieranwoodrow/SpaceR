@@ -10,25 +10,28 @@ import UIKit
 
 class UIHistoryCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var historicEventTitle: UILabel!
-    @IBOutlet private weak var historicEventDate: UILabel!
-    @IBOutlet private weak var historicEventDescription: UILabel!
+    @IBOutlet weak var historicEventHeadline: UILabel!
+    @IBOutlet weak var historicEventDate: UILabel!
+    @IBOutlet weak var historicEventInfo: UILabel!
     
-    func set(historicEventTitle: String) {
-        self.historicEventTitle.text = historicEventTitle
+    func set(historicEventHeadline: String) {
+        self.historicEventHeadline.text = historicEventHeadline
     }
     
     func set(historicEventDate: String) {
         self.historicEventDate.text = historicEventDate
     }
     
-    func set(historicEventDescription: String) {
-        self.historicEventDescription.text = historicEventDescription
+    func set(historicEventInfo: String) {
+        self.historicEventInfo.text = historicEventInfo
     }
     
-    func setRocketCell(title: String, date: String, description: String ) {
-        set(historicEventTitle: title)
+    func setHistoryCell(title: String, date: String, description: String ) {
+        set(historicEventHeadline: title)
         set(historicEventDate: date)
-        set(historicEventDescription: description)
+        set(historicEventInfo: description)
+        self.layer.borderColor = UIColor(named: "BorderCell")?.cgColor
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 10
     }
 }

@@ -36,7 +36,7 @@ class HomepageViewModel {
         return historicEvents?[index].details ?? ""
     }
     
-    func getAllHistory() {
+    func historyList() {
         historyRepository?.fetchHistory(completion: { [weak self] result in
             switch result {
             case .success(let historyArray):

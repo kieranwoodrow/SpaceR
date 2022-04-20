@@ -36,7 +36,7 @@ class LaunchpadViewModel {
         return allLaunchpads?[index].lauchpadName ?? ""
     }
     
-    func getAllLaunchpads() {
+    func launchpadList() {
         repository?.fetchLaunchpads(completion: { [weak self] result in
             switch result {
             case .success(let launchpadArray):

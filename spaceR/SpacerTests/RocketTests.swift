@@ -23,35 +23,35 @@ class RocketTests: XCTestCase {
     func testRocketCountReturnsCorrectNumberOfRockets() {
         repository.failed = false
         repository.selectedEmptyRocket = false
-        viewModel.allRockets()
+        viewModel.rocketList()
         XCTAssertEqual(viewModel.rocketCount, 1)
     }
     
     func testRocketCountReturnsZeroIfApiCallFailsToPopulateRocketArray() {
         repository.failed = true
         repository.selectedEmptyRocket = true
-        viewModel.allRockets()
+        viewModel.rocketList()
         XCTAssertEqual(viewModel.rocketCount, 0)
     }
     
     func testRocketTitleReturnsCorrectTitle() {
         repository.failed = false
         repository.selectedEmptyRocket = false
-        viewModel.allRockets()
+        viewModel.rocketList()
         XCTAssertEqual(viewModel.rocketTitle(index: 0), "Test Rocket Name" )
     }
     
     func testRocketTitleReturnsEmptyStringIfTitleIsNil() {
         repository.failed = false
         repository.selectedEmptyRocket = true
-        viewModel.allRockets()
+        viewModel.rocketList()
         XCTAssertEqual(viewModel.rocketTitle(index: 0), "" )
     }
     
     func testRocketImageReturnsCorrectRandomImage() {
         repository.failed = false
         repository.selectedEmptyRocket = false
-        viewModel.allRockets()
+        viewModel.rocketList()
         let images = ["testImage1.png", "testImage2.png2", "testImage3.png"]
         let randomImage = viewModel.rocketImage(index: 0)
         var index = 0
@@ -64,27 +64,27 @@ class RocketTests: XCTestCase {
     func testRocketImageReturnsEmptyStringIfImageArrayIsNil() {
         repository.failed = false
         repository.selectedEmptyRocket = true
-        viewModel.allRockets()
+        viewModel.rocketList()
         XCTAssertEqual(viewModel.rocketImage(index: 0), "")
     }
     
     func testGetRocketReturnsCorrectRocket() {
         repository.failed = false
         repository.selectedEmptyRocket = false
-        viewModel.allRockets()
+        viewModel.rocketList()
         XCTAssertEqual(viewModel.rocket(atIndex: 0)?.id, "11001100" )
     }
     
     func testGetAllRocketsSuccess() {
         repository.failed = false
-        viewModel.allRockets() 
+        viewModel.rocketList()
         XCTAssert(delegate.reloadViewCalled)
         XCTAssertFalse(delegate.showErrorCalled)
     }
     
     func testGetAllRocketsFailure() {
         repository.failed = true
-        viewModel.allRockets()
+        viewModel.rocketList()
         XCTAssert(delegate.showErrorCalled)
         XCTAssertFalse(delegate.reloadViewCalled)
     }

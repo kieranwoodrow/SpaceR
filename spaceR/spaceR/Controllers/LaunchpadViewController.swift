@@ -16,7 +16,7 @@ class LaunchpadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        launchpadViewModel.getAllLaunchpads()
+        launchpadViewModel.launchpadList()
         setTableView()
     }
     

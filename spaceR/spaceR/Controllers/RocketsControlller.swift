@@ -15,7 +15,7 @@ class RocketsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rocketViewModel.allRockets()
+        rocketViewModel.rocketList()
         setTableView()
     }
     

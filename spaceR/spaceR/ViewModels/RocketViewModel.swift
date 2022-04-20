@@ -45,7 +45,7 @@ class RocketViewModel {
         return rockets?[index].name ?? ""
     }
     
-    func allRockets() {
+    func rocketList() {
         repository?.fetchRockets(completion: { [weak self] result in
             switch result {
             case .success(let rocketsArray):

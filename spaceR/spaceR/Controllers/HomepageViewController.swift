@@ -10,12 +10,13 @@ import UIKit
 
 class HomepageViewController: UIViewController {
     
-    @IBOutlet weak private var historyCollectionView: UICollectionView!
     private lazy var homepageViewModel = HomepageViewModel(repository: HistoryRepository(),
                                                            delegate: self)
+    @IBOutlet weak var historyCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homepageViewModel.historyList()
         setCollectionView()
     }
     
@@ -42,7 +43,7 @@ extension HomepageViewController: UICollectionViewDelegate, UICollectionViewData
             return UICollectionViewCell()
         }
         
-        cell.setRocketCell(title: homepageViewModel.historicEventTitle(index: indexPath.item),
+        cell.setHistoryCell(title: homepageViewModel.historicEventTitle(index: indexPath.item),
                            date: homepageViewModel.historicEventDate(index: indexPath.item),
                            description: homepageViewModel.historicEventDescription(index: indexPath.item))
         return cell
