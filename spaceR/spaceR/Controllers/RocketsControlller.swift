@@ -15,7 +15,7 @@ class RocketsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rocketViewModel.getAllRockets()
+        rocketViewModel.allRockets()
         setTableView()
     }
     
@@ -39,13 +39,27 @@ extension RocketsController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.setRocketCell(rocketImage: rocketViewModel.rocketImage(index: indexPath.item),
-                           rocketTitle: rocketViewModel.rocketTitle(index: indexPath.item),
-                           atIndex: indexPath.item)
+                           rocketTitle: rocketViewModel.rocketTitle(index: indexPath.item))
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "RocketInfoViewControllerSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RocketInfoViewControllerSegue" {
+            if let rocketInfoPage = segue.destination as? RocketInfoViewController {
+                let row = self.rocketTableView?.indexPathForSelectedRow?.row ?? 0
+                if let safeRocket = rocketViewModel.rocket(atIndex: row) {
+                    rocketInfoPage.set(rocket: safeRocket)
+                }
+            }
+        }
     }
 }
 

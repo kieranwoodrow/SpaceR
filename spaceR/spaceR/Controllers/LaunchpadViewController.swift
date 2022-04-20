@@ -27,6 +27,7 @@ class LaunchpadViewController: UIViewController {
 }
 
 extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         launchpadViewModel.launchpadCount
     }
@@ -39,8 +40,7 @@ extension LaunchpadViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.setLaunchpadCell(image: launchpadViewModel.launchpadImage(index: indexPath.item),
-                              title: launchpadViewModel.launchpadTitle(index: indexPath.item),
-                              atIndex: indexPath.item)
+                              title: launchpadViewModel.launchpadTitle(index: indexPath.item))
         return cell
     }
     

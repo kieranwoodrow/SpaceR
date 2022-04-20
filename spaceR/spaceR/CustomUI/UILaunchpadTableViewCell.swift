@@ -15,29 +15,22 @@ class UILaunchpadTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20,
-                                                                     left: 20,
-                                                                     bottom: 20,
-                                                                     right: 20))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 20,
+                                                                     bottom: 20, right: 20))
     }
     
-    func setLaunchpadTableViewTitle(launchpadTitle: String) {
+    func set(launchpadTitle: String) {
         launchpadTableViewTitle.text = launchpadTitle
     }
     
-    func setLaunchpadTableViewImage(launchpadImage: String) {
+    func set(launchpadImage: String) {
         if let safeLaunchpadImageURl = URL(string: launchpadImage) {
             launchpadTableViewImage.getImagesFromURL(imageURL: safeLaunchpadImageURl)
         }
     }
     
-    func launchpadImageStyling() {
-        launchpadTableViewImage.imageStyle(type: .launchpadTable)
-    }
-    
-    func setLaunchpadCell(image: String,title: String, atIndex: Int) {
-        setLaunchpadTableViewImage(launchpadImage: image)
-        setLaunchpadTableViewTitle(launchpadTitle: title)
-        launchpadImageStyling()
+    func setLaunchpadCell(image: String, title: String) {
+        set(launchpadImage: image)
+        set(launchpadTitle: title)
     }
 }
