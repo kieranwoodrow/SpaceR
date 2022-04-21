@@ -83,7 +83,6 @@ class HomepageTests: XCTestCase {
         XCTAssertFalse(delegate.showErrorCalled)
     }
     
-    
     func testHistoricEventListFailure() {
         repository.failed = true
         viewModel.historyList()
